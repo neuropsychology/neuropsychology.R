@@ -4,10 +4,16 @@ An R package containing datasets and some statistical functions useful for psych
 
 ## Installation
 
-Run the following commands:
+Open R and paste the following commands:
 
 ```
 install.packages("devtools")
 library("devtools")
 install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
 ```
+
+## Features
+
+**use a data set**
+
+df <- neuropsychology::persomind
