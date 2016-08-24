@@ -7,6 +7,6 @@ Date: Sys.Date()
 Maintainer: Dominique Makowski <dom.makowski@gmail.com>
 Description: An R package containing datasets and some statistical functions useful for psychology, neuropsychology and neuroscience.
 License: MIT
-Imports: dplyr, ggplot2
+Imports: dplyr, ggplot2, Hmisc
 LazyData: TRUE
 LazyLoad: yes
