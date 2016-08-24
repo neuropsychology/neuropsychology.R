@@ -1,0 +1,9 @@
+Package: neuropsychology
+Type: Package
+Title: neuropsychology
+Version: 0.1.0
+Author: Dominique Makowski
+Maintainer: Dominique Makowski <dom.makowski@gmail.com>
+Description: An R package containing datasets and some statistical functions useful for psychology, neuropsychology and neuroscience.
+License: MIT
+LazyData: TRUE
