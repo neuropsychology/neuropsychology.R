@@ -2,9 +2,11 @@ Package: neuropsychology
 Type: Package
 Title: A Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 Version: 0.0.1
-Author@R: c(person("Dominique", "Makowski", email="dom.makowski@gmail.com", c("aut", "cre")))
+Author: c(person("Dominique", "Makowski", email="dom.makowski@gmail.com", c("aut", "cre")))
+Date: Sys.Date()
 Maintainer: Dominique Makowski <dom.makowski@gmail.com>
 Description: An R package containing datasets and some statistical functions useful for psychology, neuropsychology and neuroscience.
 License: MIT
 Imports: dplyr, ggplot2
 LazyData: TRUE
+LazyLoad: yes

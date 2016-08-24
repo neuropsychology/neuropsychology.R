@@ -3,16 +3,15 @@ library("devtools")
 install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
 library(neuropsychology)
 df <- persomind
+library(ggplot2)
 
-ggplot(df, aes(x=Emotion_Experience,y=Presence, colour=Movie_3D,fill=Movie_3D))+
+ggplot(df, aes(x=Age, y=Extraversion, colour=Mood_Disorder, fill=Mood_Disorder))+
   geom_point() +
   geom_smooth(method="lm",fullrange = T) +
-  xlab("\nEmotion") +
-  ylab("Presence\n") +
   theme_bw() +
   scale_fill_brewer(palette="Set1",direction=-1) +
   scale_colour_brewer(palette="Set1",direction=-1) +
-  theme_flat
+  theme_neuropsychology
 
 library(lme4)
 citation("neuropsychology")

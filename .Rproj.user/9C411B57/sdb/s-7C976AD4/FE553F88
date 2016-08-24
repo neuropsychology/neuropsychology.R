@@ -1,0 +1,17 @@
+{
+    "contents" : "Package: neuropsychology\nType: Package\nTitle: A Toolbox for Psychologists, Neuropsychologists and Neuroscientists\nVersion: 0.0.1\nAuthor: c(person(\"Dominique\", \"Makowski\", email=\"dom.makowski@gmail.com\", c(\"aut\", \"cre\")))\nDate: Sys.Date()\nMaintainer: Dominique Makowski <dom.makowski@gmail.com>\nDescription: An R package containing datasets and some statistical functions useful for psychology, neuropsychology and neuroscience.\nLicense: MIT\nImports: dplyr, ggplot2\nLazyData: TRUE\nLazyLoad: yes\n",
+    "created" : 1472068459320.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "540362504",
+    "id" : "FE553F88",
+    "lastKnownWriteTime" : 1472072186,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "dcf"
+}
