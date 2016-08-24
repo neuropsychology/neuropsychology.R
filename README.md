@@ -1,5 +1,5 @@
-# neuropsychology.R
-A Toolbox for Psychologists, Neuropsychologists and Neuroscientists
+# neuropsychology
+An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 
 
 ## Installation
