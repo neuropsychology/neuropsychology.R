@@ -2,8 +2,12 @@ cortable <- function(x, correction="none", type="p"){
   require(Hmisc)
 
   type <- ifelse(type == "s", "spearman", "pearson")
-
-  x <- get_numeric(x)
+  
+  for (i in names(x)){
+    if (is.numeric(x[,i]) == FALSE){
+      x[,i] = NULL
+    }
+  }
   x <- as.matrix(x)
 
 
