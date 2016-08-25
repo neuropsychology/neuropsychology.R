@@ -24,7 +24,7 @@ theme_neuropsychology(legend.position="right",
 }
 \description{
 A minimal theme for ggplot2.
-For an even better result, don't forget to change the colour palette and to add a space between the axis title and the axix ticks by using "\n" (see the example below).
+For an even better result, don't forget to change the colour palette and to add a space between the axis title and the axix (see the example below).
 }
 \examples{
 require(ggplot2)

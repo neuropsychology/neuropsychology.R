@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{describe_beta}\n\\alias{describe_beta}\n%- Also NEED an '\\alias' for EACH other topic documented here.\n\\title{Describe a variable\n%%  ~~function to do ... ~~\n}\n\\description{\nDescribe a variable\n}\n\n%- maybe also 'usage' for other objects documented here.\n\n\\author{\nDominique Makowski\n}\n\\examples{\nrequire(neuropsychology)\n}\n",
+    "created" : 1472130753831.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2245859190",
+    "id" : "BE8C0D70",
+    "lastKnownWriteTime" : 1472133842,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/man/describe.Rd",
+    "project_path" : "man/describe.Rd",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}
