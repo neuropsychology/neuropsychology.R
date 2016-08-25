@@ -8,7 +8,6 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 |Authors|Dominique Makowski|
 
 ---
-
 ## Installation
 
 Open R and paste the following commands:
@@ -26,8 +25,7 @@ library(neuropsychology)
 ```
 
 ---
-
-## Features
+## Feature Examples
 
 ### Use a data set
 ```
@@ -39,3 +37,11 @@ Available datasets are:
 
 See the description of each datasets by typing "?nameofthedataset" (ex: "?persomind") in the console
 
+---
+## Citation
+
+Run the following command to see the proper citation in APA or bibtex format:
+```
+library(neuropsychology)
+citation("neuropsychology")
+```
