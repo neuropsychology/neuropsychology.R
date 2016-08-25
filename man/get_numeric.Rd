@@ -22,7 +22,7 @@ Dominique Makowski
 \examples{
 require(neuropsychology)
 
-df <- persomind
+df <- personality
 
 df_only_factors <- get_factors(df)
 }

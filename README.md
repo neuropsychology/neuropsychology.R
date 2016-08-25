@@ -29,13 +29,13 @@ library(neuropsychology)
 
 ### Use a data set
 ```
-df <- persomind
+df <- personality
 ```
 
 Available datasets are:
-- persomind
+- personality
 
-See the description of each datasets by typing "?nameofthedataset" (ex: "?persomind") in the console
+See the description of each datasets by typing "?nameofthedataset" (ex: "?personality") in the console
 
 ---
 ## Citation
