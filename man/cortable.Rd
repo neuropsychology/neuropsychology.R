@@ -28,7 +28,7 @@ Bertolt and Dominique Makowski
 \examples{
 require(neuropsychology)
 
-df <- neuropsychology::persomind
+df <- persomind
 
 cortable(df)
 }

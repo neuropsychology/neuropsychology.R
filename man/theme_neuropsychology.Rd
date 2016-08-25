@@ -28,7 +28,8 @@ A minimal theme for ggplot2. Don't forget to change the Palet and to add a space
 \examples{
 require(ggplot2)
 require(neuropsychology)
-df <- neuropsychology::persomind
+
+df <- persomind
 
 ggplot(df, aes(x=Age, y=Negative_Affect, colour=Sex, fill=Sex)) +
   geom_point() +

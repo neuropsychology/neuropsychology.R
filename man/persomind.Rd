@@ -3,9 +3,10 @@
 \title{persomind}
 \author{Dominique Makowski}
 \description{
-A dataset.
+A dataset containing personality and mindfulness trait data from an online questionnaire.
 }
 \examples{
 library(neuropsychology)
-df <- neuropsychology::persomind
+
+df <- persomind
 }

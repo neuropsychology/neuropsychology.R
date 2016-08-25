@@ -20,9 +20,9 @@ Data frame
 Dominique Makowski
 }
 \examples{
-library(neuropsychology)
+require(neuropsychology)
 
-df <- neuropsychology::persomind
+df <- persomind
 
 df_only_factors <- get_factors(df)
 }
