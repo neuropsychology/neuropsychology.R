@@ -17,7 +17,7 @@ install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
 
 ## Features
 
-* use a data set
+#### Use a data set
 ```
 df <- persomind
 ```
