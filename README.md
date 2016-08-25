@@ -40,7 +40,7 @@ See the description of each datasets by typing "?nameofthedataset" (ex: "?persom
 ---
 ## Citation
 
-Run the following command to see the proper citation entry in APA6 or Bibtex format:
+Run the following commands to see the proper citation entry in APA6 or Bibtex format:
 ```
 library(neuropsychology)
 citation("neuropsychology")
