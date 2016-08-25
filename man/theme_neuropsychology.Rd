@@ -32,7 +32,7 @@ df <- neuropsychology::persomind
 
 ggplot(df, aes(x=Age, y=Negative_Affect, colour=Sex, fill=Sex)) +
   geom_point() +
-  geom_smooth(method="lm",fullrange = T) +
+  geom_smooth(method="lm", fullrange=TRUE) +
 
   theme_neuropsychology() +
 

@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{get_numeric}\n\\alias{get_numeric}\n%- Also NEED an '\\alias' for EACH other topic documented here.\n\\title{Get the numerical variables\n%%  ~~function to do ... ~~\n}\n\\description{\nSubset a dataframe by keeping the numerical variables\n}\n\\usage{\nget_numeric(x)\n}\n%- maybe also 'usage' for other objects documented here.\n\\arguments{\n  \\item{x}{\nData frame\n}\n}\n\\author{\nDominique Makowski\n}\n\\examples{\nlibrary(neuropsychology)\n\ndf <- neuropsychology::persomind\n\ndf_only_factors <- get_factors(df)\n}\n",
+    "created" : 1472125732212.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "807207278",
+    "id" : "CD5C409D",
+    "lastKnownWriteTime" : 1472125784,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/man/get_numeric.Rd",
+    "project_path" : "man/get_numeric.Rd",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

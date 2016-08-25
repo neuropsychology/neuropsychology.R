@@ -1,11 +1,11 @@
 \name{cortable}
 \alias{cortable}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{A function to do correlation matrices
+\title{Correlation matrix with significance stars
 %%  ~~function to do ... ~~
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Do a correlation matrix with significance stars
 }
 \usage{
 cortable(x, correction="none", type="p")

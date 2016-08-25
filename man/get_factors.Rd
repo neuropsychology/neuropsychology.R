@@ -4,6 +4,9 @@
 \title{A function to get the factors
 %%  ~~function to do ... ~~
 }
+\description{
+Subset a dataframe by keeping the factors
+}
 \usage{
 get_factors(x)
 }

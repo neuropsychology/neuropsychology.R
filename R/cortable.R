@@ -1,8 +1,7 @@
 cortable <- function(x, correction="none", type="p"){
-  require(Hmisc)
 
   type <- ifelse(type == "s", "spearman", "pearson")
-  
+
   for (i in names(x)){
     if (is.numeric(x[,i]) == FALSE){
       x[,i] = NULL

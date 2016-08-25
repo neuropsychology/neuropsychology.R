@@ -1,1 +1,6 @@
+import(ggplot2)
+import(Hmisc)
+import(stats)
+
 exportPattern("^[[:alpha:]]+")
+

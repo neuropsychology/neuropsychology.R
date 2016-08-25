@@ -3,7 +3,6 @@ theme_neuropsychology <- function(legend.position="right",
                         axis.title.size=20,
                         axis.text.size=15)
 {
-  require(ggplot2)
   theme_classic() +
     theme(
       legend.position=legend.position,
