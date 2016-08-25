@@ -1,12 +1,12 @@
 {
-    "contents" : "\\name{persomind}\n\\alias{persomind}\n\\title{persomind}\n\\author{Dominique Makowski}\n\\description{\nA dataset containing personality and mindfulness trait data from an online questionnaire.\n}\n\\examples{\nlibrary(neuropsychology)\n\ndf <- persomind\n}\n",
+    "contents" : "\\name{persomind}\n\\alias{persomind}\n\\title{persomind}\n\\author{Dominique Makowski}\n\\description{\nA dataset containing personality and mindfulness trait data from an online questionnaire.\n\nIf you use this dataset for a publication, please refer to it as:\n\"persomind-1.0\".\n}\n\\examples{\nlibrary(neuropsychology)\n\ndf <- persomind\n}\n",
     "created" : 1472126760055.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3441119834",
+    "hash" : "3587067473",
     "id" : "7B9A5AEA",
-    "lastKnownWriteTime" : 1472126908,
+    "lastKnownWriteTime" : 1472129079,
     "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/man/persomind.Rd",
     "project_path" : "man/persomind.Rd",
     "properties" : {

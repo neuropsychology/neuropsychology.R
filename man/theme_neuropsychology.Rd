@@ -4,13 +4,13 @@
 \author{Dominique Makowski}
 \usage{
 theme_neuropsychology(legend.position="right",
-                        legend.text.size=20,
-                        axis.title.size=20,
-                        axis.text.size=15)
+                      legend.text.size=20,
+                      axis.title.size=20,
+                      axis.text.size=15)
 }
 \arguments{
     \item{legend.position}{
-        "right", "top", "bottom"
+    one of the following: "right", "left", "top" or "bottom"
     }
     \item{legend.text.size}{
         size of legend text (usually the numbers)
@@ -23,7 +23,8 @@ theme_neuropsychology(legend.position="right",
     }
 }
 \description{
-A minimal theme for ggplot2. Don't forget to change the Palet and to add a space betweenn the axis title and the axix ticks (see example below)
+A minimal theme for ggplot2.
+For an even better result, don't forget to change the colour palette and to add a space between the axis title and the axix ticks by using "\n" (see the example below).
 }
 \examples{
 require(ggplot2)
