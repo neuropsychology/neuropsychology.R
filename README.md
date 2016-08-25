@@ -19,6 +19,12 @@ library("devtools")
 install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
 ```
 
+Once the package is installed, load the package each time you open a new R session by using the following command:
+
+```
+library(neuropsychology)
+```
+
 ---
 
 ## Features
