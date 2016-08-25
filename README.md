@@ -1,9 +1,8 @@
 # neuropsychology
 An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 
-||neuropsychology|
-|----------------|---|
 |Package Status|![](https://img.shields.io/badge/status-stable-brightgreen.svg)|
+|----------------|---|
 |Latest Version|![](https://img.shields.io/badge/version-0.1-brightgreen.svg)|
 |Authors|Dominique Makowski|
 
