@@ -35,7 +35,14 @@ df <- personality
 Available datasets are:
 - personality
 
-See the description of each datasets by typing "?nameofthedataset" (ex: "?personality") in the console
+See the description of each datasets by typing "?nameofthedataset" (ex: "?personality") in the console.
+
+### Quickly get a corelation table with significance stars
+```
+cortable(personality)
+```
+This function will automatically select the numeric columns of your dataframe and show a correlation table with significance stars.
+You can adjust the p value by applying different corrections or change the type of correlation type (Spearman's or Pearson's). Run "?cortable" for documentation.
 
 ---
 ## Citation
