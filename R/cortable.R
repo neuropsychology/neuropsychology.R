@@ -7,7 +7,7 @@ cortable <- function(df,
   type <- ifelse(type == "s", "spearman",
                  ifelse(type == "spearman", "spearman","pearson"))
 
-  correction_text <- ifelse(correction=="holm", "Holm–Bonferroni",
+  correction_text <- ifelse(correction=="holm", "Holm-Bonferroni",
                             ifelse(correction=="fdr", "False Discovery Rate",correction))
 
   for (i in names(df)){
