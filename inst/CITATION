@@ -6,7 +6,7 @@ bibentry("Manual",
 	url="https://github.com/neuropsychology/neuropsychology.R",
 
 	textVersion =
-  	paste("D. Makowski (2016). ",
+  	paste("Makowski, D. (2016). ",
   			"R package 'neuropsychology': An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists (version 0.1). ",
   			"Available from https://github.com/neuropsychology/neuropsychology.R",
   			sep=""),
