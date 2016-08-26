@@ -5,22 +5,35 @@
 %%  ~~function to do ... ~~
 }
 \description{
-Do a correlation matrix with significance stars
+Quickly get a correlation table with significance stars
 }
 \usage{
-cortable(x, correction="none", type="p")
+cortable(df,
+        correction="none",
+        type="pearson",
+        print.result=TRUE,
+        plot.result=TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-Data frame
+  \item{df}{
+Dataframe
 }
   \item{correction}{
-  "none", "holm" for holm-bonferroni
+  "none", "holm" for holm-bonferroni, "fdr" for False Discovery Rate
 }
   \item{type}{
-  "s" for Spearman and "p" for Pearson
+  "spearman" for Spearman's and "pearson" for Pearson's
 }
+  \item{print.result}{
+  TRUE or FALSE. Should it print the table in the console.
+}
+\item{plot.result}{
+  TRUE or FALSE. Should it plot the result in the plotting tab.
+}
+}
+\value{
+    The table in the format of a dataframe
 }
 \author{
 Bertolt and Dominique Makowski
@@ -30,7 +43,13 @@ require(neuropsychology)
 
 df <- personality
 
-cortable(df)
+result <- cortable(df)
+
+# If you are using RStudio, you can visualize it more nicely using the following "View(cortable(df))"
+
+# You can also save the table as a .csv file using the following:
+
+write.csv(cortable(df), "correlation_table.csv")  # Use write.csv2 if you have trouble opening the file in excel
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

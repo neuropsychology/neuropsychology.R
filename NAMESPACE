@@ -1,6 +1,7 @@
 import(ggplot2)
 import(Hmisc)
 import(stats)
+import(ggcorrplot)
 
 exportPattern("^[[:alpha:]]+")
 
