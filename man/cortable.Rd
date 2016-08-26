@@ -20,7 +20,7 @@ cortable(df,
 Dataframe
 }
   \item{correction}{
-  "none", "holm" for holm-bonferroni, "fdr" for False Discovery Rate
+  "none", "holm" for holm-bonferroni (default), "fdr" for False Discovery Rate
 }
   \item{type}{
   "spearman" for Spearman's and "pearson" for Pearson's

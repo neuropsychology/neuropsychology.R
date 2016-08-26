@@ -7,6 +7,8 @@ cortable <- function(df,
   type <- ifelse(type == "s", "spearman",
                  ifelse(type == "spearman", "spearman","pearson"))
 
+  correction_text <- ifelse(correction=="holm", "Holm–Bonferroni",
+                            ifelse(correction=="fdr", "False Discovery Rate",correction))
 
   for (i in names(df)){
     if (is.numeric(df[,i]) == FALSE){
@@ -44,11 +46,12 @@ cortable <- function(df,
   table <- cbind(table[1:length(table)-1])
 
   if (print.result==TRUE){
+    print(paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")", sep = ""))
     print(table)
   }
   if (plot.result==TRUE){
     print(ggcorrplot(rcorr(df, type = type)$r,
-               title = paste("A ", type, "'s correlation matrix (correction: ", correction, ")", sep = ""),
+               title = paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")", sep = ""),
                method = "circle",
                type="lower",
                colors=c("#E91E63", "white", "#03A9F4"),
