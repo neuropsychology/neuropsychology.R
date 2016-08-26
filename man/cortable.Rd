@@ -9,7 +9,7 @@ Quickly get a correlation table with significance stars
 }
 \usage{
 cortable(df,
-        correction="none",
+        correction="holm",
         type="pearson",
         print.result=TRUE,
         plot.result=TRUE)

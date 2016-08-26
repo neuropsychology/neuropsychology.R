@@ -1,6 +1,6 @@
-cortable <- function(df, 
-                     correction="none", 
-                     type="pearson", 
+cortable <- function(df,
+                     correction="holm",
+                     type="pearson",
                      print.result=TRUE,
                      plot.result=TRUE){
 
@@ -42,7 +42,7 @@ cortable <- function(df,
 
   ## remove last column and return the matrix (which is now a data frame)
   table <- cbind(table[1:length(table)-1])
-  
+
   if (print.result==TRUE){
     print(table)
   }
@@ -58,6 +58,6 @@ cortable <- function(df,
                legend.title="",
                lab = FALSE))
   }
-  
+
   return(as.data.frame(table))
 }
