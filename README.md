@@ -18,6 +18,8 @@ library("devtools")
 install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
 ```
 
+If it doesn't work, try [updating R](https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=update%20r).
+
 Once the package is installed, load the package each time you open a new R session by using the following command:
 
 ```
