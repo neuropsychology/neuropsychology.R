@@ -1,10 +1,12 @@
-# <p align="center"> Statistics for Psychologists with R: An Introduction </p>
+#<p align="center"> Statistics for Psychologists with R: An Introduction </p>
 **<p align="center"> Dominique Makowski </p>**
 
 <p align="center"><img src="https://biblineuropsy.files.wordpress.com/2016/08/n.png" width="200"></p>
 
 
 **<p align="center">Welcome to the introductory course supported by the _Ecole de Neuropsychologie_ group.</p>**
+
+---
 
 ## About the course
 
@@ -14,7 +16,7 @@ It is not a programming course, nor a course on statistics *per se*.
 
 ### Contact
 
-You can contact the creator of this course via Linkedin (click [here](https://fr.linkedin.com/in/dominiquemakowski)) or via email (<dom.makowski@gmail.com>)
+For remarks, complaints or anything else, you can contact the creator of this course via Linkedin (click [here](https://fr.linkedin.com/in/dominiquemakowski)) or via email (<dom.makowski@gmail.com>)
 
 
 
@@ -48,3 +50,23 @@ And, most importantly...
 
 - R was born in 1993
 - Developped by statisticians for statistics
+
+
+
+## Installation of R
+
+You'll need two things: the language (R) and an editor (RStudio) with which you will comunicate with R.
+
+### R
+
+Download and install R for [MacOS](https://cran.r-project.org/bin/macosx/), [Windows](https://cran.r-project.org/bin/windows/) or [Linux](https://cran.r-project.org/bin/linux/).
+
+### RStudio
+
+R is the language. But it is only a language. After installing R, you will also need an editor. The most popular is RStudio.
+
+Click on [this link](https://www.rstudio.com/products/rstudio/download3/) and then on the Download green button of RStudio Desktop (Free Licence). Then, choose your platforme (Windows, MacOS or Linux).
+
+
+### Data types
+### Subsetting
