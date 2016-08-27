@@ -4,7 +4,7 @@
 <p align="center"><img src="https://biblineuropsy.files.wordpress.com/2016/08/n.png" width="200"></p>
 
 
-**<p align="center">Welcome to the introductory course supported by the _Ecole de Neuropsychologie_ group.</p>**
+*<p align="center">This course is supported by the École de Neuropsychologie group.</p>*
 
 ---
 
