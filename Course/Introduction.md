@@ -50,22 +50,31 @@ And, most importantly...
 - You need to know programing and coding
 - You need to be an expert of statistics
 
-### History
+### Why R
 
-- R was born in 1993
-- Developped by statisticians for statistics
+- Born in 1993
+- Developped by statisticians
+- Free
+- Open-source 
+- Cross-platform Compatibility (Windows, MacOS, Linux...)
+- Robust community 
+- Gold standart accross science
+- Reproducible research
+- Cutting-edge statistics and methods
+- Powerful data visualization
+- Data safe
 
 
 
-## Installation of R
+## Installation
 
 You'll need two things: the language (R) and an editor (RStudio) with which you will comunicate with R.
 
-### R
+### <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Rlogo.png/64px-Rlogo.png" height="50">
 
 Download and install R for [MacOS](https://cran.r-project.org/bin/macosx/), [Windows](https://cran.r-project.org/bin/windows/) or [Linux](https://cran.r-project.org/bin/linux/).
 
-### RStudio
+### <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/RStudio_logo.png/640px-RStudio_logo.png" height="50">
 
 R is the language. But it is only a language. After installing R, you will also need an editor. The most popular is RStudio.
 
