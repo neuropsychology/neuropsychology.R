@@ -33,8 +33,8 @@ Add the end of this course, you will:
 - [x] Install packages
 - [x] Read your data file with R
 - [x] Explore your data
-- [x] Run correlation analysis
-- [x] Run linear regression analysis
+- [x] Run a correlation analysis
+- [x] Run a multiple linear regression
 - [x] Run an analysis of variance (ANOVA)
 
 And, most importantly...
@@ -50,7 +50,7 @@ And, most importantly...
 - You need to know programing and coding
 - You need to be an expert of statistics
 
-### Why R
+### Why <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Rlogo.png/64px-Rlogo.png" height="40">
 
 - Born in 1993
 - Developped by statisticians
@@ -64,21 +64,46 @@ And, most importantly...
 - Powerful data visualization
 - Data safe
 
+### Think different
+
+R will require from you to think differently. Especially if you're used to softwares like STATISTICA, SPSS or SAS. 
+But it's fot the best. 
+
+- Deep knowledge of your data
+- Scripts
+- Objects
+- Dataframe
+- Model
+- Result
+- ...
+- function(object)
+- object2 <- function(object1)
+
 
 
 ## Installation
 
 You'll need two things: the language (R) and an editor (RStudio) with which you will comunicate with R.
 
-### <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Rlogo.png/64px-Rlogo.png" height="50">
+### R
 
 Download and install R for [MacOS](https://cran.r-project.org/bin/macosx/), [Windows](https://cran.r-project.org/bin/windows/) or [Linux](https://cran.r-project.org/bin/linux/).
 
-### <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/RStudio_logo.png/640px-RStudio_logo.png" height="50">
+### RStudio
 
 R is the language. But it is only a language. After installing R, you will also need an editor. The most popular is RStudio.
 
 Click on [this link](https://www.rstudio.com/products/rstudio/download3/) and then on the Download green button of RStudio Desktop (Free Licence). Then, choose your platforme (Windows, MacOS or Linux).
+
+
+## Let's go!
+
+### First steps
+
+Create a folder where you will store your project (the data, scripts, plots...). Place your data in this folder. For this training, we will use the "personality" dataset available within the neuropsychology package.
+Open RStudio. 
+
+
 
 ### Packages
 
