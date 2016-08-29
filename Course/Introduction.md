@@ -20,7 +20,7 @@ Note that there are other tutorials teaching R for psychological research, that 
 
 ### Contact
 
-For remarks, complaints or anything else, you can contact the creator of this course via Linkedin (click [here](https://fr.linkedin.com/in/dominiquemakowski)) or via email (<dom.makowski@gmail.com>)
+For remarks, complaints or anything else, you can contact the creator of this course via  [Linkedin](https://fr.linkedin.com/in/dominiquemakowski) or via email (<dom.makowski@gmail.com>)
 
 
 
