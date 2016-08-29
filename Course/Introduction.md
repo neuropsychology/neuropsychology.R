@@ -30,20 +30,30 @@ Add the end of this course, you will:
 
 - [x] Know a bit of the philosophy and history behind R
 - [x] Use R for simple operations
-- [x] Install packages
 - [x] Read your data file with R
 - [x] Explore your data
 - [x] Subset your data
 - [x] Run a correlation analysis
+- [x] Run a t-test
 - [x] Draw some basic plots
-- [x] Run a multiple linear regression
 - [x] Run an analysis of variance (ANOVA)
+- [x] Run a multiple linear regression
+- [x] Install and use packages
+
 
 And, most importantly...
 
-- [x] You won't be afraid of R or statistics anymore
+- [x] You won't be afraid of R or statistics anymore :bowtie:
 
 ## About <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Rlogo.png/64px-Rlogo.png" height="40">
+
+### Personal Experience
+
+I spent all my bachelor with a mixed feeling toward statistics. Although I understood their importance for psychological science, I was just completely lost in the their teaching. We spent like three years learning theorethical stuff about the history of t-testing and, again, even if I realise its importance *now*, it just wasn't the right moment to teach that to students. And then, shortly after, you learn how to get results, by clicking here and here, and looking for the highlighted text that indicates that you're lucky enough to have a significant effect. I applied the methods, but still with no interest or understanding of statistics whatsoever. 
+
+Until my master thesis, about neuroaesthetics. I gathered data from children and adults and I became eager to discover the results. Somehow, I knew what I wanted to do: check the link between those two variables, check if there's a difference in that variable between my group ages etc. But to do it with a software like Statistica was a pain in the *** :sweat:. I somehow managed to do it, and the year after that, I discovered R. I found great the possibility of automating statistical reports, re-running a entire statistical analysis, with a small change at the beginning, and get almost immediately a beautiful pdf with all tje results, plots and so on.
+
+So I started to learn. I was alone, nobody in my lab' was using it at that time, and it was hard: I was now lacking the therothetical notions that were thaught to me years ago. Long story short, now, I love statistics. And that is thanks to R.
 
 ### The Myth
 
