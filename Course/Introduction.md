@@ -401,7 +401,7 @@ summary(fit)
 That generates a lot of information, which I will not explain in details in the present course (see the [not available yet] course on hierarchical mixed-effects models).
 
 
-### lm() > aov(), t.test(), cor.test()
+### Linear Models vs. ANOVAs, t-tests and correlations
 
 Not convinced by the fact that a linear model is the general framework all of these other procedures work on?
 Let's do an analysis of variance of the linear model fitted above and compare it with the analysis of variance table obtained with the `aov()` function.
@@ -416,7 +416,7 @@ fit <- lm(Negative_Affect ~ Sex, data=df)
 summary(fit)
 t.test(Negative_Affect~Sex, data=df, var.equal=TRUE)
 ```
-As you can see, the p value is the same. Even more interesting, if you subtract the two means (the men's mean from the women's mean) displayed in the t-test output, it will give you... the value of the β (the "beta", the slope), displayed under "Estimate" in the linear model output... You might argue that the `t.test()` function gives us the confidence interval for the estimate...
+As you can see, the p value is the same. Even more interesting, if you subtract the two means (the men's mean from the women's mean) displayed in the t-test output, it will give you... the value of the β (the "beta", the slope), displayed under "Estimate" in the linear model output. If you're really rigid and tenacious, you might argue that the `t.test()` function gives us the confidence interval for the estimate...
 
 ```R
 confint(fit)
@@ -424,7 +424,7 @@ confint(fit)
 There you go :wink:
 
 
-As for the correlation, it will be the occasion to introduce another useful function, `scale()`, which scale and/or center your variable (or your dataframe). Let's say we want to add in our dataframes two variables, the Z score of the Age, and the Z score of the Negative Affect. How do we do that?
+As for the correlation, it will be the occasion to introduce another useful function, `scale()`, that scales and/or center your variable (or your whole dataframe). Let's say we want to add in our dataframe two variables, the Z score of the Age, and the Z score of the Negative Affect. How do we do that?
 
 We can add variables on the fly simply by specifying a value for them. For example, if you run the line below, it will create a new variable called Z_Age, filled with ones.
 
@@ -432,7 +432,7 @@ We can add variables on the fly simply by specifying a value for them. For examp
 df$Z_Age <- 1
 ```
 
-But we want to fill it with the actual Z score of the Age.
+But we want to fill it with the actual Z score of the Age:
 
 
 ```R
@@ -449,7 +449,7 @@ summary(fit2)
 cor.test(df$Negative_Affect, df$Age)
 ```
 
-As you can see, the p value and the beta are almost identical (not exactly, due to some minimal imprecisions caused by the intermediate `scale()` function). Again, you can retrieve the confidence interval with the `confint()` function.
+As you can see, the p value and the beta are almost identical (altough not exactly, due to some minimal imprecisions caused by the intermediate `scale()` function). Again, you can retrieve the confidence interval with the `confint()` function.
 
 **As a conclusion, linear and nonlinear modelling is a powerful and consistent framework.**
 
@@ -462,19 +462,23 @@ We will finish this course by what makes the wealth of languages such as R, Pyth
 In R, there are three ways of installing a package. For the majority of packages.
 - Click on Tools -> Install Packages...
 - Directly use the `install.packages()` function. For example, we can download the "devtools" package by running the following command:
+- 
 ```R
   install.packages("devtools")
 ```
 
-This package contains a function that will allow to download unregistered (often *in development* packages), such as the *neuropsychology* package.
+This package contains a function that will allow to download unregistered (often *in development* packages, or because their maintener is as lazy as me to register it officially), such as the *neuropsychology* package.
 
 First, every time you start an R session, you need to *load* a package in order to use it:
+
 ```R
   library("devtools")
 ```
+
 This basically activate the package and load its functions into your current package library.
 
 Then, we can use another function to download the neuropsychology package.
+
 ```R
   install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)  # Download the package
   library("neuropsychology")  # Load the package
