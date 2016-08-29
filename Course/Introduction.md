@@ -11,7 +11,7 @@
 ## About the course
 
 This course was crafted by psychologists, neuropsychologists and neuroscientists for psychologists, neuropsychologists and neuroscientists.
-As such, it is a straighforward introduction to R with a special focus on how to get some actual results with it.
+As such, it is a straightforward introduction to R with a special focus on how to get some actual results with it.
 It is not a programming course, nor a course on statistics *per se*.
 
 It is meant to be a short, straight to the point tutorial, that will not teach you R, nor statistics, but only how do quickly and easily do some things with your data using R.
@@ -55,12 +55,12 @@ And, most importantly...
 ### Why R
 
 - Born in 1993
-- Developped by statisticians
+- Developed by statisticians
 - Free
 - Open-source 
 - Cross-platform Compatibility (Windows, MacOS, Linux...)
 - Robust community 
-- Gold standart accross science
+- Gold standard across science
 - Reproducible research
 - Cutting-edge statistics and methods
 - Powerful data visualization
@@ -68,8 +68,8 @@ And, most importantly...
 
 ### Think different
 
-R will require from you to think differently. Especially if you're used to softwares like STATISTICA, SPSS or SAS. 
-But it's fot the best. 
+R will require from you to think differently. Especially if you're used to software like STATISTICA, SPSS or SAS. 
+But it's for the best. 
 
 - It will require and develop a deep knowledge of your data
 - Think in terms of "objects": everything in R is an object: a dataframe, a function, a result, a statistical model etc. An object is basically just a container of information.
@@ -82,7 +82,7 @@ The syntax in R is often the same. You apply a function on an object. This funct
 
 ## Installation
 
-You'll need two things: the language (R) and an editor (RStudio) with which you will comunicate with R.
+You'll need two things: the language (R) and an editor (RStudio) with which you will communicate with R.
 
 ### R
 
@@ -92,7 +92,7 @@ Download and install R for [MacOS](https://cran.r-project.org/bin/macosx/), [Win
 
 R is the language. But it is only a language. After installing R, you will also need an editor. The most popular is RStudio.
 
-Click on [this link](https://www.rstudio.com/products/rstudio/download3/) and then on the Download green button of RStudio Desktop (Free Licence). Then, choose your platforme (Windows, MacOS or Linux).
+Click on [this link](https://www.rstudio.com/products/rstudio/download3/) and then on the Download green button of RStudio Desktop (Free Licence). Then, choose your platform (Windows, MacOS or Linux).
 
 
 ## Let's go!
@@ -101,7 +101,7 @@ Click on [this link](https://www.rstudio.com/products/rstudio/download3/) and th
 
 #### Initialization
 
-Create a folder where you will store your project (the data, scripts, plots...). Place your data in this folder. For this training, we will use the "personality" dataset available within the neuropsychology package. So click on this link and download the dataset, which ends with .csv. This format (.csv for comma separated values) is a standard light format used in statistics. You can open those files with almost any softwares (incuding excel, statistica, etc.)
+Create a folder where you will store your project (the data, scripts, plots...). Place your data in this folder. For this training, we will use the "personality" dataset available within the neuropsychology package. So click on this link and download the dataset, which ends with .csv. This format (.csv for comma separated values) is a standard light format used in statistics. You can open those files with almost any softwares (including Excel, Statistica, etc.)
 
 1. Once you have a folder (that you can name "Rcourse" for example), and the file personality.csv in it,
 2. Open RStudio. Click on file -> new file -> R script. Then click on "save as", navigate to your project directory and save it there, with the personality.csv file.
@@ -111,7 +111,7 @@ However, we still have to tell R that this is the project directory we will be w
 
 So, each time you open RStudio, don't forget to do the following: 
 
-4. **click on Session -> Set Working Directory -> To Source File location**.
+- **click on Session -> Set Working Directory -> To Source File location**.
 
 What does it mean? That the working directory (where R will look for files and save things if asked to) is to be where the script (the source file) is.
 
@@ -119,19 +119,19 @@ What does it mean? That the working directory (where R will look for files and s
 
 Let's take a look at what we have now. A classic RStudio window is organized in 4 different panels:
 
-- Script: nothing more than a text editor where we will write and save our script. 
-- Console: here lives the language R, where we can communicate with it.
-- Environment: a panel that will display the different variables, dataframes (which are all "objects") that we will create.
-- Plots and help: a panel that will display the plots or the help for functions.
+- **Script**: nothing more than a text editor where we will write and save our script. 
+- **Console**: here lives the language R, where we can communicate with it.
+- **Environment**: a panel that will display the different variables, dataframes (which are all "objects") that we will create.
+- **Plots and Help**: a panel that will display the plots or the help for functions.
  
-You want to communicate with R? Type `3+5` into the console and press ENTER. See the result? It's magical. But frome now on, we want to save the code we will create, so we won't type it directly in the console but in the script panel, that we can run and re-run again everytime we want.
+You want to communicate with R? Type `3+5` into the console and press ENTER. See the result? It's magical. But from now on, we want to save the code we will create, so we won't type it directly in the console but in the script panel, that we can run and re-run again every time we want.
 
 
 ### Our First Object: `df`
 
 `df` is a convention name for dataframe, which is the classic format of statistical data. Is is organized into *variables*, the columns, that are named, and *observations*, the rows, that often are, in psychological science, participants.
 
-We want to read the csv and to store it in a object that we will call `df`. In the script panel, write the following:
+We want to read the csv and to store it in an object that we will call `df`. In the script panel, write the following:
 
 ```R
 df <- read.csv("personality.csv")
@@ -147,7 +147,7 @@ If you look into the environment panel, you'll see that a line just appeared tha
 Indeed, the personality dataset consists of 1327 participants (rows/observations) and 20 variables (columns/variables). 
 
 
-**NOTE: use read.csv for non-european files and read.csv2 for some european files (french or german for example): the difference lies in the format, the former use a dot separation for decimals (`3.12`) and the latter use a comma (`3,12`)**
+**NOTE: use read.csv for non-European files and read.csv2 for some European files (French or German for example): the difference lies in the format, the former use a dot separation for decimals (`3.12`) and the latter use a comma (`3,12`)**
 
 **NOTE2: R is case-sensitive, meaning that it matters whether it is upper or lowercase. If you type rEad.csv or "persoNality.csv", it won't work. This is the cause of many errors when beginning**
 
@@ -209,22 +209,22 @@ df$Study_Level <- as.factor(df$Study_Level)
 df$Salary <- as.factor(df$Salary)
 ```
 
-Once our variable are correctly stored with the right type, let's jump to the next section.
+Once our variables are correctly stored with the right type, let's jump to the next section.
 
 ## Let's do some proper statistics
 
 ### Individual Correlations
 
-Correlations are one of the most popular statistical procedure in psychological science. To run a correlation test between the Age of the participant and the Negative Affect (the tendency to experience negative emotions such as sadness, anger, fear or anxiety)  personality trait, run the following:
+Correlations are one of the most popular statistical procedure in psychological science. To run a correlation test between the Age of the participant and the Negative Affect (the tendency to experience negative emotions such as sadness, anger, fear or anxiety) personality trait, run the following:
 
 ```R
 cor.test(df$Age, Negative_Affect)
 ```
 
-Bravo, you've run your first statistical analysis! Once you'll be used to it, doing statistics with R will be way more quicker than with any other software.
+Bravo, you've run your first statistical analysis! Once you'll be used to it, doing statistics with R will be way quicker than with any other software.
 
 
-The ouput is the following:
+The output is the following:
 
 ```
 	Pearson's product-moment correlation
@@ -239,9 +239,9 @@ sample estimates:
 -0.2000692 
 ```
 
-It gives you all the important infos: the estimated coefficient r (-0.057...), the p value, the 95% IC and the degrees of freedom.
+It gives you all the important info: the estimated coefficient r (-0.057...), the p value, the 95% IC and the degrees of freedom.
 
-It reveals that the correlation between Age and Negative Affect is significantly negative and moderate, meaning that the tendency to experience negative emotions disminish when Age increases.
+It reveals that the correlation between Age and Negative Affect is significantly negative and moderate, meaning that the tendency to experience negative emotions diminish when Age increases.
 
 ### t-tests
 
@@ -289,7 +289,7 @@ t.test(df$Negative_Affect ~ df$Sex, var.equal=TRUE)
 ```
 The output shows that the level of Negative Affect is significantly greater in Women than in Men.
 
-in R, all functions have arguments. You can get display the documentation by typing `?yourfunction()` to have more infos about what are the defaults and what can be changed.
+in R, all functions have arguments. You can get display the documentation by typing `?yourfunction()` to have more info about what are the defaults and what can be changed.
 
 
 ### Ugly box plots
@@ -320,13 +320,13 @@ Ok so what it means is that we want a subset of "df", in which the variable Mood
 
 So now we have a dataframe with only the people that did not report suffering from a mood disorder. But wait... *we've overwrite our data!* by replacing the original object df with the new subset! 
 
-**No worries, R is completely data safe. It never works directly on the data file. Unless you explicitely ask him to save something, it will never modify the external files.**
+**No worries, R is completely data safe. It never works directly on the data file. Unless you explicitly ask him to save something, it will never modify the external files.**
 So we can simply run the code again, from the beginning, whenever we want, to reload the original dataframe and do all these steps over again.
 
 
 ## Let's finish with some complex stuff
 
-It is a lie. In R, many complex algorithms and statistical procedures are as simply to run than a correlation. Your job is then to know if you applied the right method, and to correctly interpret the ouptut.
+It is a lie. In R, many complex algorithms and statistical procedures are as simply to run than a correlation. Your job is then to know if you applied the right method, and to correctly interpret the output.
 
 ### ANOVAs & post-hocs
 
@@ -384,7 +384,7 @@ fit <- lm(Negative_Affect ~ Sex * Mood_Disorder, data=df)
 summary(fit)
 ```
 
-That generates a lot of information, which I will not explain in details in the present course (see the [not available yet] course on hierarhical mixed-effects models).
+That generates a lot of information, which I will not explain in details in the present course (see the [not available yet] course on hierarchical mixed-effects models).
 
 
 ### lm() > aov(), t.test(), cor.test()
@@ -402,7 +402,7 @@ fit <- lm(Negative_Affect ~ Sex, data=df)
 summary(fit)
 t.test(Negative_Affect~Sex, data=df, var.equal=TRUE)
 ```
-As you can see, the p value is the same. Even more interesting, if you substract the two means (the men's mean from the women's mean) displayed in the t-test output, it will give you... the value of the β (the "beta", the slope), displayed under "Estimate" in the linear model output... You might argue that the `t.test()` function gives us the confidence interval for the estimate...
+As you can see, the p value is the same. Even more interesting, if you subtract the two means (the men's mean from the women's mean) displayed in the t-test output, it will give you... the value of the β (the "beta", the slope), displayed under "Estimate" in the linear model output... You might argue that the `t.test()` function gives us the confidence interval for the estimate...
 
 ```R
 confint(fit)
@@ -426,7 +426,7 @@ df$Z_Age <- scale(df$Age)
 df$Z_Negative_Affect <- scale(df$Negative_Affect)
 ```
 
-As we can see, our dataframe df is now made of 22 variables (instead of 20 as in the begining). Now, let's fit a linear model of the two new variables and compare it with the correlation of the same two original variables (not scaled).
+As we can see, our dataframe df is now made of 22 variables (instead of 20 as in the beginning). Now, let's fit a linear model of the two new variables and compare it with the correlation of the same two original variables (not scaled).
 
 ```R
 fit2 <- lm(Z_Negative_Affect ~ Z_Age, data=df)
@@ -435,9 +435,9 @@ summary(fit2)
 cor.test(df$Negative_Affect, df$Age)
 ```
 
-As you can see, the p value and the beta are almost identical (not excatly, due to some minimal imprecisions caused by the indermediate `scale()` function). Again, you can retrieve the confindence interval with the `confint()` function.
+As you can see, the p value and the beta are almost identical (not exactly, due to some minimal imprecisions caused by the intermediate `scale()` function). Again, you can retrieve the confidence interval with the `confint()` function.
 
-**As a conclusion, linear and non linear modelling is a powerful and consistent framework.**
+**As a conclusion, linear and nonlinear modelling is a powerful and consistent framework.**
 
 
 
@@ -447,12 +447,12 @@ We will finish this course by what makes the wealth of languages such as R, Pyth
 
 In R, there are three ways of installing a package. For the majority of packages.
 - Click on Tools -> Install Packages...
-- Directly use the `install.packages()` function. For example, we can download the "devtools" package by running the followind command:
+- Directly use the `install.packages()` function. For example, we can download the "devtools" package by running the following command:
 ```R
   install.packages("devtools")
 ```
 
-This package contains a function that will allow to download unregistered (often *in developpment* packages), such as the *neuropsychology* package.
+This package contains a function that will allow to download unregistered (often *in development* packages), such as the *neuropsychology* package.
 
 First, every time you start an R session, you need to *load* a package in order to use it:
 ```R
@@ -473,8 +473,9 @@ This package contains the function `cortable()` that returns a correlation matri
 ```
 
 :clap::clap::clap::clap:
+
 We're hope you're not afraid to do your basic statistics with R anymore, that you will want to discover more about this great language!
 
-Thank you !!!
+**Thank you !!!**
 
-Don't forget to contact us if you any remarks :bowtie:.
+Don't forget to contact us if you any remarks :bowtie:
