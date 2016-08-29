@@ -98,11 +98,11 @@ The syntax in R is quite consistent. You apply a function on an object. This fun
 
 You'll need two things: the language (R) and an editor (RStudio) with which you will communicate with R.
 
-### R
+- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Rlogo.png/64px-Rlogo.png" height="30">
 
 Download and install R for [MacOS](https://cran.r-project.org/bin/macosx/), [Windows](https://cran.r-project.org/bin/windows/) or [Linux](https://cran.r-project.org/bin/linux/).
 
-### RStudio
+- <img src="https://www.rstudio.com/wp-content/uploads/2014/03/blue-250.png" height="30">
 
 R is the language. But it is only a language. After installing R, you will also need an editor. The most popular is RStudio.
 
