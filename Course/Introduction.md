@@ -151,7 +151,7 @@ We want to read the csv and to store it in an object that we will call `df`. In 
 df <- read.csv("personality.csv")
 ```
 
-Then, execute this line of code by clicking on it and press CTRL + ENTER.
+Then, execute this line of code by clicking on it and pressing CTRL + ENTER.
 
 *So, what happened here?*
 
