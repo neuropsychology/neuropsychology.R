@@ -115,7 +115,7 @@ Click on [this link](https://www.rstudio.com/products/rstudio/download3/) and th
 
 #### Initialization
 
-Create a folder where you will store your project (the data, scripts, plots...). Place your data in this folder. For this training, we will use the "personality" dataset available within the neuropsychology package. So click on this link and download the dataset, which ends with .csv. This format (.csv for comma separated values) is a standard light format used in statistics. You can open those files with almost any softwares (including Excel, Statistica, etc.)
+Create a folder where you will store your project (the data, scripts, plots...). Place your data in this folder. For this training, we will use the "personality" dataset available within the neuropsychology package. So right click on [this link](https://github.com/neuropsychology/neuropsychology.R/raw/master/Course/personality.csv) and select "save under" to download the dataset, which ends with .csv. This format (.csv for comma separated values) is a standard light format used in statistics. You can open those files with almost any softwares (including Excel, Statistica, etc.)
 
 1. Once you have a folder (that you can name "Rcourse" for example), and the file personality.csv in it,
 2. Open RStudio. Click on file -> new file -> R script. Then click on "save as", navigate to your project directory and save it there, with the personality.csv file.
