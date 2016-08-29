@@ -57,7 +57,7 @@ So I started to learn. I was alone, nobody in my lab' was using it at that time,
 
 And that is, thanks to R.
 
-*Disclaimer: I am not a statistican nor a programmer at all, just a _de facto_ user interested in these.*  
+*Disclaimer: I am not a statistican nor a programmer at all, just an interested user.* 
 
 ### The Myth
 
