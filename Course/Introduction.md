@@ -490,8 +490,6 @@ This package contains the function `cortable()` that returns a correlation matri
 
 :clap::clap::clap::clap:
 
-We're hope you're not afraid to do your basic statistics with R anymore, that you will want to discover more about this great language!
+We hope you're not afraid to do your statistics with R anymore and that you are eager to discover more about this language. Believe us, it's worth it.
 
 **Thank you !!!**
-
-Don't forget to contact us if you any remarks :bowtie:
