@@ -23,7 +23,7 @@ If it doesn't work, try [updating R](https://www.google.fr/webhp?sourceid=chrome
 Once the package is installed, load the package each time you open a new R session by using the following command:
 
 ```R
-library(neuropsychology)
+library("neuropsychology")
 ```
 
 ---
@@ -51,6 +51,6 @@ You can adjust the p value by applying different corrections or change the type 
 
 Run the following commands to see the proper citation entry in APA6 or Bibtex format:
 ```R
-library(neuropsychology)
+library("neuropsychology")
 citation("neuropsychology")
 ```
