@@ -49,8 +49,8 @@ cortable <- function(df,
     print(paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")", sep = ""))
     print(table)
   }
-  if (plot.result==TRUE){
-    print(ggcorrplot(rcorr(df, type = type)$r,
+  
+  plot <- ggcorrplot(rcorr(df, type = type)$r,
                title = paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")", sep = ""),
                method = "circle",
                type="lower",
@@ -59,8 +59,11 @@ cortable <- function(df,
                p.mat = p.mat,
                insig="pch",
                legend.title="",
-               lab = FALSE))
+               lab = FALSE)
+               
+  if (plot.result==TRUE){
+    print(plot)
   }
 
-  return(as.data.frame(table))
+  return(c(as.data.frame(table), plot))
 }
