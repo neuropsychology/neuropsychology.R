@@ -65,5 +65,5 @@ cortable <- function(df,
     print(plot)
   }
   
-  return(list(df=as.data.frame(table), plot=plot))
+  return(list(table=as.data.frame(table), plot=plot))
 }
