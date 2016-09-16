@@ -14,7 +14,7 @@ APAze <- function(fit, method="boot"){
                             paste("= ", coefs$p, sep=""))))
   apa <- paste(
     paste(rownames(coefs), ": ", sep=""),
-    paste("(ƒÀ = ", as.character(coefs$Estimate), ",", sep=""),
+    paste("(Î² = ", as.character(coefs$Estimate), ",", sep=""),
     paste(" 95% CI [", as.character(coefs$CI25), ", ", sep=""),
     paste("", as.character(coefs$CI75), "]", sep=""),
     paste(", p ", p, ")", sep=""),
