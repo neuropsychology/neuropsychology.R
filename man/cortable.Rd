@@ -33,7 +33,12 @@ Dataframe
 }
 }
 \value{
-    The table in the format of a dataframe
+\item{table}{
+  The table in the format of a dataframe
+}
+\item{plot}{
+  The plot in the format of a ggplot plot
+}
 }
 \author{
 Bertolt and Dominique Makowski
@@ -45,11 +50,17 @@ df <- personality
 
 result <- cortable(df)
 
-# If you are using RStudio, you can visualize it more nicely using the following "View(cortable(df))"
+# Extract the table and the plot
+table <- result$table
+plot <- result$plot
 
-# You can also save the table as a .csv file using the following:
 
-write.csv(cortable(df), "correlation_table.csv")  # Use write.csv2 if you have trouble opening the file in excel
+# If you are using RStudio, you can visualize the table more nicely using the following "View(cortable(df))"
+
+# You can also save the table as a .csv file and the plot using the following:
+
+write.csv(table, "correlation_table.csv")  # Use write.csv2 if you have trouble opening the file in excel
+ggplot2::ggsave("mycorrplot.png", plot) # See ?ggsave for more info about the size of the plot
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
