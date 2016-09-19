@@ -1,0 +1,17 @@
+{
+    "contents" : "APAze <- function(fit, method=\"boot\"){\n\n  R2 <- r.squaredGLMM(fit)\n\n  confint <- confint(fit, method=method, nsim=1000,oldNames=F)\n  coefs <- data.frame(coef(summary(fit)))\n  coefs$CI25 <- tail(confint,nrow(coefs))[,1]\n  coefs$CI75 <- tail(confint,nrow(coefs))[,2]\n  p_list <- 2 * (1 - pnorm(abs(coefs$t.value)))\n  coefs <- subset(coefs,select=-c(Std..Error,t.value))\n  coefs <- round(coefs,2)\n  coefs$p <- round(p_list,3)\n\n  p <- ifelse(coefs$p < .001, \"< .001\",\n              ifelse(coefs$p < .01, \"< .01\",\n                     ifelse(coefs$p < .05, \"< .05\",\n                            paste(\"= \", coefs$p, sep=\"\"))))\n\n  R2_apa <- paste(\"The overall model predicting ... successfully converged and explained \",\n  substring(as.character(format(round(R2[2], 2), nsmall=2)), 3),\n  \"% of the variance of the endogen (the conditional R²). \",\n  \"The variance explained by the fixed effects was of \",\n  substring(as.character(format(round(R2[1], 2), nsmall=2)), 3),\n  \"% (the marginal R²) and the one explained by the random effects of \",\n  substring(as.character(format(round(R2[2]-R2[1], 2), nsmall=2)), 3),\n  \"%.\", sep=\"\")\n\n  apa <- paste(\n    paste(rownames(coefs), \": \", sep=\"\"),\n    paste(\"(beta = \", as.character(coefs$Estimate), \",\", sep=\"\"),\n    paste(\" 95% CI [\", as.character(coefs$CI25), \", \", sep=\"\"),\n    paste(\"\", as.character(coefs$CI75), \"]\", sep=\"\"),\n    paste(\", p \", p, \")\", sep=\"\"),\n    sep=\"\"\n  )\n  apa <- c(R2_apa, apa)\n  return(apa)\n}\n\n",
+    "created" : 1474279093360.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1788918956",
+    "id" : "20C379F4",
+    "lastKnownWriteTime" : 1474281051,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/R/APAze.R",
+    "project_path" : "R/APAze.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
