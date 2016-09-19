@@ -14,7 +14,8 @@ APAze <- function(fit, method="boot"){
   p <- ifelse(coefs$p < .001, "< .001",
               ifelse(coefs$p < .01, "< .01",
                      ifelse(coefs$p < .05, "< .05",
-                            paste("= ", coefs$p, sep=""))))
+                            ifelse(coefs$p >= 1.00, ">= 1.00",
+                            paste("= ", substring(as.character(format(round(coefs$p, 2), nsmall=2)), 2), sep="")))))
 
   R2_apa <- paste("The overall model predicting ... successfully converged and explained ",
   substring(as.character(format(round(R2[2], 2), nsmall=2)), 3),
