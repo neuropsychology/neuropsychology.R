@@ -1,11 +1,11 @@
 \name{get_numeric}
 \alias{get_numeric}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Get the numerical variables
+\title{Select numeric variables
 %%  ~~function to do ... ~~
 }
 \description{
-Subset a dataframe by keeping the numerical variables
+Subset a dataframe by keeping the numeric variables
 }
 \usage{
 get_numeric(x)

@@ -54,14 +54,11 @@ result <- cortable(df)
 table <- result$table
 plot <- result$plot
 
+# Save table
+write.csv(table, "correlation_table.csv")
 
-# If you are using RStudio, you can visualize the table more nicely using the following "View(cortable(df))"
-
-# You can also save the table as a .csv file and the plot using the following:
-
-write.csv(table, "correlation_table.csv")  # Use write.csv2 if you have trouble opening the file in excel
-ggplot2::ggsave("mycorrplot.png", plot) # See ?ggsave for more info about the size of the plot
+# Save plot
+ggplot2::ggsave("mycorrplot.png", plot)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
+
 \keyword{ ~correlation }% __ONLY ONE__ keyword per line

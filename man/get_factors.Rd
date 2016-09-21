@@ -1,7 +1,7 @@
 \name{get_factors}
 \alias{get_factors}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{A function to get the factors
+\title{Select numeric variables
 %%  ~~function to do ... ~~
 }
 \description{

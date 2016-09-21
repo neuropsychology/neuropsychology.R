@@ -1,6 +1,6 @@
 \name{theme_neuropsychology}
 \alias{theme_neuropsychology}
-\title{theme_neuropsychology}
+\title{A minimal theme for ggplot2}
 \author{Dominique Makowski}
 \usage{
 theme_neuropsychology(legend.position="right",

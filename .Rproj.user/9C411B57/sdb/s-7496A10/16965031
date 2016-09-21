@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{get_factors}\n\\alias{get_factors}\n%- Also NEED an '\\alias' for EACH other topic documented here.\n\\title{Select numeric variables\n%%  ~~function to do ... ~~\n}\n\\description{\nSubset a dataframe by keeping the factors\n}\n\\usage{\nget_factors(x)\n}\n%- maybe also 'usage' for other objects documented here.\n\\arguments{\n  \\item{x}{\nData frame\n}\n}\n\\author{\nDominique Makowski\n}\n\\examples{\nrequire(neuropsychology)\n\ndf <- personality\n\ndf_only_factors <- get_factors(df)\n}\n\n",
+    "created" : 1474462091723.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "677797627",
+    "id" : "16965031",
+    "lastKnownWriteTime" : 1474462102,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/man/get_factors.Rd",
+    "project_path" : "man/get_factors.Rd",
+    "properties" : {
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}
