@@ -13,7 +13,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 - 0.1.0: From CRAN, run the following commands in your R console:
 
 ```R
-install.packages("dplyr")
+install.packages("neuropsychology")
 library("neuropsychology")
 ```
 
