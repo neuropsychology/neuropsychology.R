@@ -1,13 +1,13 @@
 bibentry("Manual",
-	title="R package '{neuropsychology}': An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists",
+	title="Package '{neuropsychology}': An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists",
 	author=person("Dominique", "Makowski"),
 	year="2016",
-	note="(version 0.1)",
+	note="(0.1.1)",
 	url="https://github.com/neuropsychology/neuropsychology.R",
 
 	textVersion =
   	paste("Makowski, D. (2016). ",
-  			"R package 'neuropsychology': An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists (version 0.1). ",
+  			"Package 'neuropsychology': An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists (0.1.1). ",
   			"Available from https://github.com/neuropsychology/neuropsychology.R",
   			sep=""),
 
