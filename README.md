@@ -10,14 +10,14 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 ---
 ## Installation
 
-- 0.1.0: From CRAN, run the following commands in your R console:
+- To get the stable version (`0.1.0`) From CRAN, run the following commands in your R console:
 
 ```R
 install.packages("neuropsychology")
 library("neuropsychology")
 ```
 
-- to get the latest version (0.1.1), run the following:
+- To get the latest development version (`0.1.1`), run the following:
 
 ```R
 install.packages("devtools")
