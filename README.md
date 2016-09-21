@@ -15,7 +15,7 @@ Open R and paste the following commands:
 ```R
 install.packages("devtools")
 library("devtools")
-install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
+install_github("neuropsychology/neuropsychology.R")
 ```
 
 If it doesn't work, try [updating R](https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=update%20r).
