@@ -4,27 +4,30 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 |Name|neuropsychology|
 |----------------|---|
 |Status|![](https://img.shields.io/badge/status-stable-brightgreen.svg)|
-|Latest Version|![](https://img.shields.io/badge/version-0.1-brightgreen.svg)|
+|Latest Version|![](https://img.shields.io/badge/version-0.1.1-brightgreen.svg)|
 |Authors|Dominique Makowski|
 
 ---
 ## Installation
 
-Open R and paste the following commands:
+- 0.1.0: From CRAN, run the following commands in your R console:
+
+```R
+install.packages("dplyr")
+library("neuropsychology")
+```
+
+- to get the latest version (0.1.1), run the following:
 
 ```R
 install.packages("devtools")
 library("devtools")
 install_github("neuropsychology/neuropsychology.R")
+library("neuropsychology")
 ```
 
 If it doesn't work, try [updating R](https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=update%20r).
 
-Once the package is installed, load the package each time you open a new R session by using the following command:
-
-```R
-library("neuropsychology")
-```
 
 ---
 ## Feature Examples
