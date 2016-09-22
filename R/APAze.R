@@ -1,5 +1,10 @@
 APAze <- function(fit, method="boot", nsim=1000){
 
+
+# lmerMod -----------------------------------------------------------------
+
+  if(class(fit)[1]=="lmerMod"){
+    
   varsnames <- all.vars(terms(fit))
   R2 <- r.squaredGLMM(fit)
 
@@ -40,5 +45,14 @@ APAze <- function(fit, method="boot", nsim=1000){
   )
   apa <- c(R2_apa, apa)
   return(apa)
+  }
+  
+  
+
+# Else --------------------------------------------------------------------
+
+  else{
+    print(paste("Function not available yet for object of class", class(fit)[1]))
+  }
 }
 

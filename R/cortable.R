@@ -1,15 +1,31 @@
 cortable <- function(df,
                      correction="holm",
                      type="pearson",
+                     returns="table",
                      print.result=TRUE,
-                     plot.result=TRUE){
+                     plot.result=TRUE,
+                     iamaboringperson=FALSE){
   
   type <- ifelse(type == "s", "spearman",
                  ifelse(type == "spearman", "spearman","pearson"))
   
   correction_text <- ifelse(correction=="holm", "Holm-Bonferroni",
                             ifelse(correction=="fdr", "False Discovery Rate",correction))
+
   
+  if(length(names(df)) > 15 && correction=="none" && iamaboringperson==FALSE){
+    warning("We've detected that you are running a lot (> 15) of correlation tests without adjusting the p values.
+To help you in your p fishing, we've added some cool variables:
+You never know, you might find something significant and get to publish this paper!
+\nTo deactivate this, change the 'iamaboringperson' argument to TRUE.
+Cheers.")
+  df$Local_Air_Density <- rnorm(nrow(df), mean=47, sd=12)
+  df$Number_of_Reproducing_Frogs <- runif(nrow(df), max=100)
+  df$Researchers_Hapinness <- rnorm(nrow(df), mean=0, sd=1)
+  df$Aliens_Motherships_Distance <- rnorm(nrow(df), mean=50000, sd=5000)
+  df$Gods_Desctrutive_Power <- runif(nrow(df), max=10)
+    } 
+
   for (i in names(df)){
     if (is.numeric(df[,i]) == FALSE){
       df[,i] = NULL
@@ -51,7 +67,7 @@ cortable <- function(df,
   }
   
   plot <- ggcorrplot(rcorr(df, type = type)$r,
-                     title = paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")", sep = ""),
+                     title = paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")\n", sep = ""),
                      method = "circle",
                      type="lower",
                      colors=c("#E91E63", "white", "#03A9F4"),
@@ -65,5 +81,10 @@ cortable <- function(df,
     print(plot)
   }
   
-  return(list(table=as.data.frame(table), plot=plot))
+  if (returns=="table"){
+    return(table)
+  }
+  else{
+    return(plot)
+  }
 }

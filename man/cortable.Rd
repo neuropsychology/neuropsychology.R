@@ -11,48 +11,55 @@ Quickly get a correlation table with significance stars
 cortable(df,
         correction="holm",
         type="pearson",
+        returns="table",
         print.result=TRUE,
-        plot.result=TRUE)
+        plot.result=TRUE,
+        iamaboringperson=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{df}{
-Dataframe
+  A dataframe
 }
   \item{correction}{
   "none", "holm" for holm-bonferroni (default), "fdr" for False Discovery Rate
 }
   \item{type}{
-  "spearman" for Spearman's and "pearson" for Pearson's
+  "spearman" for Spearman's correlation and "pearson" for Pearson's
+}
+  \item{returns}{
+  "table" or "plot". Should the function return the table or the plot
 }
   \item{print.result}{
-  TRUE or FALSE. Should it print the table in the console.
+  TRUE or FALSE. Should it print the table in the console
 }
 \item{plot.result}{
-  TRUE or FALSE. Should it plot the result in the plotting tab.
+  TRUE or FALSE. Should it plot the result in the plotting tab
+}
+\item{iamaboringperson}{
+  Are you a boring person?
 }
 }
 \value{
-\item{table}{
-  The table in the format of a dataframe
-}
-\item{plot}{
-  The plot in the format of a ggplot plot
+\item{result}{
+  Either The table in the format of a dataframe or the plot in the format of a ggplot's plot. Depending on the "returns" argument
 }
 }
 \author{
-Bertolt and Dominique Makowski
+Dominique Makowski and Bertolt 
 }
 \examples{
 require(neuropsychology)
 
 df <- personality
 
-result <- cortable(df)
+cortable(df)
 
-# Extract the table and the plot
-table <- result$table
-plot <- result$plot
+# Extract the table
+table <- cortable(df, returns="table")
+
+# Extract the plot
+plot <- cortable(df, returns="plot")
 
 # Save table
 write.csv(table, "correlation_table.csv")
@@ -61,4 +68,4 @@ write.csv(table, "correlation_table.csv")
 ggplot2::ggsave("mycorrplot.png", plot)
 }
 
-\keyword{ ~correlation }% __ONLY ONE__ keyword per line
+\keyword{ ~correlation table }% __ONLY ONE__ keyword per line
