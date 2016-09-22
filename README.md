@@ -43,7 +43,7 @@ Available datasets are:
 
 See the description of each datasets by typing `?nameofthedataset` (ex: `?personality`) in the console.
 
-### Get a correlation table with significance stars
+### Get a correlation plot and table with significance stars
 ```R
 cortable(personality)
 ```
