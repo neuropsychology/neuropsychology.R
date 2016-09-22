@@ -18,7 +18,7 @@ install.packages("neuropsychology")
 library("neuropsychology")
 ```
 
-- To get the latest development version (`0.1.1`), run the following:
+- To get the latest development version (`0.1.2`), run the following:
 
 ```R
 install.packages("devtools")
