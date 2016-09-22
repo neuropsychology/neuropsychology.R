@@ -67,7 +67,7 @@ Cheers.")
   }
 
   plot <- ggcorrplot(rcorr(df, type = type)$r,
-                     title = paste("A ", type, "'s correlation matrix (correction: ", correction_text, ") \n", sep = ""),
+                     title = paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")\n", sep = ""),
                      method = "circle",
                      type="lower",
                      colors=c("#E91E63", "white", "#03A9F4"),
@@ -75,7 +75,8 @@ Cheers.")
                      p.mat = p.mat,
                      insig="pch",
                      legend.title="",
-                     lab = FALSE)
+                     lab=FALSE) +
+    theme(plot.title = element_text(hjust = 0.7))
 
   if (plot.result==TRUE){
     print(plot)

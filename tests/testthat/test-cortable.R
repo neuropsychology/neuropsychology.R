@@ -8,4 +8,6 @@ df <- personality
 
 cortable(df)
 
-ggsave("cortable_plot.png", cortable(df, returns="plot"), dpi=600)
+ggsave("cortable_plot.png", cortable(df, returns="plot"), dpi=600,
+       scale=1.2)
+
