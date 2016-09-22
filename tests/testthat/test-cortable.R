@@ -6,4 +6,4 @@ library(neuropsychology)
 
 df <- personality
 
-ggsave("cortable_plot.pdf", cortable(df, returns="plot"))
+ggsave("cortable_plot.png", cortable(df, returns="plot"))
