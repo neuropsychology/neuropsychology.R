@@ -1,0 +1,18 @@
+{
+    "contents" : "install.packages(\"devtools\")\nlibrary(\"devtools\")\ninstall_github(\"neuropsychology/neuropsychology.R\")\nlibrary(\"neuropsychology\")\n\ndf <- personality\n\ndf$Salary <- as.factor(df$Salary)\ndf$Study_Level <- as.factor(df$Study_Level)\n\nmatable <- cortable(df)\n\nwrite.csv2(matable, \"matable.csv\")\n\nmongraphique <- cortable(df, returns=\"plot\")\n?cortable\n",
+    "created" : 1474620876364.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3527177140",
+    "id" : "30BBC63B",
+    "lastKnownWriteTime" : 6137945804425539169,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -85,4 +85,7 @@ Cheers.")
   if (returns=="table"){
     return(table)
   }
+  else{
+    return(plot)
+  }
 }
