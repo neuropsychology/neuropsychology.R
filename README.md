@@ -68,6 +68,7 @@ Salary                            0.86   0.00   1.50  1.23     904
 Study_Level                       4.51   5.00   1.64  1.28    1327
 BMI                              22.14  21.28  15.38  3.92    1292
 Extraversion                      3.39   3.50   2.26  1.50    1327
+...
 
  Factor 
          
@@ -80,6 +81,7 @@ Mood_Disorder Absence Presence
       Count   1186.00   141.00
       Percent   89.37    10.63
 Mode Absence
+...
 ```
 
 ---
