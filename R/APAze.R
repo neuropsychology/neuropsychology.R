@@ -1,11 +1,10 @@
 APAze <- function(fit, method="boot", nsim=1000){
 
-
-# lmerMod -----------------------------------------------------------------
-
-  if(class(fit)[1]=="lmerMod"){
-    
   varsnames <- all.vars(terms(fit))
+  
+# lmerMod -----------------------------------------------------------------
+  if(class(fit)[1]=="lmerMod"){
+  
   R2 <- r.squaredGLMM(fit)
 
   confint <- confint(fit, method=method, nsim=nsim,oldNames=F)
@@ -50,7 +49,39 @@ APAze <- function(fit, method="boot", nsim=1000){
   
 
 # Else --------------------------------------------------------------------
-
+  else if(class(fit)[1]=="lm"){
+    confint <- confint(fit)
+    coefs <- data.frame(coef(summary(fit)))
+    coefs$CI25 <- tail(confint,nrow(coefs))[,1]
+    coefs$CI75 <- tail(confint,nrow(coefs))[,2]
+    p_list <- 2 * (1 - pnorm(abs(coefs$t.value)))
+    coefs <- coefs[,!(names(coefs) %in% c("Std..Error","t.value"))]
+    
+    coefs <- round(coefs,2)
+    coefs$p <- round(p_list,3)
+    
+    p <- ifelse(coefs$p < .001, "< .001",
+                ifelse(coefs$p < .01, "< .01",
+                       ifelse(coefs$p < .05, "< .05",
+                              ifelse(coefs$p >= 1.00, ">= 1.00",
+                                     paste("= ", substring(as.character(format(round(coefs$p, 2), nsmall=2)), 2), sep="")))))
+    
+    R2_apa <- paste("The overall model predicting ",
+          varsnames[1],
+          " explained ",
+          substring(as.character(format(round(summary(fit)$r.squared, 2), nsmall=2)), 3),
+          "% of the variance of the endogen (R2).", sep="")
+    apa <- paste(
+      paste(rownames(coefs), ": ", sep=""),
+      paste("(beta = ", as.character(coefs$Estimate), ",", sep=""),
+      paste(" 95% CI [", as.character(coefs$CI25), ", ", sep=""),
+      paste("", as.character(coefs$CI75), "]", sep=""),
+      paste(", p ", p, ")", sep=""),
+      sep=""
+    )
+    apa <- c(R2_apa, apa)
+    return(apa)
+  }
   else{
     print(paste("Function not available yet for object of class", class(fit)[1]))
   }

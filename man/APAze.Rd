@@ -1,11 +1,11 @@
 \name{APAze}
 \alias{APAze}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{APA6-ready output
+\title{APA6-ready output for lm and lmer objects
 %%  ~~function to do ... ~~
 }
 \description{
-Get an APA6-ready output for mixed effects and non-mixed effects linear models
+APA6-ready output for mixed effects and non-mixed effects linear models
 }
 \usage{
 APAze(fit, method="boot", nsim=1000)
@@ -16,10 +16,10 @@ APAze(fit, method="boot", nsim=1000)
 A lm() or lme4::lmer() fit
 }
 \item{method}{
-"boot" for bootstrapped CI, "Wald" for estimated. See ?confint.merMod
+"boot" for bootstrapped CI, "Wald" for estimated. Only in the case of a mixed-effect model. See ?confint.merMod
 }
 \item{nsim}{
-how many times should it bootstrap the confint (only if method = "boot")
+how many times should it bootstrap the confindence intervals (only if method = "boot")
 }
 }
 \author{
