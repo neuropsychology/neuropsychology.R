@@ -1,9 +1,8 @@
-get_factors <- function(x){
-  dfchar <- x
-  for (i in names(dfchar)){
-    if (is.numeric(dfchar[,i]) == TRUE){
-      dfchar[,i] = NULL
+get_factors <- function(df){
+  for (i in names(df)){
+    if (is.numeric(df[,i]) == TRUE){
+      df[,i] = NULL
     }
   }
-  return(dfchar)
+  return(df)
 }

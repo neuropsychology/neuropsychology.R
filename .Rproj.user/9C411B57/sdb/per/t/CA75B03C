@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{APAze}\n\\alias{APAze}\n%- Also NEED an '\\alias' for EACH other topic documented here.\n\\title{APA6-ready output for lm and lmer objects\n%%  ~~function to do ... ~~\n}\n\\description{\nAPA6-ready output for mixed effects and non-mixed effects linear models.\n}\n\\usage{\nAPAze(fit,\n      method=\"boot\",\n      nsim=1000)\n}\n%- maybe also 'usage' for other objects documented here.\n\\arguments{\n  \\item{fit}{A lm() or lme4::lmer() fit.}\n  \\item{method}{\"boot\" for bootstrapped CI, \"Wald\" for estimated. Only in the case of a mixed-effect model. See ?confint.merMod.}\n  \\item{nsim}{how many times should it bootstrap the confindence intervals (only if method = \"boot\").}\n}\n\\author{Dominique Makowski}\n\\examples{\nrequire(neuropsychology)\n\ndf <- personality\n\nfit <- lmer(Age ~ BMI + (1|Salary), data=df)\nAPAze(fit, method=\"Wald\")\n}\n",
+    "created" : 1474899824123.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2234305461",
+    "id" : "CA75B03C",
+    "lastKnownWriteTime" : 1474899830,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/man/APAze.Rd",
+    "project_path" : "man/APAze.Rd",
+    "properties" : {
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

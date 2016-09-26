@@ -1,9 +1,8 @@
-get_numeric <- function(x){
-  dfnum <- x
-  for (i in names(dfnum)){
-    if (is.numeric(dfnum[,i]) == FALSE){
-      dfnum[,i] = NULL
+get_numeric <- function(df){
+  for (i in names(df)){
+    if (is.numeric(df[,i]) == FALSE){
+      df[,i] = NULL
     }
   }
-return(dfnum)
+return(df)
 }

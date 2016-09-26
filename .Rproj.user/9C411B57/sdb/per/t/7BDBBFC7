@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{describe}\n\\alias{describe}\n\\title{Description of variables}\n\\description{Describes a vector or the columns in a matrix or data frame.}\n\\usage{\n describe(x,num.desc=c(\"mean\",\"median\",\"var\",\"sd\",\"valid.n\"),xname=NA,\n  horizontal=FALSE)\n}\n\\arguments{\n \\item{x}{A vector, matrix or data frame.}\n \\item{num.desc}{The names of the functions to apply to numeric data.}\n \\item{xname}{A name for the object \\samp{x}, mostly where this would be\n  a very long string describing its structure (e.g. if it was extracted\n  by name from a data frame).}\n \\item{horizontal}{Whether to display the results of \\samp{describe.factor}\n  across the page (TRUE) or down the page (FALSE).}\n}\n\\details{\n \\samp{describe} displays a table of descriptive statistics for numeric,\n factor and logical variables in the object \\samp{x}. The summary measures\n for numeric variables can easily be altered with the argument\n \\samp{num.desc}. Pass a character vector with the names of the\n desired summary measures and these will be displayed at the top of\n the numeric block with their results beneath them. If quantiles are\n desired, the user will have to write wrapper functions that call\n \\samp{quantile} with the appropriate type or probabilities and use\n the names of the wrapper functions in \\samp{num.desc}. Remember that\n any function called by \\samp{describe} must have an \\samp{na.rm}\n argument.\n\n Percentages are now always displayed and returned in the tables for\n factor and logical variables.\n}\n\\value{\n A list with three components:\n \\item{Numeric}{A list of the values returned from \\samp{describe.numeric}\n  for each column described.}\n \\item{Factor}{A list of the tables for each column described.}\n \\item{Logical}{A list of the tables for each column described.}\n}\n\\author{Jim Lemon}\n\\seealso{\\link{Mode}, \\link{valid.n}, \\link{describe.numeric},\n \\link{describe.factor}}\n\\examples{\n sample.df<-data.frame(sex=sample(c(\"MALE\",\"FEMALE\"),100,TRUE),\n  income=(rnorm(100)+2.5)*20000,suburb=factor(sample(1:4,100,TRUE)))\n # include the maximum values\n describe(sample.df,num.desc=c(\"mean\",\"median\",\"max\",\"var\",\"sd\",\"valid.n\"))\n # make up a function\n roughness<-function(x,na.rm=TRUE) {\n  if(na.rm) x<-x[!is.na(x)]\n  xspan<-diff(range(x))\n  return(mean(abs(diff(x))/xspan,na.rm=TRUE))\n }\n # now use it\n describe(sample.df$income,num.desc=\"roughness\",xname=\"income\")\n}\n\\keyword{misc}\n",
+    "created" : 1474898320951.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3706294547",
+    "id" : "7BDBBFC7",
+    "lastKnownWriteTime" : 1407483603,
+    "path" : "C:/Users/Dom/Desktop/prettyR/man/describe.Rd",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

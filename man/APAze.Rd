@@ -5,26 +5,20 @@
 %%  ~~function to do ... ~~
 }
 \description{
-APA6-ready output for mixed effects and non-mixed effects linear models
+APA6-ready output for mixed effects and non-mixed effects linear models.
 }
 \usage{
-APAze(fit, method="boot", nsim=1000)
+APAze(fit,
+      method="boot",
+      nsim=1000)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{fit}{
-A lm() or lme4::lmer() fit
+  \item{fit}{A lm() or lme4::lmer() fit.}
+  \item{method}{"boot" for bootstrapped CI, "Wald" for estimated. Only in the case of a mixed-effect model. See ?confint.merMod.}
+  \item{nsim}{how many times should it bootstrap the confindence intervals (only if method = "boot").}
 }
-\item{method}{
-"boot" for bootstrapped CI, "Wald" for estimated. Only in the case of a mixed-effect model. See ?confint.merMod
-}
-\item{nsim}{
-how many times should it bootstrap the confindence intervals (only if method = "boot")
-}
-}
-\author{
-Dominique Makowski
-}
+\author{Dominique Makowski}
 \examples{
 require(neuropsychology)
 

@@ -5,16 +5,14 @@
 %%  ~~function to do ... ~~
 }
 \description{
-Subset a dataframe by keeping the factors
+Subset a dataframe by keeping the factors.
 }
 \usage{
-get_factors(x)
+get_factors(df)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-Data frame
-}
+  \item{df}{A Data frame.}
 }
 \author{
 Dominique Makowski

@@ -1,0 +1,17 @@
+{
+    "contents" : "source(\"preprocessing.R\")\n\nlibrary(lme4)\nlibrary(MuMIn)\nlibrary(optimx)\nlibrary(psych)\nlibrary(\"devtools\")\ninstall_github(\"neuropsychology/neuropsychology.R\", dependencies=TRUE)\nlibrary(\"neuropsychology\")\n\nlibrary(dplyr)\ndescriptive <- df %>%\n  group_by(Intensity,Nature) %>%\n  summarise(\n    EDA_m = mean(EDA),\n    EDA_sd = sd(EDA),\n    Intensity_m = mean(Subjective_Intensity),\n    Intensity_sd = sd(Subjective_Intensity))\ndescriptive[,-c(1,2)] <- round(descriptive[,-c(1,2)],2)\ndescriptive\n\n\ndf$Nature <- factor(df$Nature,levels = c( \"Real\",\"Fiction\"))\ndf$Intensity <- factor(df$Intensity,levels = c( \"Neutral\",\"Mild\",\"High\"))\n\ndf %>% select(Age, Sex, Mood_Disorder, Antagonism, Extraversion) %>% describe()\n\n# LMM WITH EXE\nlibrary(reshape2)\ndfobs3$High <- dfobs3$d_Intensity_High\ndfobs3$Mild <- dfobs3$d_Intensity_Mild\ndfobs3$Neutral <- dfobs3$d_Intensity_Neutral\nexe <- dfobs3 %>%\n  select(Participant,Neutral,Mild,High) %>%\n  melt(variable.name = \"Intensity\", value.name = \"d_Subjective_Intensity\") %>%\n  arrange(Participant)\ndfobs3$High <- dfobs3$d_EDA_High\ndfobs3$Mild <- dfobs3$d_EDA_Mild\ndfobs3$Neutral <- dfobs3$d_EDA_Neutral\nexe_eda <- dfobs3 %>%\n  select(Participant,Neutral,Mild,High) %>%\n  melt(variable.name = \"Intensity\", value.name = \"d_EDA\") %>%\n  arrange(Participant)\nexe2 <- merge(exe,exe_eda)\nexe <- merge(dfobs3 %>%\n  select(Participant, Sex, WM_capacity, WM_manipulation, WM_updating, Stroop, TMT),\n  exe2)\nrm(exe2, exe_eda)\n\n\nexe$Intensity <- relevel(exe$Intensity, \"Neutral\")\nfit <- lm(d_Subjective_Intensity ~ Intensity / WM_updating\n              #+ (1|Participant),\n              ,data=exe)\nsummary(fit)\nAPAze(fit, \"Wald\")\n\ndfhigh$d_Intensity_High\nsummary(lm(d_Intensity_High~WM_updating, data=dfobs3))\n\n\nggplot(exe, aes(x=WM_updating, y=d_Subjective_Intensity, colour=Intensity)) +\n  geom_point() +\n  geom_smooth(method=\"lm\") +\n  theme_neuropsychology()\n# MODELS -----------------------------------------------------\nfit <- lmer(Subjective_Intensity ~ Intensity / Nature +\n              (1+Condition*Intensity|Participant) +\n              (1+Condition|Item),\n            data=df,\n            control = lmerControl(calc.derivs=F ))#,optimizer = \"optimx\",\n                                 # optCtrl = list(method = \"nlminb\")))\n\nr.squaredGLMM(fit)\n\nlibrary(lsmeans)\nlibrary(lmerTest)\nlsmeans::lsmeans(fit, pairwise~Intensity)\nplot(lmerTest::lsmeans(fit))\n\nconfint <- confint(fit, method=\"Wald\", nsim=1000,oldNames=F)\ncoefs <- data.frame(coef(summary(fit)))\ncoefs$CI25 <- tail(confint,nrow(coefs))[,1]\ncoefs$CI975 <- tail(confint,nrow(coefs))[,2]\np_list <- 2 * (1 - pnorm(abs(coefs$t.value)))\ncoefs <- subset(coefs,select=-c(Std..Error,t.value))\ncoefs <- round(coefs,2)\ncoefs$p <- round(p_list,3)\n\ncoefs\n\ndfobs <- read.csv2(\"data_grouped_by_participants.csv\")\n\n",
+    "created" : 1474798311806.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2015614762",
+    "id" : "617BE919",
+    "lastKnownWriteTime" : 1474898023,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/articles/Fiction/Fiction2/Statistics/Acta_R2.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

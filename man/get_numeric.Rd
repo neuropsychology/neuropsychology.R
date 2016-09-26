@@ -5,16 +5,14 @@
 %%  ~~function to do ... ~~
 }
 \description{
-Subset a dataframe by keeping the numeric variables
+Subset a dataframe by keeping the numeric variables.
 }
 \usage{
-get_numeric(x)
+get_numeric(df)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-Data frame
-}
+  \item{df}{A Data frame.}
 }
 \author{
 Dominique Makowski
@@ -24,5 +22,5 @@ require(neuropsychology)
 
 df <- personality
 
-df_only_factors <- get_factors(df)
+df_only_numeric <- get_numeric(df)
 }

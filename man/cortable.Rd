@@ -1,11 +1,11 @@
 \name{cortable}
 \alias{cortable}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Correlation matrix with significance stars
+\title{Correlation plot and table with significance stars
 %%  ~~function to do ... ~~
 }
 \description{
-Quickly get a correlation table with significance stars
+Get a correlation plot and table with significance stars.
 }
 \usage{
 cortable(df,
@@ -18,36 +18,21 @@ cortable(df,
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{df}{
-  A dataframe
+  \item{df}{A dataframe.}
+  \item{correction}{"none", "holm" for holm-bonferroni (default), "fdr" for False Discovery Rate.}
+  \item{type}{"spearman" for Spearman's correlation and "pearson" for Pearson's.}
+  \item{returns}{Should the function return the table or the plot.}
+  \item{print.result}{Should it print the table in the console.}
+\item{plot.result}{Should it plot the result in the plotting tab.}
+\item{iamaboringperson}{Are you?}
 }
-  \item{correction}{
-  "none", "holm" for holm-bonferroni (default), "fdr" for False Discovery Rate
-}
-  \item{type}{
-  "spearman" for Spearman's correlation and "pearson" for Pearson's
-}
-  \item{returns}{
-  "table" or "plot". Should the function return the table or the plot
-}
-  \item{print.result}{
-  TRUE or FALSE. Should it print the table in the console
-}
-\item{plot.result}{
-  TRUE or FALSE. Should it plot the result in the plotting tab
-}
-\item{iamaboringperson}{
-  Are you a boring person?
-}
+\details{
+ \samp{cortable} displays a correlation matrix or table, and a plot. Note that you can save the table under a .csv format to easily integrate it in your documents. Moreover, you can customize the plot's theme and featuers as it is in ggplot2's format.
 }
 \value{
-\item{result}{
-  Either The table in the format of a dataframe or the plot in the format of a ggplot's plot. Depending on the "returns" argument
+\item{result}{Either The table in the format of a dataframe or the plot in the format of a ggplot's plot. Depending on the "returns" argument.}
 }
-}
-\author{
-Dominique Makowski and Bertolt 
-}
+\author{Dominique Makowski and Bertolt}
 \examples{
 require(neuropsychology)
 

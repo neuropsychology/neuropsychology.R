@@ -1,13 +1,15 @@
 importFrom("utils", "tail")
 
 import(ggplot2)
-import(stats)
+
 import(ggcorrplot)
 import(lme4)
 import(MuMIn)
+import(dplyr)
 import(prettyR)
 
-importFrom(Hmisc,rcorr)
+importFrom(stats, "rnorm", "runif", "coef", "p.adjust", "pnorm", "terms")
+importFrom(Hmisc, "rcorr")
 
 exportPattern("^[[:alpha:]]+")
 

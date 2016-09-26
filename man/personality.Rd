@@ -17,10 +17,12 @@ The level of education. Should be treated as a factor. 0: Absence of Degree, 1: 
 
 }
 \format{
-1327 observations (rows)
+1327 observations (rows) and 20 variables (columns)
 }
 \examples{
-library(neuropsychology)
+require(neuropsychology)
 
 df <- personality
+
+describe(df)
 }

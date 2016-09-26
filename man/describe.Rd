@@ -5,35 +5,27 @@
 %%  ~~function to do ... ~~
 }
 \description{
-Describes a vector or the columns in a matrix or data frame
+Describes a vector or the columns in a matrix or data frame.
 }
 \usage{
 describe(df, group=NA)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{df}{
-  A dataframe, matrix or vector
+  \item{df}{A dataframe, matrix or vector.}
+  \item{group}{A string indicating the factor by which you want to separate the descriptions.}
 }
-  \item{group}{
-  A string indicating the factor by which you want to separate the descriptions
-}
+\details{
+ \samp{describe} displays a table of descriptive statistics for numeric,
+ factor and logical variables in the object \samp{df}. This function relies massively on the PrettyR package. All credits go to its authors.
 }
 \value{
 A list with three components:
-\item{Numeric}{
-  A list of the values returned for each column described
+\item{Numeric}{A list of the values returned for each column described.}
+\item{Factor}{A list of the tables for each column described.}
+\item{Logical}{A list of the tables for each column described.}
 }
-\item{Factor}{
-  A list of the tables for each column described
-}
-\item{Logical}{
-  A list of the tables for each column described
-}
-}
-\author{
-Jim Lemon (the author of  the PrettyR package) and Dominique Makowski
-}
+\author{Jim Lemon and Dominique Makowski}
 \examples{
 require(neuropsychology)
 
