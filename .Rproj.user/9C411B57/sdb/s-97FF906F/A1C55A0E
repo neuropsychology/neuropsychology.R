@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{describe}\n\\alias{describe}\n%- Also NEED an '\\alias' for EACH other topic documented here.\n\\title{Description of dataframes\n%%  ~~function to do ... ~~\n}\n\\description{\nDescribes a vector or the columns in a matrix or data frame\n}\n\\usage{\ndescribe(df, group=NA)\n}\n%- maybe also 'usage' for other objects documented here.\n\\arguments{\n  \\item{df}{\n  A dataframe, matrix or vector\n}\n  \\item{group}{\n  A string indicating the factor by which you want to separate the descriptions\n}\n}\n\\value{\nA list with three components:\n\\item{Numeric}{\n  A list of the values returned for each column described\n}\n\\item{Factor}{\n  A list of the tables for each column described\n}\n\\item{Logical}{\n  A list of the tables for each column described\n}\n}\n\\author{\nJim Lemon (the author of  the PrettyR package) and Dominique Makowski\n}\n\\examples{\nrequire(neuropsychology)\n\ndf <- personality\n\ndescribe(df)\n\ndescribe(df, group=\"Sex\")\n}\n\n%\\keyword{ ~correlation table }% __ONLY ONE__ keyword per line\n",
+    "created" : 1474897284203.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "666395128",
+    "id" : "A1C55A0E",
+    "lastKnownWriteTime" : 1474897350,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/man/describe.Rd",
+    "project_path" : "man/describe.Rd",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

@@ -1,12 +1,13 @@
 importFrom("utils", "tail")
 
 import(ggplot2)
-import(Hmisc)
 import(stats)
 import(ggcorrplot)
 import(lme4)
 import(MuMIn)
+import(prettyR)
 
+importFrom(Hmisc,rcorr)
 
 exportPattern("^[[:alpha:]]+")
 

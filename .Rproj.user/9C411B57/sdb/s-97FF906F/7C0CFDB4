@@ -1,0 +1,17 @@
+{
+    "contents" : "describe <- function(df, group=NA){\n\n  if(is.na(group)==FALSE){\n    df.list <- split(df, df[group])\n\n    n=1\n    for (i in df.list){\n      print(prettyR::describe(i, xname=levels(df[,group])[n]))\n      n=+1\n      }\n  } else{\n    print(prettyR::describe(df))\n  }\n  }\n",
+    "created" : 1474895725138.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "627465951",
+    "id" : "7C0CFDB4",
+    "lastKnownWriteTime" : 1474897687,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/R/describe.R",
+    "project_path" : "R/describe.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
