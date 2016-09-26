@@ -9,6 +9,6 @@ describe <- function(df, group=NA){
       n=+1
       }
   } else{
-    print(prettyR::describe(df))
+    print(prettyR::describe(df, horizontal=FALSE))
   }
   }
