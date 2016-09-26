@@ -53,7 +53,34 @@ You can adjust the p value by applying different corrections or change the type 
 
 <p align="legt"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable_plot.png" width="700"></p>
 
+### Describe a dataframe
+```R
+describe(personality)
+```
 
+This function prints a nice summary of your dataframe. Note that you can also group the descriptions by a factor using the "group" argument. See `?describe` for more documentation.
+
+```R
+ Numeric 
+                                  mean median    var    sd valid.n
+Age                              26.80  22.88 112.19 10.59    1302
+Salary                            0.86   0.00   1.50  1.23     904
+Study_Level                       4.51   5.00   1.64  1.28    1327
+BMI                              22.14  21.28  15.38  3.92    1292
+Extraversion                      3.39   3.50   2.26  1.50    1327
+
+ Factor 
+         
+Sex             F      M
+  Count   1053.00 274.00
+  Percent   79.35  20.65
+Mode F 
+             
+Mood_Disorder Absence Presence
+      Count   1186.00   141.00
+      Percent   89.37    10.63
+Mode Absence
+```
 
 ---
 ## Citation
