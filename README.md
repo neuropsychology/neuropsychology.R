@@ -48,7 +48,7 @@ Your patient has an IQ of 78. What does it mean? You'd like to insert a plot in 
 ```R
 assess(score=78, mean=100, sd=15)
 ```
-<p align="center"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" width="700"></p>
+<p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" width="700"></p>
 You can also compare it to a custom parent distribution if you have the data. For example, your patient is 27 and you want to see where it stands compared to the participants of the `personality` dataset. You can also change the colours. See `?assess` for more documentation.
 ```R
 assess(score=27, distribution=personality$Age)
@@ -57,7 +57,7 @@ assess(score=27, distribution=personality$Age)
 "The participant (score = 27) is positioned at 0.02 standard deviations from the mean (M = 26.8, SD = 10.59). 
 The participant's score is greater than 74.42 % of the general population."
 ```
-<p align="center"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot2.png" width="300"></p>
+<p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot2.png" width="300"></p>
 To save the plot:
 ```R
 plot <- assess(score=27, population=personality$Age)
@@ -72,7 +72,7 @@ cortable(personality)
 This function will automatically select the numeric columns of your dataframe and show a correlation table with significance stars.
 You can adjust the p value by applying different corrections or change the type of correlation type (Spearman's or Pearson's). You can also view the result in RStudio or save it as a .csv file to open it in excel. Run `?cortable` for documentation.
 
-<p align="center"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable_plot.png" width="700"></p>
+<p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable_plot.png" width="700"></p>
 
 ### Describe a dataframe
 ```R
