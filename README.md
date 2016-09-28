@@ -86,16 +86,13 @@ Extraversion    3.27   3.25 2.30 1.52     245
 
 ### Compare a patient's score with the parent population
 
-Your patient has an IQ of 78. You want to insert a plot in your report? Use the `assess()` fucntion, by comparing your patient's score with the mean and standard deviation of the IQ test (100 and 15, respecetively).
+Your patient has an IQ of 78. What does it mean? You'd like to insert a plot in your report? Use the `assess()` fucntion, that compares your patient's score with the mean and standard deviation of your test (for the IQ, 100 and 15, respecetively).
 
 ```R
 assess(score=78, mean=100, sd=15)
 ```
 
-```R
-"The participant (score = 87) is positioned at -0.87 standard deviations from the mean (M = 100.13, SD = 15.01). 
-The participant's score is smaller than 80.89 % of the general population."
-```
+<p align="legt"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" width="700"></p>
 
 You can also compare it to a specific parent distribution if you have the data. For example, your patient is 27 and you want to see where it stands compared to the participants of the `personality` dataset.
 
