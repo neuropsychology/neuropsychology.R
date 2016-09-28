@@ -10,3 +10,4 @@ figure <- assess(87, mean=100, sd=15)
 ggsave("assess_plot.png", figure, dpi=600,
        scale=1.2)
 
+# ggsave("mafigure.png", assess(87, mean=100, sd=15, language="fr", colour.line="black", colour.fill="gray"))
