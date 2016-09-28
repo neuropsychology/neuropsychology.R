@@ -60,7 +60,7 @@ The participant's score is greater than 74.42 % of the general population."
 <p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot2.png" width="300"></p>
 To save the plot:
 ```R
-plot <- assess(score=27, population=personality$Age)
+plot <- assess(score=27, distribution=personality$Age)
 ggsave("assess_plot.png", plot)
 ```
 
