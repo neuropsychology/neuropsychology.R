@@ -1,0 +1,17 @@
+{
+    "contents" : "install.packages(\"devtools\")\nlibrary(\"devtools\")\ninstall_github(\"neuropsychology/neuropsychology.R\", dependencies=TRUE)\n\nlibrary(neuropsychology)\n\ndf <- personality\n\nfigure <- assess(87, mean=100, sd=15)\n\nggsave(\"assess_plot.png\", figure, dpi=600,\n       scale=1.2)\n\n",
+    "created" : 1475054033531.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2987480715",
+    "id" : "D714965",
+    "lastKnownWriteTime" : 1475054114,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/tests/testthat/test-assess.R",
+    "project_path" : "tests/testthat/test-assess.R",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

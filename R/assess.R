@@ -31,27 +31,27 @@ assess <- function(score, mean=0, sd=1, population=NA, language="en", colour.lin
           as.character(round(mean(population),2)),
           ", ecart-type = ",
           as.character(round(sd(population),2)),
-          ")", sep=""))
-    print(paste("Le score du participant est",
-                comparison,
-                "a",
-                as.character((round(percentile*100, 2))),
-                "% de la population generale."))
+          "). ",
+          "Le score du participant est ",
+          comparison,
+          " a ",
+          as.character((round(percentile*100, 2))),
+          " % de la population generale.", sep=""))
   }else{
     print(paste("The participant (score = ",
                 score,
                 ") is positioned at ",
                 as.character(round((score-mean(population))/sd(population), 2)),
-                " standart deviations from the mean (M = ",
+                " standard deviations from the mean (M = ",
                 as.character(round(mean(population),2)),
                 ", SD = ",
                 as.character(round(sd(population),2)),
-                ")", sep=""))
-    print(paste("The participant's score is",
+                "). ",
+                "The participant's score is ",
                 comparison,
-                "than",
+                " than ",
                 as.character((round(percentile*100, 2))),
-                "% of the general population."))
+                " % of the general population.", sep=""))
   }
 return(plot)
 }

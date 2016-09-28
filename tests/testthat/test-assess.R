@@ -6,8 +6,8 @@ library(neuropsychology)
 
 df <- personality
 
-cortable(df)
+figure <- assess(87, mean=100, sd=15)
 
-ggsave("cortable_plot.png", cortable(df, returns="plot"), dpi=600,
+ggsave("assess_plot.png", figure, dpi=600,
        scale=1.2)
 
