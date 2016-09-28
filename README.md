@@ -4,7 +4,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 |Name|neuropsychology|
 |----------------|---|
 |Status|![](https://img.shields.io/badge/status-stable-brightgreen.svg)|
-|Latest Version|![](https://img.shields.io/badge/version-0.1.3-brightgreen.svg)|
+|Latest Version|![](https://img.shields.io/badge/version-0.2.0-brightgreen.svg)|
 |Authors|Dominique Makowski|
 |CRAN|https://CRAN.R-project.org/package=neuropsychology|
 |Manual|https://cran.r-project.org/web/packages/neuropsychology/neuropsychology.pdf|
@@ -18,7 +18,7 @@ install.packages("neuropsychology")
 library("neuropsychology")
 ```
 
-- To get the latest development version (`0.1.3`), run the following:
+- To get the latest development version (`0.2.0`), run the following:
 
 ```R
 install.packages("devtools")
@@ -60,29 +60,6 @@ describe(personality)
 
 This function prints a nice summary of your dataframe. Note that you can also group the descriptions by a factor using the "group" argument. See `?describe` for more documentation.
 
-```R
- Numeric 
-                                  mean median    var    sd valid.n
-Age                              26.80  22.88 112.19 10.59    1302
-Salary                            0.86   0.00   1.50  1.23     904
-Study_Level                       4.51   5.00   1.64  1.28    1327
-BMI                              22.14  21.28  15.38  3.92    1292
-Extraversion                      3.39   3.50   2.26  1.50    1327
-...
-
- Factor 
-         
-Sex             F      M
-  Count   1053.00 274.00
-  Percent   79.35  20.65
-Mode F 
-             
-Mood_Disorder Absence Presence
-      Count   1186.00   141.00
-      Percent   89.37    10.63
-Mode Absence
-...
-```
 You can also chain the selection and filtering of the variables using the power of [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html):
 
 ```R
@@ -107,7 +84,33 @@ Negative_Affect 2.65   2.60 1.74 1.32     245
 Extraversion    3.27   3.25 2.30 1.52     245
 ```
 
+### Compare a patient's score with the parent population
 
+Your patient has an IQ of 78. You want to insert a plot in your report? Use the `assess()` fucntion, by comparing your patient's score with the mean and standard deviation of the IQ test (100 and 15, respecetively).
+
+```R
+assess(score=78, mean=100, sd=15)
+```
+
+```R
+"The participant (score = 87) is positioned at -0.87 standard deviations from the mean (M = 100.13, SD = 15.01). 
+The participant's score is smaller than 80.89 % of the general population."
+```
+
+You can also compare it to a specific parent distribution if you have the data. For example, your patient is 27 and you want to see where it stands compared to the participants of the `personality` dataset.
+
+```R
+assess(score=27, population=personality$Age)
+```
+```R
+"The participant (score = 27) is positioned at NA standard deviations from the mean (M = NA, SD = NA).
+The participant's score is greater than 74.42 % of the general population."
+```
+To save the plot:
+```R
+plot <- assess(score=27, population=personality$Age)
+ggsave("assess_plot.png", plot)
+```
 ---
 ## Citation
 
