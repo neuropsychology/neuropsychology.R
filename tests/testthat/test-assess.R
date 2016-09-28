@@ -4,7 +4,7 @@ install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
 
 library(neuropsychology)
 
-df <- personality
+assess(score=27, population=personality$Age)
 
 figure <- assess(87, mean=100, sd=15)
 
