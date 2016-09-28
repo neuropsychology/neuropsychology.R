@@ -49,7 +49,7 @@ Your patient has an IQ of 78. What does it mean? You'd like to insert a plot in 
 assess(score=78, mean=100, sd=15)
 ```
 <p align="legt"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" width="700"></p>
-You can also compare it to a specific parent distribution if you have the data. For example, your patient is 27 and you want to see where it stands compared to the participants of the `personality` dataset.
+You can also compare it to a custom parent distribution if you have the data. For example, your patient is 27 and you want to see where it stands compared to the participants of the `personality` dataset.
 ```R
 assess(score=27, population=personality$Age)
 ```
