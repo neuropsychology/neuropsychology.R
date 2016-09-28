@@ -1,11 +1,11 @@
-assess <- function(score, mean=0, sd=1, population=NA, language="en", colour.line="#E91E63", colour.fill="#2196F3"){
+assess <- function(score, mean=0, sd=1, distribution=NA, language="en", colour.line="#E91E63", colour.fill="#2196F3"){
 
-  if(length(population)==1){
-    population <- rnorm(50000, mean=mean, sd=sd)
+  if(length(distribution)==1){
+    distribution <- rnorm(50000, mean=mean, sd=sd)
     given.pop <- FALSE
     }else{given.pop <- TRUE}
 
-  df <- data.frame("pop"=population)
+  df <- data.frame("pop"=distribution)
 
   plot <- ggplot(df, aes_string("pop")) +
     geom_density(fill=colour.fill, colour="white", adjust = 3, na.rm=TRUE) +
@@ -14,7 +14,7 @@ assess <- function(score, mean=0, sd=1, population=NA, language="en", colour.lin
     ylab("Distribution\n") +
     theme_neuropsychology()
 
-  percentile <- ecdf(population)
+  percentile <- ecdf(distribution)
   percentile <- percentile(score)
 
   if(percentile<0.50){
@@ -22,10 +22,10 @@ assess <- function(score, mean=0, sd=1, population=NA, language="en", colour.lin
     comparison <- "smaller"
   }else{comparison <- "greater"}
 
-  
+
   if(given.pop==TRUE){
-    mean <- round(mean(population, na.rm=TRUE),2)
-    sd <- round(sd(population, na.rm=TRUE),2)
+    mean <- round(mean(distribution, na.rm=TRUE),2)
+    sd <- round(sd(distribution, na.rm=TRUE),2)
   }else{
     mean <- mean
     sd <- sd
