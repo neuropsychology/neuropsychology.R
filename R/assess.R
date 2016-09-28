@@ -1,6 +1,9 @@
 assess <- function(score, mean=0, sd=1, population=NA, language="en", colour.line="#E91E63", colour.fill="#2196F3"){
 
-  if(length(population)==1){population <- rnorm(50000, mean=mean, sd=sd)}
+  if(length(population)==1){
+    population <- rnorm(50000, mean=mean, sd=sd)
+    given.pop <- FALSE
+    }else{given.pop <- TRUE}
 
   df <- data.frame("pop"=population)
 
@@ -19,6 +22,14 @@ assess <- function(score, mean=0, sd=1, population=NA, language="en", colour.lin
     comparison <- "smaller"
   }else{comparison <- "greater"}
 
+  
+  if(given.pop==TRUE){
+    mean <- round(mean(population, na.rm=TRUE),2)
+    sd <- round(sd(population, na.rm=TRUE),2)
+  }else{
+    mean <- mean
+    sd <- sd
+  }
   if(language=="fr"){
     if(comparison=="smaller"){
       comparison <- "inferieur"
@@ -26,11 +37,11 @@ assess <- function(score, mean=0, sd=1, population=NA, language="en", colour.lin
     print(paste("Le participant (score = ",
           score,
           ") se situe a ",
-          as.character(round((score-mean(population, na.rm=TRUE))/sd(population, na.rm=TRUE), 2)),
+          as.character(round((score-mean)/sd, 2)),
           " ecarts-types de la moyenne (M = ",
-          as.character(round(mean(population, na.rm=TRUE),2)),
+          as.character(mean),
           ", ecart-type = ",
-          as.character(round(sd(population, na.rm=TRUE),2)),
+          as.character(sd),
           "). ",
           "Le score du participant est ",
           comparison,
@@ -41,11 +52,11 @@ assess <- function(score, mean=0, sd=1, population=NA, language="en", colour.lin
     print(paste("The participant (score = ",
                 score,
                 ") is positioned at ",
-                as.character(round((score-mean(population, na.rm=TRUE))/sd(population, na.rm=TRUE), 2)),
+                as.character(round((score-mean)/sd, 2)),
                 " standard deviations from the mean (M = ",
-                as.character(round(mean(population, na.rm=TRUE),2)),
+                as.character(mean),
                 ", SD = ",
-                as.character(round(sd(population, na.rm=TRUE),2)),
+                as.character(sd),
                 "). ",
                 "The participant's score is ",
                 comparison,

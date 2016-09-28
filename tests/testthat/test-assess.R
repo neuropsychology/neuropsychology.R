@@ -1,7 +1,6 @@
 install.packages("devtools")
 library("devtools")
 install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
-
 library(neuropsychology)
 
 assess(score=27, population=personality$Age)
