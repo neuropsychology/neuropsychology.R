@@ -8,7 +8,7 @@ import(MuMIn)
 import(dplyr)
 import(prettyR)
 
-importFrom(stats, "rnorm", "runif", "coef", "p.adjust", "pnorm", "terms")
+importFrom(stats, "rnorm", "runif", "coef", "p.adjust", "pnorm", "terms", "ecdf")
 importFrom(Hmisc, "rcorr")
 
 exportPattern("^[[:alpha:]]+")

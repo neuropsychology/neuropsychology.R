@@ -1,0 +1,17 @@
+{
+    "contents" : "assess <- function(score, mean=0, sd=1, population=NA, language=\"en\", colour.line=\"#E91E63\", colour.fill=\"#2196F3\"){\n\n  if(length(population)==1){population <- rnorm(50000, mean=mean, sd=sd)}\n\n  df <- data.frame(\"pop\"=population)\n\n  plot <- ggplot(df, aes_string(\"pop\")) +\n    geom_density(fill=colour.fill, colour=\"white\", adjust = 3, na.rm=TRUE) +\n    geom_vline(xintercept=score,size = 2, color=colour.line) +\n    xlab(\"\\nScore\") +\n    ylab(\"Distribution\\n\") +\n    theme_neuropsychology()\n\n  percentile <- ecdf(population)\n  percentile <- percentile(score)\n\n  if(percentile<0.50){\n    percentile <- 1-percentile\n    comparison <- \"smaller\"\n  }else{comparison <- \"greater\"}\n\n  if(language==\"fr\"){\n    if(comparison==\"smaller\"){\n      comparison <- \"inferieur\"\n    }else{comparison <- \"superieur\"}\n    print(paste(\"Le participant (score = \",\n          score,\n          \") se situe a \",\n          as.character(round((score-mean(population))/sd(population), 2)),\n          \" ecarts-types de la moyenne (M = \",\n          as.character(round(mean(population),2)),\n          \", ecart-type = \",\n          as.character(round(sd(population),2)),\n          \")\", sep=\"\"))\n    print(paste(\"Le score du participant est\",\n                comparison,\n                \"a\",\n                as.character((round(percentile*100, 2))),\n                \"% de la population generale.\"))\n  }else{\n    print(paste(\"The participant (score = \",\n                score,\n                \") is positioned at \",\n                as.character(round((score-mean(population))/sd(population), 2)),\n                \" standart deviations from the mean (M = \",\n                as.character(round(mean(population),2)),\n                \", SD = \",\n                as.character(round(sd(population),2)),\n                \")\", sep=\"\"))\n    print(paste(\"The participant's score is\",\n                comparison,\n                \"than\",\n                as.character((round(percentile*100, 2))),\n                \"% of the general population.\"))\n  }\nreturn(plot)\n}\n",
+    "created" : 1475053109946.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1453147603",
+    "id" : "72793D33",
+    "lastKnownWriteTime" : 1475053814,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/R/assess.R",
+    "project_path" : "R/assess.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

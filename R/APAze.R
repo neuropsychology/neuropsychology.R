@@ -1,10 +1,10 @@
 APAze <- function(fit, method="boot", nsim=1000){
 
   varsnames <- all.vars(terms(fit))
-  
+
 # lmerMod -----------------------------------------------------------------
   if(class(fit)[1]=="lmerMod"){
-  
+
   R2 <- r.squaredGLMM(fit)
 
   confint <- confint(fit, method=method, nsim=nsim,oldNames=F)
@@ -45,8 +45,8 @@ APAze <- function(fit, method="boot", nsim=1000){
   apa <- c(R2_apa, apa)
   return(apa)
   }
-  
-  
+
+
 
 # Else --------------------------------------------------------------------
   else if(class(fit)[1]=="lm"){
@@ -56,16 +56,16 @@ APAze <- function(fit, method="boot", nsim=1000){
     coefs$CI75 <- tail(confint,nrow(coefs))[,2]
     p_list <- 2 * (1 - pnorm(abs(coefs$t.value)))
     coefs <- coefs[,!(names(coefs) %in% c("Std..Error","t.value"))]
-    
+
     coefs <- round(coefs,2)
     coefs$p <- round(p_list,3)
-    
+
     p <- ifelse(coefs$p < .001, "< .001",
                 ifelse(coefs$p < .01, "< .01",
                        ifelse(coefs$p < .05, "< .05",
                               ifelse(coefs$p >= 1.00, ">= 1.00",
                                      paste("= ", substring(as.character(format(round(coefs$p, 2), nsmall=2)), 2), sep="")))))
-    
+
     R2_apa <- paste("The overall model predicting ",
           varsnames[1],
           " explained ",

@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{assess}\n\\alias{assess}\n%- Also NEED an '\\alias' for EACH other topic documented here.\n\\title{Compare a given score to a parent population.\n%%  ~~function to do ... ~~\n}\n\\description{\nCompare a given score to a parent population and draws a plot.\n}\n\\usage{\nassess(score, \n\t\tmean=0, \n\t\tsd=1, \n\t\tpopulation=NA, \n\t\tlanguage=\"en\",\n\t\tcolour.line=\"#E91E63\",\n\t\tcolour.fill=\"#2196F3\")\n}\n%- maybe also 'usage' for other objects documented here.\n\\arguments{\n  \\item{score}{The participant's score.}\n  \\item{mean}{The general population's mean.}\n  \\item{sd}{The general population's standart deviation.}\n  \\item{population}{Your own vector of parent distribution (if you feed in a vector, it will of course compute new values for the mean and sd).}\n  \\item{language}{\"en\" or \"fr\".}\n  \\item{colour.line}{The colour of the vertical line.}\n  \\item{colour.fill}{\"The colour of the density plot.}\n}\n\\value{\nA ggplot2 plot.\n}\n\\author{Dominique Makowski}\n\\examples{\nrequire(neuropsychology)\n\nassess(3.4, mean=2.5, sd=1.2)\n\ndf <- personality\nassess(24, population=df$Age)\n}\n\n%\\keyword{ ~correlation table }% __ONLY ONE__ keyword per line\n",
+    "created" : 1475053381687.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1165962190",
+    "id" : "9B97FE20",
+    "lastKnownWriteTime" : 1474978635,
+    "path" : "D:/Programs/Dropbox/RECHERCHE/DOCUMENTS/R_packages/neuropsychology.R/man/assess.Rd",
+    "project_path" : "man/assess.Rd",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}
