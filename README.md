@@ -100,7 +100,7 @@ You can also compare it to a specific parent distribution if you have the data. 
 assess(score=27, population=personality$Age)
 ```
 ```R
-"The participant (score = 27) is positioned at NA standard deviations from the mean (M = NA, SD = NA).
+"The participant (score = 27) is positioned at 0.02 standard deviations from the mean (M = 26.8, SD = 10.59). 
 The participant's score is greater than 74.42 % of the general population."
 ```
 To save the plot:
