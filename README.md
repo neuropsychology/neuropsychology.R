@@ -37,31 +37,47 @@ If it doesn't work, try [updating R](https://www.google.fr/webhp?sourceid=chrome
 ```R
 df <- personality
 ```
-
 Available datasets are:
 - personality
 
-See the description of each datasets by typing `?nameofthedataset` (ex: `?personality`) in the console.
+See the description of each dataset by typing `?nameofthedataset` (e.g., `?personality`) in the console.
+
+### Compare a patient's score with the parent population
+Your patient has an IQ of 78. What does it mean? You'd like to insert a plot in your report? Use the `assess()` fucntion, that compares your patient's score with the mean and standard deviation of your test (for the IQ, 100 and 15, respecetively).
+
+```R
+assess(score=78, mean=100, sd=15)
+```
+<p align="legt"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" width="700"></p>
+You can also compare it to a specific parent distribution if you have the data. For example, your patient is 27 and you want to see where it stands compared to the participants of the `personality` dataset.
+```R
+assess(score=27, population=personality$Age)
+```
+```R
+"The participant (score = 27) is positioned at 0.02 standard deviations from the mean (M = 26.8, SD = 10.59). 
+The participant's score is greater than 74.42 % of the general population."
+```
+To save the plot:
+```R
+plot <- assess(score=27, population=personality$Age)
+ggsave("assess_plot.png", plot)
+```
+You can also change the colours. See `?assess` for more documentation.
 
 ### Get a correlation plot and table with significance stars
 ```R
 cortable(personality)
 ```
-
 This function will automatically select the numeric columns of your dataframe and show a correlation table with significance stars.
 You can adjust the p value by applying different corrections or change the type of correlation type (Spearman's or Pearson's). You can also view the result in RStudio or save it as a .csv file to open it in excel. Run `?cortable` for documentation.
-
 <p align="legt"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable_plot.png" width="700"></p>
-
 ### Describe a dataframe
 ```R
 describe(personality)
 ```
-
 This function prints a nice summary of your dataframe. Note that you can also group the descriptions by a factor using the "group" argument. See `?describe` for more documentation.
 
 You can also chain the selection and filtering of the variables using the power of [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html):
-
 ```R
 personality %>%
   filter(Mood_Disorder=="Absence") %>%
@@ -83,36 +99,8 @@ Antagonism      2.37   2.20 1.56 1.25     245
 Negative_Affect 2.65   2.60 1.74 1.32     245
 Extraversion    3.27   3.25 2.30 1.52     245
 ```
-
-### Compare a patient's score with the parent population
-
-Your patient has an IQ of 78. What does it mean? You'd like to insert a plot in your report? Use the `assess()` fucntion, that compares your patient's score with the mean and standard deviation of your test (for the IQ, 100 and 15, respecetively).
-
-```R
-assess(score=78, mean=100, sd=15)
-```
-
-<p align="legt"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" width="700"></p>
-
-You can also compare it to a specific parent distribution if you have the data. For example, your patient is 27 and you want to see where it stands compared to the participants of the `personality` dataset.
-
-```R
-assess(score=27, population=personality$Age)
-```
-```R
-"The participant (score = 27) is positioned at 0.02 standard deviations from the mean (M = 26.8, SD = 10.59). 
-The participant's score is greater than 74.42 % of the general population."
-```
-To save the plot:
-```R
-plot <- assess(score=27, population=personality$Age)
-ggsave("assess_plot.png", plot)
-```
-You can also change the colours. See `?assess` for more documentation.
-
 ---
 ## Citation
-
 Run the following commands to see the proper citation entry in APA6 or Bibtex format:
 ```R
 library("neuropsychology")
