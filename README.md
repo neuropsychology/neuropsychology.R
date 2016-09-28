@@ -108,6 +108,8 @@ To save the plot:
 plot <- assess(score=27, population=personality$Age)
 ggsave("assess_plot.png", plot)
 ```
+You can also change the colours. See `?assess` for more documentation.
+
 ---
 ## Citation
 
