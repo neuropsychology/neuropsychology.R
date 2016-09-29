@@ -57,7 +57,7 @@ assess(score=27, distribution=personality$Age)
 "The participant (score = 27) is positioned at 0.02 standard deviations from the mean (M = 26.8, SD = 10.59). 
 The participant's score is greater than 74.42 % of the general population."
 ```
-<p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot2.png" width="300"></p>
+<p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot2.png" width="700"></p>
 To save the plot:
 ```R
 plot <- assess(score=27, distribution=personality$Age)
