@@ -2,7 +2,8 @@ Package: neuropsychology
 Type: Package
 Title: An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 Version: 0.2.0
-Authors@R: c(person("Dominique", "Makowski", email="dom.makowski@gmail.com", role=c("aut", "cre")))
+Authors@R: c(person("Dominique", "Makowski", email="dom.makowski@gmail.com", role=c("aut", "cre")),
+            person("Phillip","Alday",email="phillip.alday@unisa.edu.au",role=c("ctb")))
 Author: Dominique Makowski [aut, cre]
 URL: https://github.com/neuropsychology/neuropsychology.R
 Date: 2016-09-21
@@ -11,6 +12,7 @@ Description: An R package containing datasets and some statistical functions use
 License: MIT + file LICENSE
 Depends: R (>= 3.3.0), ggplot2 (>= 2.0.0), lme4 (>= 1.1.0), dplyr (>= 0.5.0)
 Imports: prettyR (>= 2.2.0), ggcorrplot (>= 0.1.0), Hmisc (>= 3.15), MuMIn (>= 1.15.6)
+Suggests: lmerTest
 LazyData: TRUE
 LazyLoad: yes
 Encoding: UTF-8

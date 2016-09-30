@@ -8,11 +8,21 @@ APAze <- function(fit, method="boot", nsim=1000){
   R2 <- r.squaredGLMM(fit)
 
   confint <- confint(fit, method=method, nsim=nsim,oldNames=F)
-  coefs <- data.frame(coef(summary(fit)))
+  if(!is.null(ddf) & inherits(fit,"merModLmerTest")){
+    coefs <- data.frame(coef(summary(fit,ddf=ddf)))
+  }else{
+    coefs <- data.frame(coef(summary(fit)))
+  }
   coefs$CI25 <- tail(confint,nrow(coefs))[,1]
   coefs$CI75 <- tail(confint,nrow(coefs))[,2]
-  p_list <- 2 * (1 - pnorm(abs(coefs$t.value)))
-  coefs <- coefs[,!(names(coefs) %in% c("Std..Error","t.value"))]
+  if(inherits(fit,"glmerMod")){
+    p_list <- coefs$Pr...z..
+  } else if("Pr...t.." %in% colnames(coefs)){
+    p_list <- coefs$Pr...t..
+  }else{
+    p_list <- 2 * (1 - pnorm(abs(coefs$t.value)))
+  }
+  coefs <- coefs[,!(names(coefs) %in% c("Std..Error","t.value","z.value"))]
 
   coefs <- round(coefs,2)
   coefs$p <- round(p_list,3)
