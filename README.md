@@ -103,6 +103,12 @@ Negative_Affect 2.65   2.60 1.74 1.32     245
 Extraversion    3.27   3.25 2.30 1.52     245
 ```
 ---
+## Contribute
+Want to add features? Correct bugs? You're more than welcome to contribute :)
+
+Check this tutorial () to see how to contribute on github.
+
+---
 ## Citation
 Run the following commands to see the proper citation entry in APA6 or Bibtex format:
 ```R
