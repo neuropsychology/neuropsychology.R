@@ -1,4 +1,4 @@
-APAze <- function(fit, method="boot", nsim=1000, ddf=NULL){
+APAze <- function(fit, method="boot", nsim=1000, add.stars=TRUE, ddf=NULL){
 
   varsnames <- all.vars(terms(fit))
 
@@ -41,7 +41,7 @@ APAze <- function(fit, method="boot", nsim=1000, ddf=NULL){
 #                      ifelse(coefs$p < .05, "< .05",
 #                             ifelse(coefs$p >= 1.00, ">= 1.00",
 #                             paste("= ", substring(as.character(format(round(coefs$p, 2), nsmall=2)), 2), sep="")))))
-  p <- format_p(p_list)
+  p <- format_p(p_list, add.stars=add.stars)
 
 
 
@@ -87,7 +87,7 @@ APAze <- function(fit, method="boot", nsim=1000, ddf=NULL){
 #                        ifelse(coefs$p < .05, "< .05",
 #                               ifelse(coefs$p >= 1.00, ">= 1.00",
 #                                      paste("= ", substring(as.character(format(round(coefs$p, 2), nsmall=2)), 2), sep="")))))
-    p <- format_p(p_list)
+    p <- format_p(p_list, add.stars=add.stars)
 
     R2_apa <- paste("The overall model predicting ",
           varsnames[1],
