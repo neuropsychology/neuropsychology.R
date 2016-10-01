@@ -1,37 +1,49 @@
-APAze <- function(fit, method="boot", nsim=1000){
+APAze <- function(fit, method="boot", nsim=1000, ddf=NULL){
 
   varsnames <- all.vars(terms(fit))
 
-# lmerMod -----------------------------------------------------------------
-  if(class(fit)[1]=="lmerMod"){
+# lme4 and lmerTest -----------------------------------------------------------------
+  if(class(fit)[1]=="lmerMod" | class(fit)[1]=="merModLmerTest"){
 
-  R2 <- r.squaredGLMM(fit)
+  R2 <- MuMIn::r.squaredGLMM(fit)
+  confint <- confint(fit, method=method, nsim=nsim, oldNames=F)
+  # It would be nice to have this to automatically switch to Wald estimation
+  # of confint in the case of eventual warnings. But I have no idea how
+  # to catch those...
 
-  confint <- confint(fit, method=method, nsim=nsim,oldNames=F)
-  if(!is.null(ddf) & inherits(fit,"merModLmerTest")){
-    coefs <- data.frame(coef(summary(fit,ddf=ddf)))
+
+
+  if(!is.null(ddf) & inherits(fit, "merModLmerTest")){
+    coefs <- data.frame(coef(summary(fit, ddf=ddf)))
   }else{
     coefs <- data.frame(coef(summary(fit)))
   }
+
   coefs$CI25 <- tail(confint,nrow(coefs))[,1]
   coefs$CI75 <- tail(confint,nrow(coefs))[,2]
-  if(inherits(fit,"glmerMod")){
+
+  if(inherits(fit, "glmerMod")){
     p_list <- coefs$Pr...z..
   } else if("Pr...t.." %in% colnames(coefs)){
     p_list <- coefs$Pr...t..
   }else{
     p_list <- 2 * (1 - pnorm(abs(coefs$t.value)))
   }
+
   coefs <- coefs[,!(names(coefs) %in% c("Std..Error","t.value","z.value"))]
 
   coefs <- round(coefs,2)
-  coefs$p <- round(p_list,3)
 
-  p <- ifelse(coefs$p < .001, "< .001",
-              ifelse(coefs$p < .01, "< .01",
-                     ifelse(coefs$p < .05, "< .05",
-                            ifelse(coefs$p >= 1.00, ">= 1.00",
-                            paste("= ", substring(as.character(format(round(coefs$p, 2), nsmall=2)), 2), sep="")))))
+  # coefs$p <- round(p_list,3)
+#
+#   p <- ifelse(coefs$p < .001, "< .001",
+#               ifelse(coefs$p < .01, "< .01",
+#                      ifelse(coefs$p < .05, "< .05",
+#                             ifelse(coefs$p >= 1.00, ">= 1.00",
+#                             paste("= ", substring(as.character(format(round(coefs$p, 2), nsmall=2)), 2), sep="")))))
+  p <- format_p(p_list)
+
+
 
   R2_apa <- paste("The overall model predicting ",
   varsnames[1],
@@ -68,13 +80,14 @@ APAze <- function(fit, method="boot", nsim=1000){
     coefs <- coefs[,!(names(coefs) %in% c("Std..Error","t.value"))]
 
     coefs <- round(coefs,2)
-    coefs$p <- round(p_list,3)
-
-    p <- ifelse(coefs$p < .001, "< .001",
-                ifelse(coefs$p < .01, "< .01",
-                       ifelse(coefs$p < .05, "< .05",
-                              ifelse(coefs$p >= 1.00, ">= 1.00",
-                                     paste("= ", substring(as.character(format(round(coefs$p, 2), nsmall=2)), 2), sep="")))))
+#     coefs$p <- round(p_list,3)
+#
+#     p <- ifelse(coefs$p < .001, "< .001",
+#                 ifelse(coefs$p < .01, "< .01",
+#                        ifelse(coefs$p < .05, "< .05",
+#                               ifelse(coefs$p >= 1.00, ">= 1.00",
+#                                      paste("= ", substring(as.character(format(round(coefs$p, 2), nsmall=2)), 2), sep="")))))
+    p <- format_p(p_list)
 
     R2_apa <- paste("The overall model predicting ",
           varsnames[1],
