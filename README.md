@@ -106,7 +106,7 @@ Extraversion    3.27   3.25 2.30 1.52     245
 ## Contribute
 Want to add features? Correct bugs? You're more than welcome to contribute :)
 
-Check this tutorial ([french](https://github.com/neuropsychology/Courses/blob/master/Programing/Github/Contribute-FR.md) or [english](https://github.com/neuropsychology/Courses/blob/master/Programing/Github/Contribute-EN.md)) to see how to submit your changes on github.
+Check this tutorial ([French](https://github.com/neuropsychology/Courses/blob/master/Programing/Github/Contribute-FR.md) or [English](https://github.com/neuropsychology/Courses/blob/master/Programing/Github/Contribute-EN.md)) to see how to submit your changes on github.
 
 ---
 ## Citation
