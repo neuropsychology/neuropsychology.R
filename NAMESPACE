@@ -9,6 +9,7 @@ import(dplyr)
 import(prettyR)
 import(png)
 import(tm)
+import(wordcloud2)
 
 importFrom(stats, "rnorm", "runif", "coef", "p.adjust", "pnorm", "terms", "ecdf")
 importFrom(Hmisc, "rcorr")

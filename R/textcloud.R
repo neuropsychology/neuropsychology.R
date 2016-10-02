@@ -1,6 +1,6 @@
-textcloud <- function(words=NULL,
+textcloud <- function(pdf.file=".",
+                      words=NULL,
                       frequency=NULL,
-                      pdf.file=NULL,
                       word.length.min=4, 
                       word.length.max=Inf,
                       freq.min=10,
@@ -16,7 +16,7 @@ textcloud <- function(words=NULL,
       data$freq <- frequency
     }
   }else if(is.null(pdf.file)==FALSE){
-    data <- extract_type(file)
+    data <- extract_text(pdf.file)
   }else{
     print("No correct input. Check ?textcloud")
   }
