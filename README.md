@@ -4,7 +4,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 |Name|neuropsychology|
 |----------------|---|
 |Status|![](https://img.shields.io/badge/status-stable-brightgreen.svg)|
-|Latest Version|![](https://img.shields.io/badge/version-0.2.1-brightgreen.svg)|
+|Latest Version|![](https://img.shields.io/badge/version-0.2.2-brightgreen.svg)|
 |Authors|[Dominique Makowski](https://biblineuropsy.files.wordpress.com/2016/09/cv_dominiquemakowski.pdf)|
 |CRAN|https://CRAN.R-project.org/package=neuropsychology|
 |Manual|https://cran.r-project.org/web/packages/neuropsychology/neuropsychology.pdf|
