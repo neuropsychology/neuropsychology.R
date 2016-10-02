@@ -7,9 +7,12 @@ import(lme4)
 import(MuMIn)
 import(dplyr)
 import(prettyR)
+import(png)
+import(tm)
 
 importFrom(stats, "rnorm", "runif", "coef", "p.adjust", "pnorm", "terms", "ecdf")
 importFrom(Hmisc, "rcorr")
+
 
 exportPattern("^[[:alpha:]]+")
 
