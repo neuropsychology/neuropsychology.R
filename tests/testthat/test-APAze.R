@@ -3,9 +3,11 @@ library("devtools")
 install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
 library(neuropsychology)
 
-APAze(glm(Age~Mood_Disorder,data=personality))
 
-APAze(lm(Age~BMI,data=personality))
+fit <- glm(Age~Mood_Disorder,data=personality)
+APAze(fit)
+fit <- lm(Age~BMI,data=personality)
+APAze(fit)
 
 library(lmerTest)
 fit_lmer <- lme4::lmer(Age~BMI + (1|Sex), data=personality)
