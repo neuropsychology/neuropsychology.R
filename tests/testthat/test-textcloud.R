@@ -4,3 +4,4 @@ install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
 library(neuropsychology)
 
 textcloud()
+textcloud(image="brain1")
