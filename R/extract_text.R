@@ -4,7 +4,7 @@ extract_text <- function(files=".",
                           freq.min=10,
                           freq.max=Inf){
 
-  Rpdf <- readPDF(control = list(text = "-layout"))
+  Rpdf <- tm::readPDF(control = list(text = "-layout"))
   if(grepl(".pdf",files)){
     files <- c(files)
   }
@@ -24,6 +24,7 @@ extract_text <- function(files=".",
   words <- findFreqTerms(text_clean, lowfreq=freq.min, highfreq=freq.max)
   words <- as.data.frame(inspect(text_clean[words,]))
   data <- data.frame(word=rownames(words),freq=rowSums(words))
-  data <- arrange(data, desc(data$freq))
+  order <- desc(data$freq)
+  data <- arrange(data, order)
 }
 

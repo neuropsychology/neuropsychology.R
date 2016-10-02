@@ -23,15 +23,15 @@ textcloud <- function(pdf.file=".",
 
   if(is.null(image)==FALSE){
     png::writePNG(neuropsychology::masks[[image]], "img.png")
-  }
-  cloud <- wordcloud2::wordcloud2(data=data,
-                      size=text.size,
-                      figPath="img.png")
-
-  if(is.null(image)==FALSE){
+    cloud <- wordcloud2::wordcloud2(data=data,
+                                    size=text.size,
+                                    figPath="img.png")
     unlink("img.png")
-    }
+  }else{
+    cloud <- wordcloud2::wordcloud2(data=data,
+                                    size=text.size)
+  }
 
-  return(cloud)
+return(cloud)
 }
 
