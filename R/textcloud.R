@@ -22,9 +22,9 @@ textcloud <- function(pdf.file=".",
   }
 
   if(is.null(image)==FALSE){
-    writePNG(masks[image], "img.png")
+    png::writePNG(masks[image], "img.png")
   }
-  cloud <- wordcloud2(data=text, 
+  cloud <- wordcloud2:wordcloud2(data=text, 
                       size=text.size,
                       figPath=image)
   

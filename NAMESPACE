@@ -1,19 +1,17 @@
 importFrom("utils", "tail")
 
 import(ggplot2)
-
-import(ggcorrplot)
 import(lme4)
-import(MuMIn)
 import(dplyr)
-import(prettyR)
-import(png)
 import(tm)
-import(wordcloud2)
 
+importFrom(ggcorrplot, "ggcorrplot")
+importFrom(MuMIn, "r.squaredGLMM")
+importFrom(prettyR, "describe")
 importFrom(stats, "rnorm", "runif", "coef", "p.adjust", "pnorm", "terms", "ecdf")
 importFrom(Hmisc, "rcorr")
-
+importFrom(wordcloud2, "wordcloud2")
+importFrom(png, "writePNG")
 
 exportPattern("^[[:alpha:]]+")
 

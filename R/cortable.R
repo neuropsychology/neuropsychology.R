@@ -66,7 +66,7 @@ Cheers.")
     print(table)
   }
 
-  plot <- ggcorrplot(rcorr(df, type = type)$r,
+  plot <- ggcorrplot::ggcorrplot(rcorr(df, type = type)$r,
                      title = paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")\n", sep = ""),
                      method = "circle",
                      type="lower",
