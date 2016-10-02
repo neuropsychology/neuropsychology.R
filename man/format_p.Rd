@@ -21,5 +21,7 @@ format_p(p,
 }
 \author{Dominique Makowski}
 \examples{
+require(neuropsychology)
+
 format_p(0.07)
 }
