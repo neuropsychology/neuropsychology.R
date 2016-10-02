@@ -3,5 +3,5 @@ library("devtools")
 install_github("neuropsychology/neuropsychology.R", dependencies=TRUE)
 library(neuropsychology)
 
-textcloud()
-textcloud(image="brain1")
+textcloud(image=NULL)
+textcloud(image="head2")

@@ -9,7 +9,7 @@ Scrap text from PDFs.
 }
 \usage{
 extract_text(files=".",
-              word.length.min=4, 
+              word.length.min=4,
               word.length.max=Inf,
               freq.min=10,
               freq.max=Inf)
@@ -29,5 +29,5 @@ extract_text(files=".",
 \examples{
 require(neuropsychology)
 
-text <- extract_text()
+# text <- extract_text() # In a folder containg some PDFs.
 }

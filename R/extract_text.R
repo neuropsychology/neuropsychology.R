@@ -1,5 +1,5 @@
-extract_text <- function(files=".", 
-                          word.length.min=4, 
+extract_text <- function(files=".",
+                          word.length.min=4,
                           word.length.max=Inf,
                           freq.min=10,
                           freq.max=Inf){
@@ -20,10 +20,10 @@ extract_text <- function(files=".",
                                                        # stemming = TRUE
                                                        # bounds = list(global = c(2, Inf))
   ))
-  
+
   words <- findFreqTerms(text_clean, lowfreq=freq.min, highfreq=freq.max)
   words <- as.data.frame(inspect(text_clean[words,]))
   data <- data.frame(word=rownames(words),freq=rowSums(words))
-  data <- arrange(data, desc(freq))
+  data <- arrange(data, desc(data$freq))
 }
 

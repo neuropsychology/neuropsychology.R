@@ -1,13 +1,13 @@
 textcloud <- function(pdf.file=".",
                       words=NULL,
                       frequency=NULL,
-                      word.length.min=4, 
+                      word.length.min=4,
                       word.length.max=Inf,
                       freq.min=10,
                       freq.max=Inf,
-                      image=NULL,
+                      image="brain1",
                       text.size=0.5){
-  
+
   if(is.null(words)==FALSE){
     data <- data.frame(word=words)
     if(is.null(frequency)){
@@ -22,17 +22,16 @@ textcloud <- function(pdf.file=".",
   }
 
   if(is.null(image)==FALSE){
-    png::writePNG(masks[image], "img.png")
+    png::writePNG(neuropsychology::masks[[image]], "img.png")
   }
-  cloud <- wordcloud2:wordcloud2(data=text, 
+  cloud <- wordcloud2::wordcloud2(data=data,
                       size=text.size,
-                      figPath=image)
-  
+                      figPath="img.png")
+
   if(is.null(image)==FALSE){
     unlink("img.png")
     }
-  
+
   return(cloud)
 }
 
-  
