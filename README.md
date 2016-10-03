@@ -1,6 +1,9 @@
 # neuropsychology
 An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 
+<p align="center"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" width="200"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable_plot.png" width="200"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot2.png" width="200"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud.png" width="200"></p>
+
+---
 |Name|neuropsychology|
 |----------------|---|
 |Status|![](https://img.shields.io/badge/status-stable-brightgreen.svg)|
@@ -8,6 +11,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 |Authors|Dominique Makowski|
 |CRAN|https://CRAN.R-project.org/package=neuropsychology|
 |Manual|https://cran.r-project.org/web/packages/neuropsychology/neuropsychology.pdf|
+
 ---
 ## Installation
 
