@@ -3,13 +3,13 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 
 <p align="left">
 <a href="https://github.com/neuropsychology/neuropsychology.R/blob/master/README.md#compare-a-patients-score-with-the-parent-population">
-<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" height="140"></a>
+<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" height="150"></a>
 <a href="https://github.com/neuropsychology/neuropsychology.R/blob/master/README.md#a-brain--or-head-shaped-wordcloud">
-<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud1.png" height="140"></a>
+<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud1.png" height="150"></a>
 <a href="https://github.com/neuropsychology/neuropsychology.R/blob/master/README.md#get-a-correlation-plot-and-table-with-significance-stars">
-<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable_plot.png" height="140"></a>
+<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable_plot.png" height="150"></a>
 <a href="https://github.com/neuropsychology/neuropsychology.R/blob/master/README.md#a-brain--or-head-shaped-wordcloud">
-<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud2.png" height="140"></a>
+<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud2.png" height="150"></a>
 </p>
 
 
