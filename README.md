@@ -102,6 +102,16 @@ Antagonism      2.37   2.20 1.56 1.25     245
 Negative_Affect 2.65   2.60 1.74 1.32     245
 Extraversion    3.27   3.25 2.30 1.52     245
 ```
+
+### A brain- or head-shaped wordcloud
+First, create a folder with several PDFs (journal articles for example, but you can also use your own specific word list). Add an R script in it and run the following code.
+```R
+braincloud()
+```
+
+<p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud.png" width="700"></p>
+
+
 ---
 ## Contribute
 Want to add features? Correct bugs? You're more than welcome to contribute :)
