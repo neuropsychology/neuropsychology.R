@@ -59,7 +59,7 @@ See the description of each dataset by typing `?nameofthedataset` (e.g., `?perso
 First, create a folder with several PDFs (journal articles for example, but you can also use your own specific word list). Add an R script in it and run one of the following:
 ```R
 braincloud()
-braincloud(image="brain1", text.size = 0.6, colours.replicate=F)
+braincloud(image="brain1", text.size=0.6, colours.replicate=FALSE)
 ```
 
 <p align="left">
