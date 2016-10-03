@@ -11,10 +11,10 @@ Ncolours <- function(colours="all"){
                     Ncolours_Greys)
   
   if(tolower(colours)=="all"){
-    return(Ncolours_Reds)
+    return(Ncolours_All)
   }
   else if(tolower(colours)=="reds"){
-    return(Ncolours_All)
+    return(Ncolours_Reds)
   }
   else if(tolower(colours)=="blues"){
     return(Ncolours_Blues)
