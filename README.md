@@ -16,7 +16,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 |Name|neuropsychology|
 |----------------|---|
 |Status|![](https://img.shields.io/badge/status-stable-brightgreen.svg)|
-|Latest Version|![](https://img.shields.io/badge/version-0.2.4-brightgreen.svg)|
+|Latest Version|![](https://img.shields.io/badge/version-0.2.5-brightgreen.svg)|
 |Authors|[Dominique Makowski](https://biblineuropsy.files.wordpress.com/2016/09/cv_dominiquemakowski.pdf)|
 |CRAN|https://CRAN.R-project.org/package=neuropsychology|
 |Manual|https://cran.r-project.org/web/packages/neuropsychology/neuropsychology.pdf|
@@ -31,7 +31,7 @@ install.packages("neuropsychology")
 library("neuropsychology")
 ```
 
-- To get the latest development version (`0.2.4`), run the following:
+- To get the latest development version (`0.2.5`), run the following:
 
 ```R
 install.packages("devtools")
