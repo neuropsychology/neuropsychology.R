@@ -8,7 +8,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 |----------------|---|
 |Status|![](https://img.shields.io/badge/status-stable-brightgreen.svg)|
 |Latest Version|![](https://img.shields.io/badge/version-0.2.4-brightgreen.svg)|
-|Authors|Dominique Makowski|
+|Authors|[Dominique Makowski](https://biblineuropsy.files.wordpress.com/2016/09/cv_dominiquemakowski.pdf)|
 |CRAN|https://CRAN.R-project.org/package=neuropsychology|
 |Manual|https://cran.r-project.org/web/packages/neuropsychology/neuropsychology.pdf|
 
@@ -84,7 +84,7 @@ describe(personality)
 ```
 This function prints a nice summary of your dataframe. Note that you can also group the descriptions by a factor using the "group" argument. See `?describe` for more documentation.
 
-You can also pipe the selection and filtering process using the power of dplyr:
+You can also pipe the selection and filtering process using the power of [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html):
 ```R
 personality %>%
   filter(Mood_Disorder=="Absence") %>%
