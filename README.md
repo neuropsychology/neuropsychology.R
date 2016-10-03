@@ -80,7 +80,7 @@ describe(personality)
 ```
 This function prints a nice summary of your dataframe. Note that you can also group the descriptions by a factor using the "group" argument. See `?describe` for more documentation.
 
-You can also chain the selection and filtering of the variables using the power of [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html):
+You can also pipe the selection and filtering process using the power of dplyr:
 ```R
 personality %>%
   filter(Mood_Disorder=="Absence") %>%
