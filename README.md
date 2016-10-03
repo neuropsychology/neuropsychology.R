@@ -117,9 +117,10 @@ Extraversion    3.27   3.25 2.30 1.52     245
 ```
 
 ### A brain- or head-shaped wordcloud
-First, create a folder with several PDFs (journal articles for example, but you can also use your own specific word list). Add an R script in it and run the following code.
+First, create a folder with several PDFs (journal articles for example, but you can also use your own specific word list). Add an R script in it and run one of the following:
 ```R
 braincloud()
+braincloud(image="brain1", text.size = 0.6, colours.replicate=F)
 ```
 
 <p align="left">
