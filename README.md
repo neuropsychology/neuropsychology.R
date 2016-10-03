@@ -92,17 +92,16 @@ ggsave("assess_plot.png", plot)
 
 ### Get a correlation plot and table with significance stars
 ```R
-cortable(personality)
+cortable(personality) # Display
+
+write.csv(cortable(personality), "mytable.csv") # Save the table
+ggsave("corplot.png", cortable(personality)) # Save the plot
 ```
 This function will automatically select the numeric columns of your dataframe and show a correlation table with significance stars.
-You can adjust the p value by applying different corrections or change the type of correlation type (Spearman's or Pearson's). 
+You can adjust the p value by applying different corrections or change the type of correlation type (Spearman's or Pearson's). You can also view the result in RStudio or save it as a .csv file to open it in excel. Run `?cortable` for documentation.
 
 <p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable_plot.png" width="700"></p>
 
-You can also view the result in RStudio or save it as a .csv file to open it in excel. Run `?cortable` for documentation.
-```R
-write.csv(cortable(personality))
-```
 <p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable.png" width="850"></p>
 
 
