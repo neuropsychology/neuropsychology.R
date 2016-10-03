@@ -12,7 +12,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 <img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud.png" height="130"></a>
 </p>
 
----
+
 |Name|neuropsychology|
 |----------------|---|
 |Status|![](https://img.shields.io/badge/status-stable-brightgreen.svg)|
