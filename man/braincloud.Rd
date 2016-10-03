@@ -17,7 +17,7 @@ braincloud(pdf.file=".",
           freq.max=Inf,
           image="brain1",
           text.size=0.5,
-          colours="random-dark")
+          colours="neuropsychology")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -30,7 +30,7 @@ braincloud(pdf.file=".",
   \item{freq.max}{Keep only words that appear less than x times.}
   \item{image}{NULL or "brain1", "brain2", "head1", "head2".}
   \item{text.size}{Adjust the text size.}
-  \item{colours}{colour of the words. A vector of HEX colours or the following: "random-dark", "random-light" or "neuropsychology" for a material design palette.}
+  \item{colours}{colour of the words. A vector of HEX colours or the following: "random-dark", "random-light" or "neuropsychology" for a material design palette (default).}
     \item{colours.replicate}{Should it replicate the length of the colours vector to match the length of the data? If FALSE and length of the colours vector shorter than the length of the data, the words left will appear black.}
 
 }
