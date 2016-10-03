@@ -1,4 +1,4 @@
-textcloud <- function(pdf.file=".",
+braincloud <- function(pdf.file=".",
                       words=NULL,
                       frequency=NULL,
                       word.length.min=4,
@@ -18,7 +18,7 @@ textcloud <- function(pdf.file=".",
   }else if(is.null(pdf.file)==FALSE){
     data <- extract_text(pdf.file)
   }else{
-    print("No correct input. Check ?textcloud")
+    print("No correct input. Check ?braincloud")
   }
 
   if(is.null(image)==FALSE){

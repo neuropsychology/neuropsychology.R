@@ -1,14 +1,14 @@
-\name{textcloud}
-\alias{textcloud}
+\name{braincloud}
+\alias{braincloud}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Draw a brain shaped wordcloud
 %%  ~~function to do ... ~~
 }
 \description{
-SDraw a brain shaped wordcloud.
+Draw a brain shaped wordcloud.
 }
 \usage{
-textcloud(pdf.file=".",
+braincloud(pdf.file=".",
           words=NULL,
           frequency=NULL,
           word.length.min=4,
@@ -31,11 +31,11 @@ textcloud(pdf.file=".",
   \item{text.size}{Adjust the text size.}
 }
 \value{
-\item{textcloud}{A wordcloud. Better to click on "show in new window" in RStudio.}
+\item{cloud}{A wordcloud. Better to click on "show in new window" in RStudio.}
 }
 \author{Dominique Makowski}
 \examples{
 require(neuropsychology)
 
-textcloud(words=c("here", "is", "some", "random", "words"))
+braincloud(words=c("here", "is", "some", "random", "words"))
 }
