@@ -1,7 +1,7 @@
 \name{assess}
 \alias{assess}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Compare a given score to a parent population.
+\title{Compare a given score to a parent population
 %%  ~~function to do ... ~~
 }
 \description{

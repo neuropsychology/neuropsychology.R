@@ -1,7 +1,7 @@
 \name{masks}
 \alias{masks}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{The masks used in textcloud.
+\title{The masks used in textcloud
 %%  ~~function to do ... ~~
 }
 \description{

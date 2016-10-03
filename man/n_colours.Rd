@@ -1,11 +1,11 @@
-\name{Ncolours}
-\alias{Ncolours}
+\name{n_colours}
+\alias{n_colours}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Returns nice colours
+\title{Returns a vector of colours
 %%  ~~function to do ... ~~
 }
 \description{
-Returns nice colours vectors based on the material design palette.
+Returns a vector of colours based on the material design palette.
 }
 \usage{
 Ncolours(colours="all")
@@ -15,13 +15,13 @@ Ncolours(colours="all")
   \item{colours}{c("all", "blues", "reds", "yellows", "greys"). The colours list to return.}
 }
 \value{
-\item{Ncolours}{A vector of colours in HEX format..}
+\item{n_colours}{A vector of colours in HEX format.}
 }
-\author{Jim Lemon and Dominique Makowski}
+\author{Dominique Makowski}
 \examples{
 require(neuropsychology)
 
-mypalette <- Ncolours("blues")
+mypalette <- n_colours("blues")
 }
 
 %\keyword{ ~correlation table }% __ONLY ONE__ keyword per line

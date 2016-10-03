@@ -6,7 +6,9 @@ braincloud <- function(pdf.file=".",
                       freq.min=10,
                       freq.max=Inf,
                       image="brain1",
-                      text.size=0.5){
+                      text.size=0.5,
+                      colours='random-dark',
+                      colours.replicate=TRUE){
 
   if(is.null(words)==FALSE){
     data <- data.frame(word=words)
@@ -21,14 +23,22 @@ braincloud <- function(pdf.file=".",
     print("No correct input. Check ?braincloud")
   }
 
+  if(colours=="neuropsychology"){
+    colours <- n_colours()
+  }
+  if(colours.replicate==TRUE){
+    colours <- rep(colours, length.out=length(data))
+  }
   if(is.null(image)==FALSE){
     png::writePNG(neuropsychology::masks[[image]], "img.png")
     cloud <- wordcloud2::wordcloud2(data=data,
+                                    color=colours,
                                     size=text.size,
                                     figPath="img.png")
     unlink("img.png")
   }else{
     cloud <- wordcloud2::wordcloud2(data=data,
+                                    color=colours,
                                     size=text.size)
   }
 

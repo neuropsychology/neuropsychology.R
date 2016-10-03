@@ -1,4 +1,4 @@
-Ncolours <- function(colours="all"){
+n_colours <- function(colours="all"){
   Ncolours_Reds <- c("#f44336", "#E91E63", "#9C27B0","#673AB7")
   Ncolours_Blues <- c("#3F51B5","#2196F3","#03A9F4","#00BCD4")
   Ncolours_Greens <- c("#009688", "#4CAF50", "#8BC34A", "#CDDC39")

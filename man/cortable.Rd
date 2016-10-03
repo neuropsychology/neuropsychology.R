@@ -53,4 +53,4 @@ write.csv(table, "correlation_table.csv")
 ggplot2::ggsave("mycorrplot.png", plot)
 }
 
-\keyword{ ~correlation table }% __ONLY ONE__ keyword per line
+%\keyword{ ~correlation table }% __ONLY ONE__ keyword per line
