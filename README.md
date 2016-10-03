@@ -55,6 +55,18 @@ Available datasets are:
 
 See the description of each dataset by typing `?nameofthedataset` (e.g., `?personality`) in the console.
 
+### Create a braincloud
+First, create a folder with several PDFs (journal articles for example, but you can also use your own specific word list). Add an R script in it and run one of the following:
+```R
+braincloud()
+braincloud(image="brain1", text.size = 0.6, colours.replicate=F)
+```
+
+<p align="left">
+<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud1.png" width="400">
+<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud2.png" width="400">
+</p>
+
 ### Compare a patient's score with the parent population
 Your patient has an IQ of 78. What does it mean? You'd like to insert a plot in your report? Use the `assess()` fucntion, that compares your patient's score with the mean and standard deviation of your test (for the IQ, 100 and 15, respecetively).
 
@@ -116,17 +128,7 @@ Negative_Affect 2.65   2.60 1.74 1.32     245
 Extraversion    3.27   3.25 2.30 1.52     245
 ```
 
-### A brain- or head-shaped wordcloud
-First, create a folder with several PDFs (journal articles for example, but you can also use your own specific word list). Add an R script in it and run one of the following:
-```R
-braincloud()
-braincloud(image="brain1", text.size = 0.6, colours.replicate=F)
-```
 
-<p align="left">
-<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud1.png" width="400">
-<img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud2.png" width="400">
-</p>
 
 
 ---
