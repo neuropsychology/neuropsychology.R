@@ -1,7 +1,7 @@
 # neuropsychology
 An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 
-<p align="center"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" width="200"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable_plot.png" width="200"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot2.png" width="200"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud.png" width="200"></p>
+<p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" height="130"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable_plot.png" height="130"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot2.png" height="130"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud.png" height="130"></p>
 
 ---
 |Name|neuropsychology|
