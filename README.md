@@ -142,6 +142,7 @@ Want to add features? Correct bugs? You're more than welcome to contribute :)
 
 Check this tutorial ([French](https://github.com/neuropsychology/Courses/blob/master/Programing/Github/Contribute-FR.md) or [English](https://github.com/neuropsychology/Courses/blob/master/Programing/Github/Contribute-EN.md)) to see how to submit your changes on github.
 
+You can also contribute by opening "issues" for feature request, help, bug signaling etc.
 ---
 ## Citation
 Run the following commands to see the proper citation entry in APA6 or Bibtex format:
