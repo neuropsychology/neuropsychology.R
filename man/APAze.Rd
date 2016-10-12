@@ -1,7 +1,7 @@
 \name{APAze}
 \alias{APAze}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{APA6-ready output for (g)lm and (g)lmer objects
+\title{APA6-ready output for (g)lm , (g)lmer objects and Bayes Factors.
 %%  ~~function to do ... ~~
 }
 \description{
