@@ -8,7 +8,7 @@
 Returns a vector of colours based on the material design palette.
 }
 \usage{
-Ncolours(colours="all")
+n_colours(colours="all")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

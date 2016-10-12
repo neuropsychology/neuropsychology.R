@@ -9,15 +9,16 @@ Draw a brain shaped wordcloud.
 }
 \usage{
 braincloud(pdf.file=".",
-          words=NULL,
-          frequency=NULL,
-          word.length.min=4,
-          word.length.max=Inf,
-          freq.min=10,
-          freq.max=Inf,
-          image="brain1",
-          text.size=0.5,
-          colours="neuropsychology")
+            words=NULL,
+            frequency=NULL,
+            word.length.min=4,
+            word.length.max=Inf,
+            freq.min=10,
+            freq.max=Inf,
+            image="brain1",
+            text.size=0.5,
+            colours="neuropsychology",
+            colours.replicate=TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
