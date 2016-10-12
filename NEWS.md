@@ -1,5 +1,5 @@
 # UPCOMING: 0.3.0
-- No plans.
+- No plans yet.
 
 # CURRENT: 0.2.6
 - `APAze()`: Added support for Bayes Factors 
