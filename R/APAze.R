@@ -1,9 +1,10 @@
 APAze <- function(fit, method="boot", nsim=1000, add.stars=TRUE, ddf=NULL){
 
-  varsnames <- all.vars(terms(fit))
+  
 
 # lme4 and lmerTest -----------------------------------------------------------------
   if(class(fit)[1]=="lmerMod" | class(fit)[1]=="merModLmerTest"){
+  varsnames <- all.vars(terms(fit))
 
   R2 <- MuMIn::r.squaredGLMM(fit)
   confint <- confint(fit, method=method, nsim=nsim, oldNames=F)
@@ -72,6 +73,7 @@ APAze <- function(fit, method="boot", nsim=1000, add.stars=TRUE, ddf=NULL){
 
 # Else --------------------------------------------------------------------
   else if(class(fit)[1]=="lm"|class(fit)[1]=="glm"){
+    varsnames <- all.vars(terms(fit))
     confint <- confint(fit)
     coefs <- data.frame(coef(summary(fit)))
     coefs$CI25 <- tail(confint,nrow(coefs))[,1]
@@ -108,7 +110,25 @@ APAze <- function(fit, method="boot", nsim=1000, add.stars=TRUE, ddf=NULL){
     apa <- c(R2_apa, apa)
     return(apa)
 
+  }else if(class(fit)[1]=="BFBayesFactor"){
+    bf <- BayesFactor::extractBF(fit, logbf = FALSE, onlybf = FALSE)[1]
+    bf_err <- BayesFactor::extractBF(fit, logbf = FALSE, onlybf = FALSE)[2]
+    
+    bf_int <- ifelse(bf>100, "decisive evidence for X",
+                     ifelse(bf>30, "very strong evidence for X",
+                            ifelse(bf>10, "strong evidence for X",
+                                   ifelse(bf>3, "moderate evidence for X",
+                                          ifelse(bf>1.15, "anecdotal evidence for X",
+                                                 ifelse(bf>0.85, "no evidence for X or Y",
+                                                        ifelse(bf>0.3, "anecdotal evidence for Y",
+                                                               ifelse(bf>0.1, "moderate evidence for Y",
+                                                                      ifelse(bf>0.03, "strong evidence for Y",
+                                                                             ifelse(bf>0.01, "very strong evidence for Y",
+                                                                                    "decisive evidence for Y"))))))))))
+    apa <- paste("A Bayesian TYPE_OF_ANALYSIS suggests a ", bf_int, " (bf = ", round(bf, 2), " += ", round(bf_err), ").", sep="")
+    return(apa)
   }else{
+    varsnames <- all.vars(terms(fit))
     print(paste("Function not available yet for object of class", class(fit)[1]))
   }
 }

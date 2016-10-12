@@ -12,6 +12,7 @@ importFrom(stats, "rnorm", "runif", "coef", "p.adjust", "pnorm", "terms", "ecdf"
 importFrom(Hmisc, "rcorr")
 importFrom(wordcloud2, "wordcloud2")
 importFrom(png, "writePNG")
+importFrom(BayesFactor, "extractBF")
 
 exportPattern("^[[:alpha:]]+")
 
