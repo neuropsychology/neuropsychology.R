@@ -2,10 +2,10 @@
 - No plans yet.
 
 # CURRENT: 0.2.6
-- `APAze()`: Added support for Bayes Factors 
+- `APAze()`: Added support for Bayes Factors.
 
 ## 0.2.5
-- Created NEWS.md: Change tracking via this changelog.
+- Created NEWS.md: a history of changes via this changelog.
 - `braincloud()`: Changed the default colour palette.
 
 ## 0.2.4
