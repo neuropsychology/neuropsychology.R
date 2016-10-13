@@ -114,18 +114,18 @@ APAze <- function(fit, method="boot", nsim=1000, add.stars=TRUE, ddf=NULL){
     bf <- BayesFactor::extractBF(fit, logbf = FALSE, onlybf = FALSE)[1]
     bf_err <- BayesFactor::extractBF(fit, logbf = FALSE, onlybf = FALSE)[2]
     
-    bf_int <- ifelse(bf>100, "decisive evidence for X",
-                     ifelse(bf>30, "very strong evidence for X",
-                            ifelse(bf>10, "strong evidence for X",
-                                   ifelse(bf>3, "moderate evidence for X",
-                                          ifelse(bf>1.15, "anecdotal evidence for X",
+    bf_int <- ifelse(bf>100, "a decisive evidence for X",
+                     ifelse(bf>30, "a very strong evidence for X",
+                            ifelse(bf>10, "a strong evidence for X",
+                                   ifelse(bf>3, "a moderate evidence for X",
+                                          ifelse(bf>1.15, "an anecdotal evidence for X",
                                                  ifelse(bf>0.85, "no evidence for X or Y",
-                                                        ifelse(bf>0.3, "anecdotal evidence for Y",
-                                                               ifelse(bf>0.1, "moderate evidence for Y",
-                                                                      ifelse(bf>0.03, "strong evidence for Y",
-                                                                             ifelse(bf>0.01, "very strong evidence for Y",
-                                                                                    "decisive evidence for Y"))))))))))
-    apa <- paste("A Bayesian TYPE_OF_ANALYSIS suggests a ", bf_int, " (bf = ", round(bf, 2), " += ", round(bf_err), ").", sep="")
+                                                        ifelse(bf>0.3, "an anecdotal evidence for Y",
+                                                               ifelse(bf>0.1, "a moderate evidence for Y",
+                                                                      ifelse(bf>0.03, "a strong evidence for Y",
+                                                                             ifelse(bf>0.01, "a very strong evidence for Y",
+                                                                                    "a decisive evidence for Y"))))))))))
+    apa <- paste("A Bayesian TYPE_OF_ANALYSIS suggests ", bf_int, " (bf = ", round(bf, 2), " += ", round(bf_err), ").", sep="")
     return(apa)
   }else{
     varsnames <- all.vars(terms(fit))
