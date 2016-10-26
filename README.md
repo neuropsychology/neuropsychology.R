@@ -144,6 +144,7 @@ Extraversion    3.27   3.25 2.30 1.52     245
   Just open an [issue](https://github.com/neuropsychology/neuropsychology.R/issues) :relaxed:
 - Want to add yourself a feature? Correct a bug? You're more than welcome to contribute!
   Check this tutorial ([French](https://github.com/neuropsychology/Courses/blob/master/Programing/Github/Contribute-FR.md) or [English](https://github.com/neuropsychology/Courses/blob/master/Programing/Github/Contribute-EN.md)) to see how to submit your changes on github.
+- Check [this style guide](http://handsondatascience.com/StyleO.pdf) to write R code with style.
 
 ---
 ## Citation
