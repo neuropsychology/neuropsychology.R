@@ -4,6 +4,7 @@ import(ggplot2)
 import(lme4)
 import(dplyr)
 import(tm)
+import(Hmisc)
 
 importFrom(ggcorrplot, "ggcorrplot")
 importFrom(MuMIn, "r.squaredGLMM")
