@@ -18,6 +18,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 |Status|![](https://travis-ci.org/neuropsychology/neuropsychology.R.svg?branch=master)|
 |Latest Version|![](https://img.shields.io/badge/version-0.3.0-brightgreen.svg)|
 |Documentation|[![Rdoc](http://www.rdocumentation.org/badges/version/neuropsychology)](http://www.rdocumentation.org/packages/neuropsychology)|
+|Downloads|[![](http://cranlogs.r-pkg.org/badges/neuropsychology)](http://www.r-pkg.org/pkg/neuropsychology)|
 |Authors|[Dominique Makowski](https://github.com/neuropsychology/Organization/blob/master/CVs/DominiqueMakowski.pdf)|
 |CRAN|https://CRAN.R-project.org/package=neuropsychology|
 |Manual|https://cran.r-project.org/web/packages/neuropsychology/neuropsychology.pdf|
