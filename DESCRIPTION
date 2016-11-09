@@ -7,6 +7,7 @@ Authors@R: c(person("Dominique", "Makowski", email="dom.makowski@gmail.com", rol
 URL: https://github.com/neuropsychology/neuropsychology.R
 Date: 2016-10-02
 Maintainer: Dominique Makowski <dom.makowski@gmail.com>
+BugReports: https://github.com/neuropsychology/neuropsychology.R/issues
 Description: An R package containing free datasets as well as several
     statistical functions useful in psychology, neuropsychology and neuroscience.
 License: MIT + file LICENSE
@@ -21,7 +22,6 @@ Imports: prettyR (>= 2.2.0),
             BayesFactor (>= 0.9.0),
             htmlTable
 Suggests: lmerTest
->>>>>>> origin/master
 LazyData: TRUE
 LazyLoad: yes
 Encoding: UTF-8
