@@ -16,7 +16,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 |Name|neuropsychology|
 |----------------|---|
 |Status|![](https://travis-ci.org/neuropsychology/neuropsychology.R.svg?branch=master)|
-|Stable Version|[![](https://img.shields.io/badge/version-0.2.4-brightgreen.svg?colorB=CDDC39)](https://CRAN.R-project.org/package=neuropsychology)|
+|Stable Version|[![](https://img.shields.io/badge/version-0.3.0-brightgreen.svg)](https://CRAN.R-project.org/package=neuropsychology)|
 |Latest Version|[![](https://img.shields.io/badge/version-0.3.0-brightgreen.svg)](https://github.com/neuropsychology/neuropsychology.R)|
 |Documentation|[![Rdoc](http://www.rdocumentation.org/badges/version/neuropsychology)](http://www.rdocumentation.org/packages/neuropsychology)|
 |Downloads|[![](http://cranlogs.r-pkg.org/badges/neuropsychology)](http://www.r-pkg.org/pkg/neuropsychology)|
@@ -26,7 +26,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 ---
 ## Installation
 
-- To get the stable version (`0.2.4`) From CRAN, run the following commands in your R console:
+- To get the stable version (`0.3.0`) From CRAN, run the following commands in your R console:
 
 ```R
 install.packages("neuropsychology")
