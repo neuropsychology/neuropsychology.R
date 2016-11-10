@@ -43,7 +43,7 @@ install_github("neuropsychology/neuropsychology.R")
 library("neuropsychology")
 ```
 -->
-If it doesn't work, try [updating R](https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=update%20r). Or create an [issue](https://github.com/neuropsychology/neuropsychology.R/issues).
+If it doesn't work, try [updating R](https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=update%20r). If the problem persists, create an [issue](https://github.com/neuropsychology/neuropsychology.R/issues).
 
 
 ---
