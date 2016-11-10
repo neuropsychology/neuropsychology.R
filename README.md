@@ -33,6 +33,7 @@ install.packages("neuropsychology")
 library("neuropsychology")
 ```
 
+<!---
 - To get the latest development version (`0.3.0`), run the following:
 
 ```R
@@ -41,7 +42,7 @@ library("devtools")
 install_github("neuropsychology/neuropsychology.R")
 library("neuropsychology")
 ```
-
+-->
 If it doesn't work, try [updating R](https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=update%20r).
 
 
