@@ -2,7 +2,7 @@
 % Please edit documentation in R/dprime.R
 \name{dprime}
 \alias{dprime}
-\title{Calculates Signal Detection Theory indices.}
+\title{Calculates Signal Detection Theory indices}
 \usage{
 dprime(n_hit, n_miss, n_fa, n_cr)
 }
@@ -16,8 +16,18 @@ dprime(n_hit, n_miss, n_fa, n_cr)
 \item{n_cr}{Number of correct rejections.}
 }
 \description{
-Calculates the d', the beta, the a' and the b''d based on the
-signal detection theory (SRT).
+Calculates the d', the beta, the A' and the B''D based on the
+signal detection theory (SRT). See Pallier (2002) for the algorithms.
+}
+\value{
+A list containing 4 objects.
+\item{dprime}{The d'. d' reflects the distance between the two distributions: signal, and signal+noise and corresponds to the Z value of the hit-rate minus that of the false-alarm rate.}
+
+\item{beta}{The beta. The value for beta is the ratio of the normal density functions at the criterion of the Z values used in the computation of d'. This reflects an observer's bias to say 'yes' or 'no' with the unbiased observer having a value around 1.0. As the bias to say 'yes' increases, resulting in a higher hit-rate and false-alarm-rate, beta approaches 0.0. As the bias to say 'no' increases, resulting in a lower hit-rate and false-alarm rate, beta increases over 1.0 on an open-ended scale.}
+
+\item{aprime}{The A'. Non-parametric estimate of discriminability. An A' near 1.0 indicates good discriminability, while a value near 0.5 means chance performance.}
+
+\item{bppd}{The B''D. Non-parametric estimate of bias. A B''D equal to 0.0 indicates no bias, positive numbers represent conservative bias (i.e. a tendency to answer 'no'), negative numbers represent liberal bias (i.e. a tendency to answer 'yes'). The maximum absolute value is 1.0.}
 }
 \details{
 Adjustement made for extreme values following (Hautus, 1995).
