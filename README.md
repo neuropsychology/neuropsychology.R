@@ -12,12 +12,13 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 <img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/braincloud2.png" height="150"></a>
 </p>
 
-
+<!---
 |Name|neuropsychology|
 |----------------|---|
-<!---
 |Status|![](https://travis-ci.org/neuropsychology/neuropsychology.R.svg?branch=master)|
 -->
+|Name|neuropsychology|
+|----------------|---|
 |Stable Version|[![](https://img.shields.io/badge/version-0.3.0-brightgreen.svg)](https://CRAN.R-project.org/package=neuropsychology)|
 |Latest Version|[![](https://img.shields.io/badge/version-0.3.0-brightgreen.svg)](https://github.com/neuropsychology/neuropsychology.R)|
 |Documentation|[![Rdoc](http://www.rdocumentation.org/badges/version/neuropsychology)](http://www.rdocumentation.org/packages/neuropsychology)|
