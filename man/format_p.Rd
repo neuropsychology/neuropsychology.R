@@ -1,9 +1,7 @@
 \name{format_p}
 \alias{format_p}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Format the p value
-%%  ~~function to do ... ~~
-}
+\title{Format the p value using APA6 standards.}
 \description{
 Format the p value using APA6 standards.
 }

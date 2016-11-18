@@ -1,14 +1,14 @@
-\name{get_factors}
-\alias{get_factors}
+\name{select_numeric}
+\alias{select_numeric}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Select numeric variables
+\title{Subset a dataframe by keeping the numeric variables.
 %%  ~~function to do ... ~~
 }
 \description{
-Subset a dataframe by keeping the factors.
+Subset a dataframe by keeping the numeric variables.
 }
 \usage{
-get_factors(df)
+select_numeric(df)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -22,6 +22,5 @@ require(neuropsychology)
 
 df <- personality
 
-df_only_factors <- get_factors(df)
+df_only_numeric <- select_numeric(df)
 }
-

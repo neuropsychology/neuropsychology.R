@@ -1,7 +1,12 @@
-# UPCOMING: 0.3.0
-- No plans yet.
+# CURRENT: 0.3.1
+- Changed `get_factors` and `get_numeric` into `select_factors` and `select_numeric`.
 
-# CURRENT: 0.2.6
+## 0.3.0
+- Uploaded to CRAN.
+- Added `dprime()`
+
+
+## 0.2.6
 - `APAze()`: Added support for Bayes Factors.
 
 ## 0.2.5

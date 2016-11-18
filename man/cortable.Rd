@@ -1,7 +1,7 @@
 \name{cortable}
 \alias{cortable}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Correlation plot and table with significance stars
+\title{Correlation plot and table with significance stars.
 %%  ~~function to do ... ~~
 }
 \description{

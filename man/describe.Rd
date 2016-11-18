@@ -1,11 +1,11 @@
 \name{describe}
 \alias{describe}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Description of dataframes
+\title{Description of dataframes.
 %%  ~~function to do ... ~~
 }
 \description{
-Describes a vector or the columns in a matrix or data frame.
+Describes a vector or the columns in a matrix or dataframe.
 }
 \usage{
 describe(df, group=NA)

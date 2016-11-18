@@ -2,7 +2,7 @@
 % Please edit documentation in R/dprime.R
 \name{dprime}
 \alias{dprime}
-\title{Calculates Signal Detection Theory indices}
+\title{Calculates Signal Detection Theory indices.}
 \usage{
 dprime(n_hit, n_miss, n_fa, n_cr)
 }

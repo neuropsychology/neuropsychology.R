@@ -1,7 +1,7 @@
 \name{braincloud}
 \alias{braincloud}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Draw a brain shaped wordcloud
+\title{Draw a brain shaped wordcloud.
 %%  ~~function to do ... ~~
 }
 \description{

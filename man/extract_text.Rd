@@ -1,9 +1,7 @@
 \name{extract_text}
 \alias{extract_text}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{Extract text from PDFs
-%%  ~~function to do ... ~~
-}
+
+\title{Extract text from PDFs.}
 \description{
 Scrap text from PDFs.
 }
