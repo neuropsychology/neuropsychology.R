@@ -1,5 +1,5 @@
 # neuropsychology
-An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
+An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists.
 
 <p align="left">
 <a href="https://github.com/neuropsychology/neuropsychology.R/blob/master/README.md#compare-a-patients-score-with-the-parent-population">
