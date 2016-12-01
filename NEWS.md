@@ -1,4 +1,7 @@
-# CURRENT: 0.3.1
+# CURRENT: 0.3.2
+- Be ready for zenodo intergration.
+
+## 0.3.1
 - Changed `get_factors` and `get_numeric` into `select_factors` and `select_numeric`.
 
 ## 0.3.0
