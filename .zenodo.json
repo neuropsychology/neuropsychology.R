@@ -16,7 +16,7 @@
         "doi": "10.5281/zenodo.192147", 
         "description": "An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists.", 
         "license": "MIT", 
-        "title": "neuropsychology/neuropsychology.R: 0.3.1", 
+        "title": "neuropsychology/neuropsychology.R: 0.3.3", 
         "upload_type": "software", 
         "prereserve_doi": {
             "doi": "10.5281/zenodo.192147", 
@@ -33,7 +33,7 @@
         "related_identifiers": [
             {
                 "scheme": "url", 
-                "identifier": "https://github.com/neuropsychology/neuropsychology.R/tree/0.3.1", 
+                "identifier": "https://github.com/neuropsychology/neuropsychology.R/tree/0.3.3", 
                 "relation": "isSupplementTo"
             }
         ]
