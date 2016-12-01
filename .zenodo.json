@@ -1,40 +1,9 @@
 {
-    "doi": "10.5281/zenodo.192147", 
-    "links": {
-        "doi": "https://doi.org/10.5281/zenodo.192147", 
-        "badge": "https://zenodo.org/badge/doi/10.5281/zenodo.192147.svg"
-    }, 
-    "created": "2016-12-01T18:00:35.766049+00:00", 
-    "title": "neuropsychology/neuropsychology.R: 0.3.1", 
-    "modified": "2016-12-01T18:09:04.613021+00:00", 
-    "submitted": true, 
-    "record_id": 192147, 
-    "state": "done", 
-    "doi_url": "https://doi.org/10.5281/zenodo.192147", 
-    "owner": 26111, 
     "metadata": {
-        "doi": "10.5281/zenodo.192147", 
-        "description": "An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists.", 
-        "license": "MIT", 
-        "title": "neuropsychology/neuropsychology.R: 0.3.1", 
-        "upload_type": "software", 
-        "prereserve_doi": {
-            "doi": "10.5281/zenodo.192147", 
-            "recid": 192147
-        }, 
-        "publication_date": "2016-12-01", 
         "creators": [
             {
                 "affiliation": "University of Sorbonne Paris Cit\u00e9", 
                 "name": "Dominique Makowski"
-            }
-        ], 
-        "access_right": "open", 
-        "related_identifiers": [
-            {
-                "scheme": "url", 
-                "identifier": "https://github.com/neuropsychology/neuropsychology.R/tree/0.3.1", 
-                "relation": "isSupplementTo"
             }
         ]
     }
