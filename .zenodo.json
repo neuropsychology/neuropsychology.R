@@ -5,7 +5,7 @@
         "badge": "https://zenodo.org/badge/doi/10.5281/zenodo.192147.svg"
     }, 
     "created": "2016-12-01T18:00:35.766049+00:00", 
-    "title": "neuropsychology/neuropsychology.R: 0.3.3", 
+    "title": "neuropsychology/neuropsychology.R: 0.3.1", 
     "modified": "2016-12-01T18:09:04.613021+00:00", 
     "submitted": true, 
     "record_id": 192147, 
@@ -16,7 +16,7 @@
         "doi": "10.5281/zenodo.192147", 
         "description": "An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists.", 
         "license": "MIT", 
-        "title": "neuropsychology/neuropsychology.R: 0.3.3", 
+        "title": "neuropsychology/neuropsychology.R: 0.3.1", 
         "upload_type": "software", 
         "prereserve_doi": {
             "doi": "10.5281/zenodo.192147", 
@@ -33,7 +33,7 @@
         "related_identifiers": [
             {
                 "scheme": "url", 
-                "identifier": "https://github.com/neuropsychology/neuropsychology.R/tree/0.3.3", 
+                "identifier": "https://github.com/neuropsychology/neuropsychology.R/tree/0.3.1", 
                 "relation": "isSupplementTo"
             }
         ]
