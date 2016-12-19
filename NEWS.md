@@ -1,4 +1,7 @@
-# CURRENT: 0.3.2
+# CURRENT: 0.3.3
+- Added `interpret()`: for BIC/AIC difference interpretation.
+
+## 0.3.2
 - Be ready for zenodo intergration.
 
 ## 0.3.1
