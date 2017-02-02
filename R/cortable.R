@@ -7,7 +7,7 @@ cortable <- function(df,
                      iamaboringperson=FALSE){
 
   type <- ifelse(type == "s", "spearman",
-                 ifelse(type == "spearman", "spearman","pearson"))
+                 ifelse(type == "spearman", "spearman", type))
 
   correction_text <- ifelse(correction=="holm", "Holm-Bonferroni",
                             ifelse(correction=="fdr", "False Discovery Rate",correction))
@@ -35,9 +35,14 @@ Cheers.")
   df <- as.matrix(df)
 
 
-
-  R <- rcorr(df, type = type)$r
-  p <- rcorr(df, type = type)$P
+  if (type!="partial"){
+    R <- rcorr(df, type = type)$r
+    p <- rcorr(df, type = type)$P
+  } else {
+    R <- pcor(df)$estimate
+    p <- pcor(df)$p.value
+  }
+  
   p <- p.adjust(p, method = correction)
   p.mat <- matrix(p, ncol = ncol(R), dimnames = list(dimnames,dimnames))
 

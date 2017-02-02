@@ -20,7 +20,7 @@ cortable(df,
 \arguments{
   \item{df}{A dataframe.}
   \item{correction}{"none", "holm" for holm-bonferroni (default), "fdr" for False Discovery Rate.}
-  \item{type}{"spearman" for Spearman's correlation and "pearson" for Pearson's.}
+  \item{type}{"pearson" for Pearson's, "partial" for partial correlations and "spearman" for Spearman's.}
   \item{returns}{Should the function return the table or the plot.}
   \item{print.result}{Should it print the table in the console.}
 \item{plot.result}{Should it plot the result in the plotting tab.}

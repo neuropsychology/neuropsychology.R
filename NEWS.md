@@ -1,4 +1,7 @@
-# CURRENT: 0.3.3
+# CURRENT: 0.4.0
+- Added "partial" parameter for `cortable()`.
+
+## 0.3.3
 - Added `interpret()`: for BIC/AIC difference interpretation.
 
 ## 0.3.2

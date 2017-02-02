@@ -1,7 +1,7 @@
 Package: neuropsychology
 Type: Package
 Title: An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
-Version: 0.3.3
+Version: 0.4.0
 Authors@R: c(person("Dominique", "Makowski", email="dom.makowski@gmail.com", role=c("aut", "cre")),
             person("Phillip", "Alday", email="phillip.alday@unisa.edu.au", role=c("ctb")))
 URL: https://github.com/neuropsychology/neuropsychology.R
@@ -19,7 +19,8 @@ Imports: prettyR (>= 2.2.0),
             tm (>= 0.6), 
             wordcloud2 (>= 0.2.0), 
             BayesFactor (>= 0.9.0),
-            htmlTable
+            htmlTable,
+			ppcor
 Suggests: lmerTest
 LazyData: TRUE
 LazyLoad: yes
