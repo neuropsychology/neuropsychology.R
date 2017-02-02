@@ -20,7 +20,8 @@ Imports: prettyR (>= 2.2.0),
             wordcloud2 (>= 0.2.0), 
             BayesFactor (>= 0.9.0),
             htmlTable,
-			ppcor
+			ppcor,
+            stringi
 Suggests: lmerTest
 LazyData: TRUE
 LazyLoad: yes
