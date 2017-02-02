@@ -36,13 +36,14 @@ Cheers.")
 
 
   if (type!="partial"){
-    R <- rcorr(df, type = type)$r
+    R_raw <- rcorr(df, type = type)$r
     p <- rcorr(df, type = type)$P
   } else {
-    R <- pcor(df)$estimate
+    R_raw <- pcor(df)$estimate
     p <- pcor(df)$p.value
   }
   
+  R <- R_raw
   p <- p.adjust(p, method = correction)
   p.mat <- matrix(p, ncol = ncol(R), dimnames = list(dimnames,dimnames))
 
@@ -71,7 +72,7 @@ Cheers.")
     print(table)
   }
 
-  plot <- ggcorrplot::ggcorrplot(rcorr(df, type = type)$r,
+  plot <- ggcorrplot::ggcorrplot(R_raw,
                      title = paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")\n", sep = ""),
                      method = "circle",
                      type="lower",
