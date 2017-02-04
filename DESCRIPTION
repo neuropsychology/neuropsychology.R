@@ -8,20 +8,21 @@ URL: https://github.com/neuropsychology/neuropsychology.R
 Date: 2016-12-19
 Maintainer: Dominique Makowski <dom.makowski@gmail.com>
 BugReports: https://github.com/neuropsychology/neuropsychology.R/issues
-Description: Contains free datasets and statistical functions useful in psychology, neuropsychology and neuroscience.
+Description: Contains statistical functions, datasets and models useful in psychology, neuropsychology and neuroscience.
 License: MIT + file LICENSE
 Depends: R (>= 3.3.0), ggplot2 (>= 2.0.0), dplyr (>= 0.5.0), lme4 (>= 1.1.0)
 Imports: prettyR (>= 2.2.0), 
-            ggcorrplot (>= 0.1.0), 
-            Hmisc (>= 3.15), 
-            MuMIn (>= 1.15.6), 
-            png (>= 0.1), 
-            tm (>= 0.6), 
-            wordcloud2 (>= 0.2.0), 
-            BayesFactor (>= 0.9.0),
-            htmlTable,
-			ppcor,
-            stringi
+		ggcorrplot (>= 0.1.0), 
+		Hmisc (>= 3.15), 
+		MuMIn (>= 1.15.6), 
+		png (>= 0.1), 
+		tm (>= 0.6), 
+		wordcloud2 (>= 0.2.0), 
+		BayesFactor (>= 0.9.0),
+		htmlTable,
+		ppcor,
+		stringi,
+		caret
 Suggests: lmerTest
 LazyData: TRUE
 LazyLoad: yes

@@ -16,5 +16,6 @@ importFrom(prettyR, "describe")
 importFrom(wordcloud2, "wordcloud2")
 importFrom(png, "writePNG")
 importFrom(BayesFactor, "extractBF")
+importFrom(stats, "predict")
 
 exportPattern("^[[:alpha:]]+")
