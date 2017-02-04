@@ -1,4 +1,5 @@
 # CURRENT: 0.4.0
+- Added "ASQ_subjective_mood_disorder()" function.
 - Added "partial" parameter for `cortable()`.
 
 ## 0.3.3
