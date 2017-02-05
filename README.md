@@ -52,14 +52,17 @@ If it doesn't work, try [updating R](https://www.google.fr/webhp?sourceid=chrome
 ---
 ## Feature Examples
 
+<!---
 ### Use a data set
 ```R
 df <- personality
 ```
 Available datasets are:
 - personality
+- ASQ
 
 See the description of each dataset by typing `?nameofthedataset` (e.g., `?personality`) in the console.
+-->
 
 ### Create a braincloud
 A wordcloud containing the most reccurent words of one or several papers. First, create a folder with several PDFs (journal articles for example, but you can also use your own specific word list). Add an R script in it and run one of the following:
