@@ -26,11 +26,9 @@ Cheers.")
   df$Gods_Desctrutive_Power <- runif(nrow(df), max=10)
     }
 
-  for (i in names(df)){
-    if (is.numeric(df[,i]) == FALSE){
-      df[,i] = NULL
-    }
-  }
+  # Remove non numeric
+  df <- df[ , sapply(df, is.numeric)]
+  
   dimnames <- names(df)
   df <- as.matrix(df)
 
