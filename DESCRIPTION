@@ -10,16 +10,19 @@ Maintainer: Dominique Makowski <dom.makowski@gmail.com>
 BugReports: https://github.com/neuropsychology/neuropsychology.R/issues
 Description: Contains statistical functions, datasets and models useful in psychology, neuropsychology and neuroscience.
 License: MIT + file LICENSE
-Depends: R (>= 3.3.0), tidyverse
-Imports: lme4,
-		prettyR (>= 2.2.0), 
-		ggcorrplot (>= 0.1.0), 
-		Hmisc (>= 3.15), 
-		MuMIn (>= 1.15.6), 
-		png (>= 0.1), 
-		tm (>= 0.6), 
-		wordcloud2 (>= 0.2.0), 
-		BayesFactor (>= 0.9.0),
+Depends: R (>= 3.2.0), tidyverse
+Imports: 
+		dplyr,
+		ggplot2,
+		lme4,
+		prettyR, 
+		ggcorrplot, 
+		Hmisc, 
+		MuMIn, 
+		png, 
+		tm, 
+		wordcloud2, 
+		BayesFactor,
 		htmlTable,
 		ppcor,
 		stringi,

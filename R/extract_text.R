@@ -11,8 +11,8 @@ extract_text <- function(files=".",
   else{
     files <- list.files(path=files, pattern = "pdf$")
   }
-  text <- Corpus(URISource(files), readerControl = list(reader = Rpdf))
-  text_clean <- TermDocumentMatrix(text, control = list(removePunctuation = TRUE,
+  text <- tm::Corpus(tm::URISource(files), readerControl = list(reader = Rpdf))
+  text_clean <- tm::TermDocumentMatrix(text, control = list(removePunctuation = TRUE,
                                                        tolower = TRUE,
                                                        removeNumbers = TRUE,
                                                        stopwords = TRUE,
@@ -21,8 +21,8 @@ extract_text <- function(files=".",
                                                        # bounds = list(global = c(2, Inf))
   ))
 
-  words <- findFreqTerms(text_clean, lowfreq=freq.min, highfreq=freq.max)
-  words <- as.data.frame(inspect(text_clean[words,]))
+  words <- tm::findFreqTerms(text_clean, lowfreq=freq.min, highfreq=freq.max)
+  words <- as.data.frame(tm::inspect(text_clean[words,]))
   data <- data.frame(word=rownames(words),freq=rowSums(words))
   order <- desc(data$freq)
   data <- arrange(data, order)

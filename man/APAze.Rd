@@ -28,6 +28,6 @@ require(neuropsychology)
 
 df <- personality
 
-fit <- lmer(Age ~ BMI + (1|Salary), data=df)
+fit <- lme4::lmer(Age ~ BMI + (1|Salary), data=df)
 APAze(fit, method="Wald")
 }
