@@ -5,7 +5,7 @@
 %%  ~~function to do ... ~~
 }
 \description{
-Describes a vector or the columns in a matrix or dataframe.
+Describes a numeric vector or numeric columns in a matrix or dataframe.
 }
 \usage{
 describe(df)
@@ -15,16 +15,13 @@ describe(df)
   \item{df}{A dataframe, matrix or vector.}
 }
 \details{
- \samp{describe} displays a table of descriptive statistics for numeric,
- factor and logical variables in the object \samp{df}. This function its just a wrapper for the prettyR::describe function. All credits go to its authors.
+ \samp{describe} displays a table of descriptive statistics for numeric
+ variables in the object \samp{df}. This function its just a wrapper for the psych::describe function. All credits go to its authors. Note that it select only numeric variables.
 }
 \value{
-A list with three components:
-\item{Numeric}{A list of the values returned for each column described.}
-\item{Factor}{A list of the tables for each column described.}
-\item{Logical}{A list of the tables for each column described.}
+\item{df}{The summary dataframe.}
 }
-\author{Jim Lemon and Dominique Makowski}
+\author{Dominique Makowski}
 \examples{
 require(neuropsychology)
 

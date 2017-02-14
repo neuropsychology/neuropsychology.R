@@ -15,7 +15,7 @@ Imports:
 		dplyr,
 		ggplot2,
 		lme4,
-		prettyR, 
+		psych, 
 		ggcorrplot, 
 		Hmisc, 
 		MuMIn, 
