@@ -1,4 +1,5 @@
 # CURRENT: 0.4.1
+- Added `fa_loadings()`.
 - Changed APAze's defaults from "boot" to "Wald".
 - Fixed the output of `cortable()`.
 - replaced importation of dplyr, tidyr etc. by tidyverse.
