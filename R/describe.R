@@ -1,15 +1,11 @@
-describe <- function(df, group=NA){
-
-  if(is.na(group)==FALSE){
-    df.list <- split(df, df[group])
-
-    n=1
-    for (i in df.list){
-      i <- i[ , !(names(i) %in% group)]
-      print(prettyR::describe(i, xname=levels(df[,group])[n]))
-      n=n+1
-      }
-  } else{
-    print(prettyR::describe(df, horizontal=FALSE))
-  }
-  }
+describe <- function(df){
+  
+  return(prettyR::describe(factors))
+  # factors <- select_factors(df)
+  # numerics <- select_numeric(df)
+  # 
+  # numerics <- prettyR::describe(numerics)$Numeric
+  # factors <- prettyR::describe(factors)$Factor
+# 
+# Need to do: function that returns one dataframe, with columns as follows: 
+#   Variable, n obs, Percentage (empty for non factors), Mean += SD, [Min-Max] 

@@ -1,4 +1,9 @@
-# CURRENT: 0.4.0
+# CURRENT: 0.4.1
+- Changed APAze's defaults from "boot" to "Wald".
+- Fixed the output of `cortable()`.
+- replaced importation of dplyr, tidyr etc. by tidyverse.
+
+## 0.4.0
 - Added "ASQ_subjective_mood_disorder()" function.
 - Added "partial" parameter for `cortable()`.
 

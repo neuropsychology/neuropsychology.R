@@ -1,9 +1,7 @@
 cortable <- function(df,
+                     returns="both",
                      correction="holm",
                      type="pearson",
-                     returns="table",
-                     print.result=TRUE,
-                     plot.result=TRUE,
                      iamaboringperson=FALSE){
 
   type <- ifelse(type == "s", "spearman",
@@ -65,10 +63,6 @@ Cheers.")
   ## remove last column and return the matrix (which is now a data frame)
   table <- cbind(table[1:length(table)-1])
 
-  if (print.result==TRUE){
-    print(paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")", sep = ""))
-    print(table)
-  }
 
   plot <- ggcorrplot::ggcorrplot(R_raw,
                      title = paste("A ", type, "'s correlation matrix (correction: ", correction_text, ")\n", sep = ""),
@@ -82,14 +76,13 @@ Cheers.")
                      lab=FALSE) +
     theme(plot.title = element_text(hjust = 0.7))
 
-  if (plot.result==TRUE){
-    print(plot)
-  }
+
 
   if (returns=="table"){
     return(table)
-  }
-  else{
+  } else if (returns=="plot"){
     return(plot)
+  } else {
+    return(list("table"=table, "plot"=plot))
   }
 }

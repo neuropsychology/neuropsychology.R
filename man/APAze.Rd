@@ -9,7 +9,7 @@ APA6-ready output for mixed effects and non-mixed effects linear models.
 }
 \usage{
 APAze(fit,
-      method="boot",
+      method="Wald",
       nsim=1000,
       add.stars=TRUE,
       ddf=NULL)

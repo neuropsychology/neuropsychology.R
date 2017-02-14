@@ -1,4 +1,4 @@
-APAze <- function(fit, method="boot", nsim=1000, add.stars=TRUE, ddf=NULL){
+APAze <- function(fit, method="Wald", nsim=1000, add.stars=TRUE, ddf=NULL){
 
   
 

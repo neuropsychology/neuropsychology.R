@@ -8,16 +8,15 @@
 Describes a vector or the columns in a matrix or dataframe.
 }
 \usage{
-describe(df, group=NA)
+describe(df)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{df}{A dataframe, matrix or vector.}
-  \item{group}{A string indicating the factor by which you want to separate the descriptions.}
 }
 \details{
  \samp{describe} displays a table of descriptive statistics for numeric,
- factor and logical variables in the object \samp{df}. This function relies massively on the PrettyR package. All credits go to its authors.
+ factor and logical variables in the object \samp{df}. This function its just a wrapper for the prettyR::describe function. All credits go to its authors.
 }
 \value{
 A list with three components:
@@ -32,8 +31,6 @@ require(neuropsychology)
 df <- personality
 
 describe(df)
-
-describe(df, group="Sex")
 }
 
 %\keyword{ ~correlation table }% __ONLY ONE__ keyword per line
