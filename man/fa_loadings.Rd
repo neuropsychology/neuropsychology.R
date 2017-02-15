@@ -9,14 +9,14 @@ Format the loadings of a factor analysis.
 fa_loadings(fa, 
             treshold=0, 
             round=2, 
-            names=NA)
+            labels=NA)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{fa}{An object returned by the fa function.}
   \item{treshold}{Remove loadings inferior to a treshold.}
   \item{round}{Round the final loadings matrix.}
-  \item{names}{Supply a additional column with e.g. item labels}
+  \item{labels}{Supply a additional column with e.g. item labels}
 }
 \value{
 list with two elements.

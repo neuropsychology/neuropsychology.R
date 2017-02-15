@@ -1,4 +1,7 @@
-# CURRENT: 0.4.1
+# CURRENT: 0.5.0
+- Added `specific_correlations()`.
+
+## 0.4.1
 - Added `fa_loadings()`.
 - Changed APAze's defaults from "boot" to "Wald".
 - Fixed the output of `cortable()`.
