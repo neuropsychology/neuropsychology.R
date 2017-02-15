@@ -115,35 +115,6 @@ You can adjust the p value by applying different corrections or change the type 
 <img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/cortable.png" width="850">
 </p>
 
-### Describe a dataframe
-```R
-describe(personality)
-```
-This function prints a nice summary of your dataframe. Note that you can also group the descriptions by a factor using the "group" argument. See `?describe` for more documentation.
-
-You can also pipe the selection and filtering process using the power of [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html):
-```R
-personality %>%
-  filter(Mood_Disorder=="Absence") %>%
-  select(Sex, Antagonism, Negative_Affect, Extraversion) %>%
-  describe(group="Sex")
-```
-```R
-Description of F 
- Numeric 
-                mean median  var   sd valid.n
-Antagonism      1.71    1.6 1.05 1.02     941
-Negative_Affect 3.38    3.4 1.98 1.41     941
-Extraversion    3.43    3.5 2.21 1.49     941
-
-Description of M 
- Numeric 
-                mean median  var   sd valid.n
-Antagonism      2.37   2.20 1.56 1.25     245
-Negative_Affect 2.65   2.60 1.74 1.32     245
-Extraversion    3.27   3.25 2.30 1.52     245
-```
-
 
 
 
