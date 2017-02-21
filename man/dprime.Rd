@@ -30,7 +30,7 @@ A list containing 4 objects.
 \item{bppd}{The B''D. Non-parametric estimate of bias. A B''D equal to 0.0 indicates no bias, positive numbers represent conservative bias (i.e. a tendency to answer 'no'), negative numbers represent liberal bias (i.e. a tendency to answer 'yes'). The maximum absolute value is 1.0.}
 }
 \details{
-Adjustement made for extreme values following (Hautus, 1995).
+For d' and beta, adjustement for extreme values are made following the recommandations Hautus (1995).
 }
 %\section{A Custom Section}{
 %
@@ -39,10 +39,10 @@ Adjustement made for extreme values following (Hautus, 1995).
 %}
 \examples{
 n_hit <- 9
-n_fa <- 1
+n_miss <- 1
 n_fa <- 2
 n_cr <- 7
 
-indices <- dprime(n_hit, n_fa, n_fa, n_cr)
+indices <- dprime(n_hit, n_miss, n_fa, n_cr)
 }
 
