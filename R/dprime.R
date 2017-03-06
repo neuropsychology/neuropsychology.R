@@ -28,5 +28,8 @@ dprime <- function(n_hit, n_miss, n_fa, n_cr){
   # bppd
   bppd <- ((1-hit_rate)*(1-fa_rate)-hit_rate*fa_rate) / ((1-hit_rate)*(1-fa_rate)+hit_rate*fa_rate)
 
-  return(list(dprime=dprime, beta=beta, aprime=aprime, bppd=bppd))
+  # c
+  c <- -(qnorm(hit_rate_adjusted) + qnorm(fa_rate_adjusted))/2
+  
+  return(list(dprime=dprime, beta=beta, aprime=aprime, bppd=bppd, c=c))
 }
