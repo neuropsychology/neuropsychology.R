@@ -28,7 +28,10 @@ A list containing 4 objects.
 \item{aprime}{The A'. Non-parametric estimate of discriminability. An A' near 1.0 indicates good discriminability, while a value near 0.5 means chance performance.}
 
 \item{bppd}{The B''D. Non-parametric estimate of bias. A B''D equal to 0.0 indicates no bias, positive numbers represent conservative bias (i.e. a tendency to answer 'no'), negative numbers represent liberal bias (i.e. a tendency to answer 'yes'). The maximum absolute value is 1.0.}
+
+\item{c}{The Criterion. the number of standard deviations from the midpoint between these two distributions, i.e. a measure on a continuum from "conservative" to "liberal".}
 }
+            
 \details{
 For d' and beta, adjustement for extreme values are made following the recommandations Hautus (1995).
 }
