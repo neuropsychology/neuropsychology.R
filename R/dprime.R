@@ -5,10 +5,8 @@ dprime <- function(n_hit, n_miss, n_fa, n_cr){
   
   
   # Adjusted ratios
-  n_hit <- n_hit + 0.5
-  n_fa <- n_fa + 0.5
-  hit_rate_adjusted <- n_hit/(n_hit + n_miss + 1)
-  fa_rate_adjusted <- n_fa/(n_fa + n_cr + 1)
+  hit_rate_adjusted <- (n_hit+0.5)/((n_hit+0.5) + n_miss + 1)
+  fa_rate_adjusted <- (n_fa+0.5)/((n_fa+0.5) + n_cr + 1)
 
   
   # dprime
