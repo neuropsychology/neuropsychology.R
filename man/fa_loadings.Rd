@@ -13,7 +13,7 @@ fa_loadings(fa,
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{fa}{An object returned by the fa function.}
+  \item{fa}{An object returned by the psych::fa function.}
   \item{treshold}{Remove loadings inferior to a treshold.}
   \item{round}{Round the final loadings matrix.}
   \item{labels}{Supply a additional column with e.g. item labels}
@@ -26,6 +26,10 @@ list with two elements.
 \author{Dominique Makowski}
 \examples{
 require(neuropsychology)
+require(psych)
 
-# fa_loadings(fa)$max
+df <- select_numeric(personality)
+fa <- psych::fa(df)
+
+fa_loadings(fa)$max
 }

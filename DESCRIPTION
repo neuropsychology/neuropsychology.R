@@ -1,6 +1,6 @@
 Package: neuropsychology
 Type: Package
-Title: An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists
+Title: Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 Version: 0.5.0
 Authors@R: c(person("Dominique", "Makowski", email="dom.makowski@gmail.com", role=c("aut", "cre")),
             person("Phillip", "Alday", email="phillip.alday@unisa.edu.au", role=c("ctb")))
@@ -13,6 +13,7 @@ License: MIT + file LICENSE
 Depends: R (>= 3.2.0), tidyverse
 Imports: 
 		dplyr,
+		tidyr,
 		ggplot2,
 		lme4,
 		psych, 

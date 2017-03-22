@@ -7,16 +7,16 @@ describe <- function(df){
 
   df <- df %>%
     psych::describe() %>%
-    transmute(variable=variables,
-              missings=n_total - n,
-              prop_missings=missings/n_total,
-              mean=mean,
-              sd=sd,
-              median=median,
-              min=min,
-              max=max,
-              skew=skew,
-              kurtosis=kurtosis)
+    dplyr::transmute_(variable=~variables,
+              missings=~n_total-n,
+              prop_missings=~missings/n_total,
+              mean=~mean,
+              sd=~sd,
+              median=~median,
+              min=~min,
+              max=~max,
+              skew=~skew,
+              kurtosis=~kurtosis)
 
   df[2:10] <- round(df[2:10], 2)
 
