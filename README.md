@@ -19,7 +19,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists.
 -->
 |Name|neuropsychology|
 |----------------|---|
-|Stable Version|[![](https://img.shields.io/badge/version-0.3.0-brightgreen.svg)](https://CRAN.R-project.org/package=neuropsychology)|
+|Stable Version|[![](https://img.shields.io/badge/version-0.5.0-brightgreen.svg)](https://CRAN.R-project.org/package=neuropsychology)|
 |Latest Version|[![](https://img.shields.io/badge/version-0.5.0-brightgreen.svg)](https://github.com/neuropsychology/neuropsychology.R)|
 |Documentation|[![Rdoc](http://www.rdocumentation.org/badges/version/neuropsychology)](http://www.rdocumentation.org/packages/neuropsychology)|
 |Downloads|[![](http://cranlogs.r-pkg.org/badges/neuropsychology)](http://www.r-pkg.org/pkg/neuropsychology)|
@@ -29,14 +29,14 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists.
 ---
 ## Installation
 
-- To get the stable version (`0.3.0`) From CRAN, run the following commands in your R console:
+- To get the stable version (`0.5.0`) From CRAN, run the following commands in your R console:
 
 ```R
 install.packages("neuropsychology")
 library("neuropsychology")
 ```
 
-
+<!---
 - To get the latest development version (`0.5.0`), run the following:
 
 ```R
@@ -45,7 +45,7 @@ library("devtools")
 install_github("neuropsychology/neuropsychology.R")
 library("neuropsychology")
 ```
-
+-->
 If it doesn't work, try [updating R](https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=update%20r). If the problem persists, create an [issue](https://github.com/neuropsychology/neuropsychology.R/issues).
 
 
