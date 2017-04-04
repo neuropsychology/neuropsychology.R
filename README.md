@@ -19,8 +19,8 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists.
 -->
 |Name|neuropsychology|
 |----------------|---|
-|Stable Version|[![](https://img.shields.io/badge/version-0.3.0-brightgreen.svg)](https://CRAN.R-project.org/package=neuropsychology)|
-|Latest Version|[![](https://img.shields.io/badge/version-0.5.0-brightgreen.svg)](https://github.com/neuropsychology/neuropsychology.R)|
+|Stable Version|[![](https://img.shields.io/badge/version-0.5.0-brightgreen.svg)](https://CRAN.R-project.org/package=neuropsychology)|
+|Latest Version|[![](https://img.shields.io/badge/version-0.5.1-brightgreen.svg)](https://github.com/neuropsychology/neuropsychology.R)|
 |Documentation|[![Rdoc](http://www.rdocumentation.org/badges/version/neuropsychology)](http://www.rdocumentation.org/packages/neuropsychology)|
 |Downloads|[![](http://cranlogs.r-pkg.org/badges/neuropsychology)](http://www.r-pkg.org/pkg/neuropsychology)|
 |Authors|[![](https://img.shields.io/badge/CV-D._Makowski-purple.svg?colorB=9C27B0)](https://cdn.rawgit.com/neuropsychology/Organization/master/CVs/DominiqueMakowski.pdf)|
@@ -29,7 +29,7 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists.
 ---
 ## Installation
 
-- To get the stable version (`0.3.0`) From CRAN, run the following commands in your R console:
+- To get the stable version (`0.5.0`) From CRAN, run the following commands in your R console:
 
 ```R
 install.packages("neuropsychology")
@@ -37,7 +37,7 @@ library("neuropsychology")
 ```
 
 
-- To get the latest development version (`0.5.0`), run the following:
+- To get the latest development version (`0.5.1`), run the following:
 
 ```R
 install.packages("devtools")

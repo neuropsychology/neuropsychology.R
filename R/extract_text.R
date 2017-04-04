@@ -4,27 +4,35 @@ extract_text <- function(files=".",
                           freq.min=10,
                           freq.max=Inf){
 
-  Rpdf <- tm::readPDF(control = list(text = "-layout"))
-  if(grepl(".pdf",files)){
+  
+  
+  if(grepl(".pdf", files)){
     files <- c(files)
-  }
-  else{
+  } else{
     files <- list.files(path=files, pattern = "pdf$")
   }
-  text <- tm::Corpus(tm::URISource(files), readerControl = list(reader = Rpdf))
-  text_clean <- tm::TermDocumentMatrix(text, control = list(removePunctuation = TRUE,
-                                                       tolower = TRUE,
-                                                       removeNumbers = TRUE,
-                                                       stopwords = TRUE,
-                                                       wordLengths=c(word.length.min,word.length.max)
-                                                       # stemming = TRUE
-                                                       # bounds = list(global = c(2, Inf))
-  ))
-
-  words <- tm::findFreqTerms(text_clean, lowfreq=freq.min, highfreq=freq.max)
-  words <- as.data.frame(tm::inspect(text_clean[words,]))
-  data <- data.frame(word=rownames(words),freq=rowSums(words))
-  order <- desc(data$freq)
-  data <- arrange(data, order)
+  
+  if (length(files) > 1){
+    text <- c()
+    for(file in files){
+      text <- c(text, pdftools::pdf_text(file))
+    }
+    text <- unlist(text)
+  } else{
+    text <- pdftools::pdf_text(files)
+  }
+  
+  text_clean <- tm::termFreq(text, control = list(removePunctuation = TRUE,
+                                    tolower = TRUE,
+                                    removeNumbers = TRUE,
+                                    stopwords = TRUE,
+                                    wordLengths=c(word.length.min, word.length.max)))
+  
+  data <- data.frame(word=rownames(text_clean), freq=rowSums(as.matrix(text_clean))) %>%
+    dplyr::arrange_("desc(freq)") %>% 
+    filter_(paste("freq > ", freq.min)) %>% 
+    filter_(paste("freq < ", freq.max))
+    
+  return(data)
 }
 
