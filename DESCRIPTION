@@ -28,7 +28,9 @@ Imports:
 		ppcor,
 		stringi,
 		caret,
-		pdftools
+		pdftools,
+		xml2,
+		rvest
 Suggests: lmerTest
 LazyData: TRUE
 LazyLoad: yes

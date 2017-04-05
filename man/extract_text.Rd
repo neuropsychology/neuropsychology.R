@@ -1,12 +1,13 @@
 \name{extract_text}
 \alias{extract_text}
 
-\title{Extract text from PDFs.}
+\title{Extract text from PDFs and HTMLs pages.}
 \description{
 Scrap text from PDFs.
 }
 \usage{
-extract_text(files=".",
+extract_text(sources=".",
+              type="pdf",
               word.length.min=4,
               word.length.max=Inf,
               freq.min=10,
@@ -14,7 +15,8 @@ extract_text(files=".",
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{files}{Either the name of a file (ending with ".pdf"), a directory or nothing to scrap all the PDFs from the directory.}
+  \item{sources}{Either the name of a file (ending with ".pdf"), a directory, nothing to scrap all the PDFs of the current directory, a html link or a list of links.}
+  \item{type}{"pdf" or "html".}
   \item{word.length.min}{Keep only words with minimum length x.}
   \item{word.length.max}{Keep only words with maximum length x.}
   \item{freq.min}{Keep only words that appear more than x times.}
