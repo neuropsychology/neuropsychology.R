@@ -40,7 +40,7 @@ extract_text <- function(sources=".",
         dplyr::transmute_("word" = ".")
       text <- rbind(text, page)
     }
-    text <- text$word
+    text <- as.character(text$word)
   }
 
 
