@@ -5,7 +5,7 @@
 %%  ~~function to do ... ~~
 }
 \description{
-STransform odds or log odds to probabilities.
+Transform odds or log odds to probabilities.
 }
 \usage{
 odds_to_probs(odds, log=TRUE)
