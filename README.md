@@ -79,7 +79,7 @@ braincloud(image="brain1", text.size=0.6, colours.replicate=FALSE)
 *Note: these brainclouds are based on the work of [Dr. Robin Carhart-Harris](http://www.imperial.ac.uk/people/r.carhart-harris).*
 
 ### Compare a patient's score with the parent population
-Your patient has an IQ of 78. What does it mean? You'd like to insert a plot in your report? Use the `assess()` fucntion, that compares your patient's score with the mean and standard deviation of your test (for the IQ, 100 and 15, respecetively).
+Your patient has an IQ of 78. What does it mean? You'd like to insert a plot in your report? Use the `assess()` function, that compares your patient's score with the mean and standard deviation of your test (for the IQ, 100 and 15, respectively).
 
 ```R
 assess(score=78, mean=100, sd=15)
