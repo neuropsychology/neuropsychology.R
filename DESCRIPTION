@@ -3,7 +3,8 @@ Type: Package
 Title: Toolbox for Psychologists, Neuropsychologists and Neuroscientists
 Version: 0.5.2
 Authors@R: c(person("Dominique", "Makowski", email="dom.makowski@gmail.com", role=c("aut", "cre")),
-            person("Phillip", "Alday", email="phillip.alday@unisa.edu.au", role=c("ctb")))
+            person("Phillip", "Alday", email="phillip.alday@unisa.edu.au", role=c("ctb")),
+	    person("Marco", "Sperduti", email="marcosperduti@yahoo.it", role=c("ctb")))
 URL: https://github.com/neuropsychology/neuropsychology.R
 Date: 2017-2-14
 Maintainer: Dominique Makowski <dom.makowski@gmail.com>
