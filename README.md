@@ -86,15 +86,18 @@ assess(score=78, mean=100, sd=15)
 ```
 <p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot.png" width="700"></p>
 You can also compare it to a custom parent distribution if you have the data. For example, your patient is 27 and you want to see where it stands compared to the participants of the `personality` dataset. You can also change the colours. See `?assess` for more documentation.
+
 ```R
 assess(score=27, distribution=personality$Age)
 ```
+
 ```R
 "The participant (score = 27) is positioned at 0.02 standard deviations from the mean (M = 26.8, SD = 10.59). 
 The participant's score is greater than 74.42 % of the general population."
 ```
 <p align="left"><img src="https://github.com/neuropsychology/neuropsychology.R/blob/master/tests/testthat/assess_plot2.png" width="700"></p>
 To save the plot:
+
 ```R
 plot <- assess(score=27, distribution=personality$Age)
 ggsave("assess_plot.png", plot)
