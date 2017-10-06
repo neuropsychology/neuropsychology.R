@@ -27,6 +27,13 @@ An R Toolbox for Psychologists, Neuropsychologists and Neuroscientists.
 
 
 ---
+
+
+:warning: **NOTE: This package is not maintained anymore. Many of its functions have been moved to the [psycho](https://github.com/neuropsychology/psycho.R) package**
+
+----
+
+
 ## Installation
 
 - To get the stable version (`0.5.0`) From CRAN, run the following commands in your R console:
